@@ -25,6 +25,9 @@ export default defineConfig({
       '@': path.resolve(__dirname, 'src'),
     },
   },
+  optimizeDeps: {
+    include: ['swiper', 'swiper/modules'],
+  },
   css: {
     preprocessorOptions: {
       scss: {

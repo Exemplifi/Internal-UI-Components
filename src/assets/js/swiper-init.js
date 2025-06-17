@@ -1,21 +1,13 @@
-import $ from "jquery";
-
-// Make jQuery globally available
-window.$ = window.jQuery = $;
+import Swiper from 'swiper';
+import { Navigation, Pagination, Autoplay } from 'swiper/modules';
 
 // Import Swiper styles
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 
-import "../scss/styles.scss";
-import * as bootstrap from "bootstrap";
-import { createIcons, icons } from "lucide";
-import Swiper from 'swiper';
-import { Navigation, Pagination, Autoplay } from 'swiper/modules';
-
 // Initialize Swiper instances
-document.addEventListener('DOMContentLoaded', () => {
+const initSwipers = () => {
   // Carousel Variant 1
   const carousel1 = new Swiper('.carousel-v1', {
     modules: [Navigation, Pagination, Autoplay],
@@ -102,9 +94,9 @@ document.addEventListener('DOMContentLoaded', () => {
       },
     },
   });
+};
 
-  createIcons({ icons });
-});
+// Initialize when DOM is loaded
+document.addEventListener('DOMContentLoaded', initSwipers);
 
-
-
+export default initSwipers; 
