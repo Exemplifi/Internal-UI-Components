@@ -1,0 +1,72 @@
+/**
+ * Package Name: _cssvars.scss
+ * Subpackage: cascadia
+ * Author: Raven Developers
+ * Author URI:
+ * Description: SCSS
+ * Author: Sridhar
+ * Created: 05/05/23
+ * Version: 1.0
+ * License: Creative Commons 3.0 Attribution
+ * License URI:
+ * Tags: app
+**/
+
+@use "sass:math";
+@use "sass:map";
+
+@use "utils/fonts" as *;
+@use "utils/rem-convert" as *;
+@use "utils/mixins" as *;
+@use "utils/vars-global" as *;
+@use "utils/vars-colors" as *;
+@use "utils/vars-bootstrap" as *;
+
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1200px
+);
+:root {
+  --body-font-family: #{$font-family-body};
+  --heading-font-family: #{$font-family-headings};
+  --body-text-color: #{$black};
+  --link-color: #{$black};
+
+  // Custom theme colors (less verbose)
+  @each $color, $value in $site-colors {
+    --#{$color}: #{$value};
+  }
+
+  // Margin spacings
+  @each $space, $value in $spacers {
+    --size-#{$space}: #{$value};
+  }
+
+  // Font sizes
+  @each $size, $value in $font-sizes {
+    --fz-#{$size}: #{$value};
+  }
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+p {
+  &:has(.asset) {
+    margin-bottom: 0 !important;
+  }
+  &:last-of-type {
+    margin-bottom: 0;
+  }
+}
+
+body {
+  a {
+    color: var(--link-color);
+  }
+}

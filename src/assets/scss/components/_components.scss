@@ -1,0 +1,22 @@
+// Importing components
+@use "../../../../node_modules/sass-rem/" as rem;
+
+// @import "../../../node_modules/bootstrap/scss/bootstrap.scss";
+@import "../utils/vars-global";
+
+@import 'accordions';
+@import 'buttons';
+@import 'calenders';
+@import 'cards';
+@import 'carousels';
+@import 'footer';
+@import 'forms';
+@import 'header';
+@import 'heros';
+@import 'icon-and-text';
+@import 'image-and-text';
+@import 'stats';
+@import 'tables';
+@import 'text-only';
+@import 'heros';
+@import "typography";

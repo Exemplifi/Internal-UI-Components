@@ -1,0 +1,18 @@
+@use "sass:math";
+
+// all base styles
+@use "./base/colors" as *;
+@use "./base/screenres" as *;
+
+
+@use './base/bootstrap' as *;
+
+// // all page styles
+@use './page/home' as *;
+
+// Importing base
+@use "base";
+
+// Importing ncludes
+@use "includes/includes";
+

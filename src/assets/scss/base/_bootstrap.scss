@@ -1,0 +1,18 @@
+// 1. Custom variables must come *before* bootstrap
+@use './variables' as *; // If you have _variables.scss with overrides
+@use 'sass:math';
+
+// 2. Import Bootstrap’s functions, variables, and mixins
+@import "../../../../node_modules/bootstrap/scss/functions";
+@import "../../../../node_modules/bootstrap/scss/variables";
+@import "../../../../node_modules/bootstrap/scss/maps";
+@import "../../../../node_modules/bootstrap/scss/mixins";
+@import "../../../../node_modules/bootstrap/scss/utilities";
+
+// 3. Now import Bootstrap utilities or specific modules you want
+@import "../../../../node_modules/bootstrap/scss/reboot";
+@import "../../../../node_modules/bootstrap/scss/buttons"; // optional
+@import "../../../../node_modules/bootstrap/scss/forms";   // optional
+// Add more parts as needed
+
+

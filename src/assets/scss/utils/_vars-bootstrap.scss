@@ -1,0 +1,180 @@
+@use "sass:math";
+@use "sass:map";
+@use "vars-colors" as *;
+
+// Grid columns
+// Set the number of columns and specify the width of the gutters.
+
+$grid-columns: 12;
+$grid-gutter-width: rem-calc(32);
+
+// Custom variables (which Bootstrap won't override)
+$font-family-body: "DIN OT", sans-serif;
+$font-family-headings: $font-family-body;
+$font-family-headings-secondary: $font-family-body;
+
+// Bootstrap variables
+$font-family-base: $font-family-body !default;
+$font-family-sans-serif: $font-family-body !default;
+$font-size-root: 16px;
+
+// No rounded corners
+$enable-rounded: false;
+// Bootstrap with Flexbox enabled
+$enable-flex: true;
+
+// New in Alpha-3: Disable default classes
+$enable-grid-classes: true;
+
+$spacer: 0.5rem;
+$spacer-x: $spacer;
+$spacer-y: $spacer;
+
+$spacers: (
+  0: 0,
+  // 4: math.div($spacer, 2),
+  8: $spacer,
+  16: (
+    $spacer * 2
+  ),
+  24: (
+    $spacer * 3
+  ),
+  32: (
+    $spacer * 4
+  ),
+  40: (
+    $spacer * 5
+  ),
+  48: (
+    $spacer * 6
+  ),
+  56: (
+    $spacer * 7
+  ),
+  64: (
+    $spacer * 8
+  ),
+  72: (
+    $spacer * 9
+  ),
+  80: (
+    $spacer * 10
+  ),
+  88: (
+    $spacer * 11
+  ),
+  96: (
+    $spacer * 12
+  ),
+  104: (
+    $spacer * 13
+  ),
+  112: (
+    $spacer * 14
+  ),
+  120: (
+    $spacer * 15
+  ),
+  128: (
+    $spacer * 16
+  ),
+  136: (
+    $spacer * 17
+  ),
+  144: (
+    $spacer * 18
+  ),
+  152: (
+    $spacer * 19
+  ),
+  160: (
+    $spacer * 20
+  )
+);
+
+$grid-breakpoints: (
+  xs: 0,
+  sm: 320px,
+  md: 768px,
+  lg: 991px,
+  xl: 1280px,
+  xxl: 1400px
+);
+
+// CONTAINER SIZES
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 990px,
+  xl: 1280px
+);
+
+$font-sizes: (
+  0: 0,
+  12: rem-calc(12px),
+  14: rem-calc(14px),
+  16: (
+    $spacer * 2
+  ),
+  18: rem-calc(18px),
+  20: rem-calc(20px),
+  22: rem-calc(22px),
+  24: (
+    $spacer * 3
+  ),
+  32: (
+    $spacer * 4
+  ),
+  40: (
+    $spacer * 5
+  ),
+  48: (
+    $spacer * 6
+  ),
+  56: (
+    $spacer * 7
+  ),
+  64: (
+    $spacer * 8
+  ),
+  72: (
+    $spacer * 9
+  ),
+  80: (
+    $spacer * 10
+  ),
+  88: (
+    $spacer * 11
+  ),
+  96: (
+    $spacer * 12
+  ),
+  104: (
+    $spacer * 13
+  ),
+  110: rem-calc(110px),
+  112: (
+    $spacer * 14
+  )
+);
+
+$h1-font-size: rem-calc(56) !default;
+$h2-font-size: rem-calc(48) !default;
+$h3-font-size: rem-calc(40) !default;
+$h4-font-size: rem-calc(32) !default;
+$h5-font-size: rem-calc(30) !default;
+$h6-font-size: rem-calc(24) !default;
+
+$display1-size: rem-calc(56);
+$display2-size: rem-calc(48);
+$display3-size: rem-calc(40);
+$display4-size: rem-calc(32);
+
+$body-small: rem-calc(14);
+$body-regular: rem-calc(16);
+$body-medium: rem-calc(18);
+$body-large: rem-calc(24);
+
+$headings-font-family: $font-family-headings;
+$headings-font-weight: 700;

@@ -1,0 +1,31 @@
+{
+  "name": "northernwaters",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "sass": "sass --watch --style=compressed --load-path=node_modules src/assets/scss/styles.scss src/assets/css/styles.css",
+    "base:sass": "sass --watch --style=compressed src/assets/scss/base.scss src/assets/css/base.css"
+  },
+  "devDependencies": {
+    "figma-developer-mcp": "^0.4.2",
+    "vite": "^6.3.5"
+  },
+  "dependencies": {
+    "@popperjs/core": "^2.11.8",
+    "bootstrap": "^5.3.6",
+    "breakpoint-sass": "^3.0.0",
+    "build": "^0.1.4",
+    "figma-api": "^2.0.2-beta",
+    "fs-extra": "^11.3.0",
+    "jquery": "^3.7.1",
+    "lucide": "^0.514.0",
+    "node-fetch": "^3.3.2",
+    "sass": "^1.89.2",
+    "sass-rem": "^4.0.0",
+    "slick-carousel": "^1.8.1"
+  }
+}

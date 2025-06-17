@@ -1,0 +1,147 @@
+// Type: SCSS Component
+body {
+  margin: 0;
+  font-family: var(--body-font-family);
+  font-optical-sizing: auto;
+  font-size: rem.convert(16px);
+  color: var(--dark-grey);
+  line-height: 1.5;
+  letter-spacing: 0;
+}
+
+.display-1,
+.display-2,
+.dynamic,
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3 {
+  font-weight: $condensed-black;
+  text-transform: uppercase;
+}
+
+.display-1 {
+  font-size: 224px;
+  line-height: 0.9em;
+  letter-spacing: -0.03em;
+  text-transform: uppercase;
+}
+.display-2 {
+  font-size: 4.5rem;
+  line-height: 1.05em;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+  @include media-breakpoint-down(lg) {
+    font-size: 2.5rem;
+  }
+}
+
+.dynamic {
+  line-height: 1em;
+  letter-spacing: -0.02em;
+}
+
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3,
+h4,
+.h4,
+h5,
+.h5,
+h6,
+.h6 {
+  margin-bottom: rem.convert(24px);
+  margin-top: rem.convert(24px);
+  @include media-breakpoint-down(md) {
+    margin-bottom: rem.convert(16px);
+    margin-top: rem.convert(16px);
+  }
+  &:first-child {
+    margin-top: 0;
+  }
+  &:not(:first-child):not(:last-child) {
+    margin-top: rem.convert(24px);
+  }
+}
+h1,
+.h1 {
+  font-size: 4rem;
+  line-height: 1.1em;
+  letter-spacing: -0.02em;
+  @include media-breakpoint-down(lg) {
+    font-size: 3.5rem;
+  }
+}
+h2,
+.h2 {
+  font-size: 3.5rem;
+  line-height: 1.1em;
+  letter-spacing: -0.02em;
+  @include media-breakpoint-down(lg) {
+    font-size: 3rem;
+  }
+}
+h3,
+.h3 {
+  font-size: 2rem;
+  line-height: 1.1em;
+  letter-spacing: -0.02em;
+  @include media-breakpoint-down(lg) {
+    font-size: 1.5rem;
+  }
+}
+h4,
+.h4 {
+  font-size: 1.5rem;
+  line-height: 1.5em;
+  font-weight: $bold;
+  @include media-breakpoint-down(lg) {
+    font-size: 1.25rem;
+  }
+}
+
+.body-1,
+.body-2,
+.body-3 {
+  line-height: 1.5em;
+  font-weight: $medium;
+}
+.body-1 {
+  font-size: 1.25rem;
+  @include media-breakpoint-down(lg) {
+    font-size: 1.125rem;
+  }
+}
+.body-3 {
+  font-size: 0.875rem;
+}
+
+.label {
+  font-size: 0.875rem;
+  line-height: 1.2em;
+  font-weight: $bold;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+.sub-text-large {
+  @include media-breakpoint-up(xl) {
+    padding-left: 48px;
+    & + div {
+      padding-right: 48px;
+    }
+  }
+  p {
+    color: var(--dark-grey);
+    line-height: 1.5em;
+    font-weight: $medium;
+    font-size: 1.25rem;
+    @include media-breakpoint-down(lg) {
+      font-size: 1.125rem;
+    }
+  }
+}

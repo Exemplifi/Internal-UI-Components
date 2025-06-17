@@ -1,0 +1,71 @@
+// Accordion - v1
+
+// Accordion Component Styles (v1)
+
+.accordion-section {
+  background: #fff;
+}
+
+.accordion--v1 {
+  width: 100%;
+}
+
+.accordion__item {
+  background: #F4F9FF;
+  border-radius: 8px;
+  padding: 20px 40px;
+  box-shadow: 0 2px 8px rgba(49, 68, 89, 0.04);
+  transition: box-shadow 0.2s;
+}
+
+.accordion__item + .accordion__item {
+  margin-top: 12px;
+}
+
+.accordion__header {
+  cursor: pointer;
+  min-height: 40px;
+}
+
+.accordion__question {
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 1.21;
+  color: #3F5773;
+  letter-spacing: 0.03em;
+  text-align: left;
+}
+
+.accordion__icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  background: #fff;
+  border-radius: 50%;
+  box-shadow: 0 1px 2px rgba(49, 68, 89, 0.06);
+}
+
+@media (max-width: 991px) {
+  .accordion__item {
+    padding: 16px 20px;
+  }
+  .accordion__question {
+    font-size: 16px;
+  }
+}
+@media (max-width: 600px) {
+  .accordion__item {
+    padding: 12px 8px;
+  }
+  .accordion__question {
+    font-size: 14px;
+  }
+}
+
+
+// Accordion - v1.1
+
+

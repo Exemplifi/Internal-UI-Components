@@ -1,0 +1,118 @@
+// Stats - v1
+
+.stats--v1 {
+  background: #314459;
+  border-radius: 32px;
+  padding: 104px 0;
+}
+
+.stats__title {
+  color: #fff;
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 1.21;
+  margin-bottom: 12px;
+}
+
+.stats__subtitle {
+  color: #DCECFF;
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.21;
+  margin-bottom: 40px;
+}
+
+.stats__row {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.stats__block {
+  background: transparent;
+  border-radius: 24px;
+  padding: 32px 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 180px;
+  position: relative;
+}
+
+.stats__number {
+  color: #fff;
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 1.21;
+  margin-bottom: 8px;
+}
+
+.stats__unit {
+  font-size: 20px;
+  font-weight: 400;
+  margin-left: 4px;
+}
+
+.stats__desc {
+  color: #DCECFF;
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.21;
+}
+
+// Divider SVGs are styled inline in HTML for color/height
+
+@media (max-width: 991px) {
+  .stats--v1 {
+    padding: 56px 0;
+    border-radius: 24px;
+  }
+  .stats__title {
+    font-size: 32px;
+  }
+  .stats__block {
+    padding: 24px 8px;
+    min-height: 120px;
+  }
+}
+
+@media (max-width: 600px) {
+  .stats--v1 {
+    padding: 32px 0;
+    border-radius: 16px;
+  }
+  .stats__title {
+    font-size: 24px;
+  }
+  .stats__block {
+    padding: 16px 4px;
+    min-height: 80px;
+  }
+  .stats__number {
+    font-size: 20px;
+  }
+  .stats__desc {
+    font-size: 14px;
+  }
+}
+
+@media (min-width: 992px) {
+  .stats__block:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    width: 1px;
+    height: 80px;
+    background: #90B0D7;
+    z-index: 2;
+  }
+}
+
+
+
