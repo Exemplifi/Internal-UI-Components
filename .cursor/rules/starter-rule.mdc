@@ -1,0 +1,437 @@
+---
+description: 
+globs: 
+alwaysApply: false
+---
+# Project Starter Pack Rules
+
+## Project Structure
+```
+project-root/
+# Project Starter Pack Rules
+
+## Project Structure
+```
+project-root/
+├── src/
+│   ├── assets/
+│   │   ├── css/
+│   │   │   ├── styles.css
+│   │   │   └── base.css
+│   │   ├── js/
+│   │   │   ├── main.js
+│   │   │   ├── carousel.js
+│   │   │   └── swiper-config.js
+│   │   ├── fonts/
+│   │   └── scss/
+│   │       ├── styles.scss
+│   │       ├── base.scss
+│   │       ├── utils.scss
+│   │       ├── abstracts/
+│   │       │   ├── _variables.scss
+│   │       │   ├── _mixins.scss
+│   │       │   └── _functions.scss
+│   │       ├── base/
+│   │       │   ├── _reset.scss
+│   │       │   ├── _typography.scss
+│   │       │   ├── _utilities.scss
+│   │       │   ├── _screenres.scss
+│   │       │   └── _bootstrap.scss
+│   │       ├── components/
+│   │       │   ├── _buttons.scss
+│   │       │   ├── _cards.scss
+│   │       │   ├── _forms.scss
+│   │       │   ├── _carousels.scss
+│   │       │   ├── _heros.scss
+│   │       │   ├── _image-and-text.scss
+│   │       │   ├── _stats.scss
+│   │       │   └── _typography.scss
+│   │       ├── includes/
+│   │       │   └── _mixins.scss
+│   │       ├── page/
+│   │       │   └── _home.scss
+│   │       └── utils/
+│   │           ├── _filter.scss
+│   │           ├── _fonts.scss
+│   │           ├── _mixins.scss
+│   │           ├── _rem-convert.scss
+│   │           ├── _vars-bootstrap.scss
+│   │           └── _vars-global.scss
+│   └── htmls/
+│       └── index.html
+├── public/
+│   └── images/
+├── dist/
+├── scripts/
+├── node_modules/
+├── .gitignore
+├── index.html
+├── package.json
+├── package-lock.json
+├── vite.config.js
+└── README.md
+```
+
+## Required Files Content
+
+### package.json
+```json
+{
+  "name": "project-name",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "sass": "sass --watch --style=compressed --load-path=node_modules src/assets/scss/styles.scss src/assets/css/styles.css",
+    "base:sass": "sass --watch --style=compressed src/assets/scss/base.scss src/assets/css/base.css"
+  },
+  "devDependencies": {
+    "vite": "^6.3.5"
+  },
+  "dependencies": {
+    "@popperjs/core": "^2.11.8",
+    "bootstrap": "^5.3.6",
+    "breakpoint-sass": "^3.0.0",
+    "jquery": "^3.7.1",
+    "sass": "^1.89.2",
+    "sass-rem": "^4.0.0",
+    "swiper": "^11.0.7"
+  }
+}
+```
+
+### vite.config.js
+```javascript
+import { defineConfig } from 'vite';
+import { resolve } from 'path';
+
+export default defineConfig({
+  root: './',
+  publicDir: 'public',
+  build: {
+    outDir: 'dist',
+    assetsDir: 'assets',
+    emptyOutDir: true,
+    rollupOptions: {
+      input: {
+        main: resolve(__dirname, 'index.html'),
+      },
+    },
+  },
+  server: {
+    port: 3000,
+    open: true,
+  },
+});
+```
+
+### .gitignore
+```
+# Dependencies
+node_modules/
+.pnp
+.pnp.js
+
+# Production
+dist/
+build/
+
+# Misc
+.DS_Store
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Editor directories and files
+.idea/
+.vscode/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+```
+
+### src/assets/scss/styles.scss
+```scss
+@use "sass:math";
+
+// all base styles
+@use "./base/colors" as *;
+@use "./base/screenres" as *;
+@use './base/bootstrap' as *;
+
+// Importing base
+@use "base";
+
+// Importing components
+@use "components/buttons";
+@use "components/cards";
+@use "components/forms";
+@use "components/carousels";
+@use "components/heros";
+@use "components/image-and-text";
+@use "components/stats";
+@use "components/typography";
+
+// Importing pages
+@use "page/home";
+```
+
+### src/assets/scss/base.scss
+```scss
+@use "sass:math";
+@use "sass:map";
+
+@use "utils/fonts" as *;
+@use "utils/rem-convert" as *;
+@use "utils/mixins" as *;
+@use "utils/vars-global" as *;
+@use "utils/vars-colors" as *;
+@use "utils/vars-bootstrap" as *;
+
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1200px
+);
+
+:root {
+  --body-font-family: #{$font-family-body};
+  --heading-font-family: #{$font-family-headings};
+  --body-text-color: #{$black};
+  --link-color: #{$black};
+
+  // Custom theme colors
+  @each $color, $value in $site-colors {
+    --#{$color}: #{$value};
+  }
+
+  // Margin spacings
+  @each $space, $value in $spacers {
+    --size-#{$space}: #{$value};
+  }
+
+  // Font sizes
+  @each $size, $value in $font-sizes {
+    --fz-#{$size}: #{$value};
+  }
+}
+```
+
+### src/assets/scss/base/_screenres.scss
+```scss
+$b5-mobile-width: 320px;
+$b5-tablet-width: 768px;
+$b5-desktop-width: 992px;
+
+@mixin mobile-only {
+  @media (min-width: #{$b5-mobile-width}) and (max-width: #{$b5-tablet-width - 1px}) {
+    @content;
+  }
+}
+
+@mixin tablet-only {
+  @media (min-width: #{$b5-tablet-width}) and (max-width: #{$b5-desktop-width - 1px}) {
+    @content;
+  }
+}
+
+@mixin mobile-and-tablet {
+  @media (min-width: #{$b5-mobile-width}) and (max-width: #{$b5-desktop-width - 1px}) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: #{$b5-desktop-width}) {
+    @content;
+  }
+}
+```
+
+### src/assets/scss/utils.scss
+```scss
+// Utils
+@use "sass:math";
+
+@use "../../node_modules/sass-rem/" as rem;
+
+@use "utils/fonts" as *;
+@use "utils/rem-convert" as *;
+@use "utils/filter" as *;
+@use "utils/mixins" as *;
+@use "utils/vars-global" as *;
+@use "utils/vars-colors" as *;
+@use "utils/vars-bootstrap" as *;
+```
+
+### src/assets/js/carousel.js
+```javascript
+// Carousel initialization and configuration
+document.addEventListener('DOMContentLoaded', function() {
+  // Add your carousel initialization code here
+});
+```
+
+### src/assets/js/swiper-config.js
+```javascript
+// Swiper configuration
+import Swiper from 'swiper';
+import { Navigation, Pagination } from 'swiper/modules';
+
+// Initialize Swiper
+const swiper = new Swiper('.swiper', {
+  modules: [Navigation, Pagination],
+  // Add your Swiper configuration here
+});
+```
+
+### src/assets/js/main.js
+```javascript
+// Main JavaScript file
+import './carousel.js';
+import './swiper-config.js';
+
+// Add your main JavaScript code here
+```
+
+### index.html (Root)
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Name</title>
+    <link rel="stylesheet" href="src/assets/css/base.css">
+    <link rel="stylesheet" href="src/assets/css/styles.css">
+</head>
+<body>
+    <div id="app">
+        <!-- Your content here -->
+    </div>
+    <script type="module" src="src/assets/js/main.js"></script>
+</body>
+</html>
+```
+
+### src/htmls/index.html
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Name</title>
+    <link rel="stylesheet" href="../assets/css/base.css">
+    <link rel="stylesheet" href="../assets/css/styles.css">
+</head>
+<body>
+    <div id="app">
+        <!-- Your content here -->
+    </div>
+    <script type="module" src="../assets/js/main.js"></script>
+</body>
+</html>
+```
+
+## Setup Instructions
+
+1. Create a new project directory
+2. Create all directories:
+   ```bash
+   mkdir -p src/assets/{css,js,fonts,scss/{abstracts,base,components,includes,page,utils}} src/htmls public/images dist scripts
+   ```
+3. Create all files:
+   ```bash
+   touch src/assets/css/{styles.css,base.css}
+   touch src/assets/js/{main.js,carousel.js,swiper-config.js}
+   touch src/assets/scss/{styles.scss,base.scss,utils.scss}
+   touch src/assets/scss/abstracts/{_variables.scss,_mixins.scss,_functions.scss}
+   touch src/assets/scss/base/{_reset.scss,_typography.scss,_utilities.scss,_screenres.scss,_bootstrap.scss}
+   touch src/assets/scss/components/{_buttons.scss,_cards.scss,_forms.scss,_carousels.scss,_heros.scss,_image-and-text.scss,_stats.scss,_typography.scss}
+   touch src/assets/scss/includes/_mixins.scss
+   touch src/assets/scss/page/_home.scss
+   touch src/assets/scss/utils/{_filter.scss,_fonts.scss,_mixins.scss,_rem-convert.scss,_vars-bootstrap.scss,_vars-global.scss}
+   touch src/htmls/index.html
+   touch {.gitignore,index.html,package.json,vite.config.js,README.md}
+   ```
+4. Copy the boilerplate HTML content to both index.html files:
+   ```bash
+   # For root index.html
+   cat > index.html << 'EOL'
+   <!DOCTYPE html>
+   <html lang="en">
+   <head>
+       <meta charset="UTF-8">
+       <meta name="viewport" content="width=device-width, initial-scale=1.0">
+       <title>Project Name</title>
+       <link rel="stylesheet" href="src/assets/css/base.css">
+       <link rel="stylesheet" href="src/assets/css/styles.css">
+   </head>
+   <body>
+       <div id="app">
+           <!-- Your content here -->
+       </div>
+       <script type="module" src="src/assets/js/main.js"></script>
+   </body>
+   </html>
+   EOL
+
+   # For src/htmls/index.html
+   cat > src/htmls/index.html << 'EOL'
+   <!DOCTYPE html>
+   <html lang="en">
+   <head>
+       <meta charset="UTF-8">
+       <meta name="viewport" content="width=device-width, initial-scale=1.0">
+       <title>Project Name</title>
+       <link rel="stylesheet" href="../assets/css/base.css">
+       <link rel="stylesheet" href="../assets/css/styles.css">
+   </head>
+   <body>
+       <div id="app">
+           <!-- Your content here -->
+       </div>
+       <script type="module" src="../assets/js/main.js"></script>
+   </body>
+   </html>
+   EOL
+   ```
+5. Initialize the project:
+   ```bash
+   npm init -y
+   ```
+6. Install dependencies:
+   ```bash
+   npm install
+   ```
+7. Start development server:
+   ```bash
+   npm run dev
+   ```
+
+## Notes
+- The SCSS structure follows the 7-1 pattern for better organization
+- Vite is used as the build tool
+- Bootstrap and Swiper are included for UI components
+- SASS is configured with source maps and compressed output
+- The project uses modern JavaScript (ES modules)
+- Screen resolution mixins are included for responsive design
+- Utility files are organized in the utils directory for better maintainability
+- All JavaScript files are properly configured with ES modules
+- Carousel and Swiper configurations are included
+- Added includes and page directories for better organization
+- Added fonts directory for font files
+
