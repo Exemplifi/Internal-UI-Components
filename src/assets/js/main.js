@@ -4,12 +4,11 @@ import "slick-carousel";
 // Make jQuery globally available
 window.$ = window.jQuery = $;
 
-import "../scss/styles.scss";
+import "../css/styles.css";
+
 import * as bootstrap from "bootstrap";
 
 import { createIcons, icons } from "lucide";
-
-// import './custom.js';
 
 createIcons({ icons });
 

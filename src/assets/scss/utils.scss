@@ -1,7 +1,7 @@
 // Utils
 @use "sass:math";
 
-@use "../../node_modules/sass-rem/" as rem;
+@use "sass-rem" as rem;
 
 @use "utils/fonts" as *;
 @use "utils/rem-convert" as *;
