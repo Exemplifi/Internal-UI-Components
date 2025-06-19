@@ -1,38 +1,48 @@
 import { defineConfig } from 'vite';
 import path from 'path';
+import fs from 'fs';
+
+// Get all JS files from src/assets/js directory
+const jsDirectory = path.resolve(__dirname, 'src/assets/js');
+const jsFiles = fs.readdirSync(jsDirectory)
+  .filter(file => file.endsWith('.js'))
+  .reduce((acc, file) => {
+    const name = file.replace('.js', '');
+    acc[name] = path.resolve(jsDirectory, file);
+    return acc;
+  }, {});
 
 export default defineConfig({
   root: '.',
   publicDir: 'public',
   build: {
-    outDir: 'dist',
+    outDir: 'src/assets/dist',
     emptyOutDir: true,
     rollupOptions: {
+      input: jsFiles,
       output: {
-        entryFileNames: 'assets/main.js',
-        chunkFileNames: 'assets/[name]-[hash].js',
-        assetFileNames: ({name}) => {
-          if (name && name.endsWith('.css')) {
-            return 'assets/main.css';
+        entryFileNames: '[name].min.js',
+        chunkFileNames: '[name]-[hash].min.js',
+        assetFileNames: (assetInfo) => {
+          if (assetInfo.name.endsWith('.css')) {
+            return 'style.min.css';
           }
-          return 'assets/[name]-[hash][extname]';
-        },
+          return '[name][extname]';
+        }
       },
     },
+    minify: true,
+    sourcemap: true,
+    // Disable CSS handling since we only want to process JS
+    cssCodeSplit: false,
+    cssMinify: true
   },
   resolve: {
     alias: {
       '@': path.resolve(__dirname, 'src'),
     },
   },
-  css: {
-    preprocessorOptions: {
-      scss: {
-        additionalData: '', // You can inject global SCSS variables/mixins here if needed
-      },
-    },
-  },
-  // Ensure Vite recognizes and bundles these asset types if imported
+  // Remove CSS preprocessing options since we're not handling CSS
   assetsInclude: [
     '**/*.woff',
     '**/*.woff2',
@@ -47,4 +57,4 @@ export default defineConfig({
   server: {
     open: true,
   },
-}); 
+});

@@ -26,7 +26,8 @@ $container-max-widths: (
   sm: 540px,
   md: 720px,
   lg: 960px,
-  xl: 1200px
+  xl: 1200px,
+  xxl: 1440px
 );
 :root {
   --body-font-family: #{$font-family-body};

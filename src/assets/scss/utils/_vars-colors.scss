@@ -2,30 +2,10 @@
 @use "sass:map";
 
 $site-colors: (
-  "black": #1d1d1d,
+  "black": #000000,
   "white": #ffffff,
-  "dark-red": #af272f,
-  "red": #e31b23,
-  "dark-grey": #585858,
-  "mid-grey": #e3e3e3,
-  "light-grey": #f9f9f9,
-  "error": #cc0000,
-  "success": #16a34a,
-  "alert": #febf00
 );
 
 // Rebranding
 $black: map.get($site-colors, "black");
 $white: map.get($site-colors, "white");
-$dark-red: map.get($site-colors, "dark-red");
-$red: map.get($site-colors, "red");
-$dark-grey: map.get($site-colors, "dark-grey");
-$mid-grey: map.get($site-colors, "mid-grey");
-$light-grey: map.get($site-colors, "light-grey");
-$error: map.get($site-colors, "error");
-$success: map.get($site-colors, "success");
-$alert: map.get($site-colors, "alert");
-
-// PRIMARY COLOURS
-$black: #000000;
-$white: #ffffff;
