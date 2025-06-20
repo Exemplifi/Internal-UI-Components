@@ -1,16 +1,5 @@
 import { defineConfig } from 'vite';
 import path from 'path';
-import fs from 'fs';
-
-// Get all JS files from src/assets/js directory
-const jsDirectory = path.resolve(__dirname, 'src/assets/js');
-const jsFiles = fs.readdirSync(jsDirectory)
-  .filter(file => file.endsWith('.js'))
-  .reduce((acc, file) => {
-    const name = file.replace('.js', '');
-    acc[name] = path.resolve(jsDirectory, file);
-    return acc;
-  }, {});
 
 export default defineConfig({
   root: '.',
@@ -19,7 +8,9 @@ export default defineConfig({
     outDir: 'src/assets/dist',
     emptyOutDir: true,
     rollupOptions: {
-      input: jsFiles,
+      input: {
+        main: path.resolve(__dirname, 'src/assets/js/main.js')
+      },
       output: {
         entryFileNames: '[name].min.js',
         chunkFileNames: '[name]-[hash].min.js',

@@ -1,4 +1,5 @@
 // Contact Form JS
+console.log('Form component JS loaded');
 
 document.addEventListener('DOMContentLoaded', function () {
   const form = document.getElementById('contactForm');
@@ -29,4 +30,4 @@ document.addEventListener('DOMContentLoaded', function () {
       }
     });
   });
-}); 
+});
