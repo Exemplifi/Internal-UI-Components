@@ -1,0 +1,74 @@
+---
+description: 
+globs: 
+alwaysApply: false
+---
+---
+description: "Coding Standard Rules"
+globs: ["*.js", "*.jsx", "*.ts", "*.tsx", "*.css", "*.scss", "*.html"]
+alwaysApply: false
+---
+
+# Coding Standard Rules
+
+## General Guidelines
+
+- **Use meaningful variable and function names**
+- **Avoid global variables unless absolutely necessary**
+- **Keep functions small and focused**
+- **Write clear and concise comments for complex logic**
+
+## JavaScript/TypeScript
+
+- **Use ES6+ features (let, const, arrow functions)**
+- **Use strict equality (`===` and `!==`)**
+- **Avoid using `var`**
+- **Always use semicolons at the end of statements**
+- **Use consistent indentation (2 spaces)**
+- **Use template literals for string interpolation**
+
+## React/JSX
+
+- **Write functional components by default**
+- **Use hooks for state and side effects**
+- **Avoid prop drilling; use context or state management libraries as needed**
+- **Destructure props at the top of the component**
+- **Use PascalCase for component names**
+
+## SCSS/Styling
+
+- **Co-locate a .scss file with each component**
+- **Use SCSS variables for colors, spacing, and fonts**
+- **Use mixins for reusable styles**
+- **Leverage parent selector (`&`) for pseudo-classes**
+- **Organize SCSS files using partials and imports**
+- **Name classes using camelCase or BEM conventions**
+- **Keep global styles minimal (reset, typography)**
+- **Avoid inline styles**
+- **Use external stylesheets for CSS/SCSS**
+- **Use Flexbox and Grid for layout**
+- **Use rem and em units for scalable typography**
+- **Avoid !important; use specificity instead**
+- **Document complex SCSS rules with comments**
+
+## HTML
+
+- **Use semantic HTML elements**
+- **Ensure all images have `alt` attributes**
+- **Use ARIA attributes for accessibility**
+- **Validate your HTML with tools like W3C Validator**
+
+## Accessibility
+
+- **Ensure keyboard navigation is supported**
+- **Provide text alternatives for non-text content**
+- **Use proper heading hierarchy**
+- **Test with screen readers and accessibility tools**
+
+## Testing
+
+- **Write unit tests for all components**
+- **Use Jest and React Testing Library for React apps**
+- **Test for accessibility issues using tools like axe-core**
+
+

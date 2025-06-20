@@ -20,7 +20,6 @@ project-root/
 │   │   │   └── base.css
 │   │   ├── js/
 │   │   │   ├── main.js
-│   │   │   ├── carousel.js
 │   │   │   └── swiper-config.js
 │   │   ├── fonts/
 │   │   └── scss/
@@ -276,14 +275,6 @@ $b5-desktop-width: 992px;
 @use "utils/vars-bootstrap" as *;
 ```
 
-### src/assets/js/carousel.js
-```javascript
-// Carousel initialization and configuration
-document.addEventListener('DOMContentLoaded', function() {
-  // Add your carousel initialization code here
-});
-```
-
 ### src/assets/js/swiper-config.js
 ```javascript
 // Swiper configuration
@@ -300,7 +291,6 @@ const swiper = new Swiper('.swiper', {
 ### src/assets/js/main.js
 ```javascript
 // Main JavaScript file
-import './carousel.js';
 import './swiper-config.js';
 
 // Add your main JavaScript code here
@@ -431,7 +421,7 @@ import './swiper-config.js';
 - Screen resolution mixins are included for responsive design
 - Utility files are organized in the utils directory for better maintainability
 - All JavaScript files are properly configured with ES modules
-- Carousel and Swiper configurations are included
+- Swiper configuration is included
 - Added includes and page directories for better organization
 - Added fonts directory for font files
 
