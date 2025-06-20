@@ -1,12 +1,198 @@
 // Icon & Text- v1
 
+.icon-text-section {
+    padding: 0;
+    width: 100%;
 
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
 
-// Icon & Text- v1.1
+    .icon-text-wrapper {
+        background-color: #F4F9FF;
+        border-radius: 24px;
+        padding: 32px;
+    }
 
+    .icon-text-header {
+        margin-bottom: 16px;
 
+        .date-icon {
+            display: flex;
+            align-items: center;
+            gap: 16px;
 
-// Icon & Text- v2
+            .calendar-icon {
+                width: 40px;
+                height: 40px;
+                position: relative;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                img {
+                    position: absolute;
+
+                    &.calendar-top {
+                        top: 6.67px;
+                        width: 30px;
+                        height: 10px;
+                    }
+
+                    &.calendar-middle {
+                        top: 0;
+                        width: 11.67px;
+                        height: 6.67px;
+                    }
+
+                    &.calendar-bottom {
+                        bottom: 6.67px;
+                        width: 30px;
+                        height: 15px;
+                        opacity: 0.25;
+                    }
+                }
+            }
+
+            .date {
+                font-family: 'Inter', sans-serif;
+                font-size: 32px;
+                font-weight: 600;
+                line-height: 130%;
+                letter-spacing: 0.03em;
+                color: #0079FE;
+            }
+        }
+    }
+
+    .icon-text-content {
+        background: #FFFFFF;
+        border: 1px solid #90B0D7;
+        border-radius: 12px;
+        padding: 12px;
+
+        .content-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 12px;
+
+            .event-info {
+                display: flex;
+                align-items: center;
+                gap: 12px;
+
+                .event-icon {
+                    width: 24px;
+                    height: 24px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+
+                    img {
+                        width: 18px;
+                        height: 20px;
+                    }
+                }
+
+                .event-title {
+                    font-family: 'Inter', sans-serif;
+                    font-size: 16px;
+                    font-weight: 700;
+                    line-height: 137.5%;
+                    color: #314459;
+                    margin: 0;
+                }
+            }
+
+            .view-more {
+                display: flex;
+                align-items: center;
+                gap: 12px;
+                cursor: pointer;
+
+                span {
+                    font-family: 'Inter', sans-serif;
+                    font-size: 16px;
+                    font-weight: 600;
+                    line-height: 130%;
+                    color: #314459;
+                }
+
+                .arrow-circle {
+                    width: 32px;
+                    height: 32px;
+                    background: #459DFF;
+                    border-radius: 50%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+
+                    img {
+                        width: 13.5px;
+                        height: 13.5px;
+                    }
+                }
+            }
+        }
+
+        .content-details {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+
+            .time-info,
+            .event-type {
+                display: flex;
+                align-items: center;
+                gap: 12px;
+
+                .time-icon {
+                    width: 24px;
+                    height: 24px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+
+                    img {
+                        width: 19.5px;
+                        height: 19.5px;
+                    }
+                }
+
+                .time,
+                .type {
+                    font-family: 'Inter', sans-serif;
+                    font-size: 16px;
+                    font-weight: 500;
+                    line-height: 137.5%;
+                    color: #4C6785;
+                }
+            }
+
+            .divider {
+                width: 1px;
+                height: 32px;
+                background-color: #596F8B;
+            }
+        }
+    }
+}
+
+// Hover effects
+.icon-text-content {
+    .view-more {
+        &:hover {
+            .arrow-circle {
+                background: darken(#459DFF, 10%);
+            }
+            span {
+                color: #0079FE;
+            }
+        }
+    }
+}
 
 
 
