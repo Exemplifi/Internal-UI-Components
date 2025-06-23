@@ -4,8 +4,14 @@
 $site-colors: (
   "black": #000000,
   "white": #ffffff,
+  "gray": #4c6785,
+  "blue": #0079fe,
+  "light-blue": #0084FF,
 );
 
 // Rebranding
 $black: map.get($site-colors, "black");
 $white: map.get($site-colors, "white");
+$gray: map.get($site-colors, "gray");
+$blue: map.get($site-colors, "blue");
+$light-blue: map.get($site-colors, "light-blue");

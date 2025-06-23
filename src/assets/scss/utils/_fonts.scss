@@ -1,6 +1,133 @@
 $font-base-url: "../../fonts";
 
 @font-face {
+  font-family: "Inter Regular";
+  font-style: normal;
+  font-weight: normal;
+  src: url("#{$font-base-url}/Inter-Regular.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Inter Italic";
+  font-style: normal;
+  font-weight: normal;
+  src: url("#{$font-base-url}/Inter-Italic.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Inter Thin BETA";
+  font-style: normal;
+  font-weight: normal;
+  src: url("#{$font-base-url}/Inter-Thin-BETA.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Inter Thin Italic BETA";
+  font-style: normal;
+  font-weight: normal;
+  src: url("#{$font-base-url}/Inter-ThinItalic-BETA.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Inter Extra Light BETA";
+  font-style: normal;
+  font-weight: normal;
+  src: url("#{$font-base-url}/Inter-ExtraLight-BETA.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Inter Extra Light Italic BETA";
+  font-style: normal;
+  font-weight: normal;
+  src: url("#{$font-base-url}/Inter-ExtraLightItalic-BETA.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Inter Light BETA";
+  font-style: normal;
+  font-weight: normal;
+  src: url("#{$font-base-url}/Inter-Light-BETA.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Inter Light Italic BETA";
+  font-style: normal;
+  font-weight: normal;
+  src: url("#{$font-base-url}/Inter-LightItalic-BETA.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Inter Medium";
+  font-style: normal;
+  font-weight: normal;
+  src: url("#{$font-base-url}/Inter-Medium.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Inter Medium Italic";
+  font-style: normal;
+  font-weight: normal;
+  src: url("#{$font-base-url}/Inter-MediumItalic.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Inter Semi Bold";
+  font-style: normal;
+  font-weight: normal;
+  src: url("#{$font-base-url}/Inter-SemiBold.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Inter Semi Bold Italic";
+  font-style: normal;
+  font-weight: normal;
+  src: url("#{$font-base-url}/Inter-SemiBoldItalic.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Inter Bold";
+  font-style: normal;
+  font-weight: normal;
+  src: url("#{$font-base-url}/Inter-Bold.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Inter Bold Italic";
+  font-style: normal;
+  font-weight: normal;
+  src: url("#{$font-base-url}/Inter-BoldItalic.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Inter Extra Bold";
+  font-style: normal;
+  font-weight: normal;
+  src: url("#{$font-base-url}/Inter-ExtraBold.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Inter Extra Bold Italic";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Inter Extra Bold Italic"),
+    url("Inter-ExtraBoldItalic.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Inter Black";
+  font-style: normal;
+  font-weight: normal;
+  src: url("#{$font-base-url}/Inter-Black.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Inter Black Italic";
+  font-style: normal;
+  font-weight: normal;
+  src: url("#{$font-base-url}/Inter-BlackItalic.woff") format("woff");
+}
+
+@font-face {
   font-family: "Segoe UI Regular";
   font-style: normal;
   font-weight: normal;

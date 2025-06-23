@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Header Component</title>
+    <link rel="stylesheet" href="../assets/dist/style.min.css">
+</head>
+<body>
+
+    <!-- Header Component -->
+    <header class="header">
+      <nav class="navbar navbar-expand-lg">
+        <div class="container">
+          <!-- Logo -->
+          <a href="/" class="header__logo" aria-label="Northern Water Home">
+            <img src="../assets/images/northern-water-logo.svg" alt="Northern Water Logo" width="149" height="56">
+          </a>
+
+          <!-- Mobile Toggle Button -->
+          <button class="navbar-toggler header__toggle" type="button" data-bs-toggle="collapse" data-bs-target="#headerNavigation" aria-controls="headerNavigation" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <!-- Navigation -->
+          <div class="collapse navbar-collapse header__navigation" id="headerNavigation">
+            <ul class="navbar-nav header__menu">
+              <!-- Water Dropdown -->
+              <li class="nav-item dropdown header__menu-item">
+                <a class="nav-link dropdown-toggle header__menu-link" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Water
+                  <img src="../assets/images/chevron-down.svg" alt="" class="header__menu-icon" aria-hidden="true">
+                </a>
+                <ul class="dropdown-menu header__submenu">
+                  <li><a class="dropdown-item header__submenu-link" href="#">Submenu Item 1</a></li>
+                  <li><a class="dropdown-item header__submenu-link" href="#">Submenu Item 2</a></li>
+                </ul>
+              </li>
+
+              <!-- Environment Dropdown -->
+              <li class="nav-item dropdown header__menu-item">
+                <a class="nav-link dropdown-toggle header__menu-link" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Environment
+                  <img src="../assets/images/chevron-down.svg" alt="" class="header__menu-icon" aria-hidden="true">
+                </a>
+                <ul class="dropdown-menu header__submenu">
+                  <li><a class="dropdown-item header__submenu-link" href="#">Submenu Item 1</a></li>
+                  <li><a class="dropdown-item header__submenu-link" href="#">Submenu Item 2</a></li>
+                </ul>
+              </li>
+
+              <!-- Data Dropdown -->
+              <li class="nav-item dropdown header__menu-item">
+                <a class="nav-link dropdown-toggle header__menu-link" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Data
+                  <img src="../assets/images/chevron-down.svg" alt="" class="header__menu-icon" aria-hidden="true">
+                </a>
+                <ul class="dropdown-menu header__submenu">
+                  <li><a class="dropdown-item header__submenu-link" href="#">Submenu Item 1</a></li>
+                  <li><a class="dropdown-item header__submenu-link" href="#">Submenu Item 2</a></li>
+                </ul>
+              </li>
+
+              <!-- About Dropdown -->
+              <li class="nav-item dropdown header__menu-item">
+                <a class="nav-link dropdown-toggle header__menu-link" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  About
+                  <img src="../assets/images/chevron-down.svg" alt="" class="header__menu-icon" aria-hidden="true">
+                </a>
+                <ul class="dropdown-menu header__submenu">
+                  <li><a class="dropdown-item header__submenu-link" href="#">Submenu Item 1</a></li>
+                  <li><a class="dropdown-item header__submenu-link" href="#">Submenu Item 2</a></li>
+                </ul>
+              </li>
+
+              <!-- News Link -->
+              <li class="nav-item header__menu-item">
+                <a class="nav-link header__menu-link" href="#">News</a>
+              </li>
+            </ul>
+
+            <!-- Right Side Actions -->
+            <div class="header__actions">
+              <!-- Search Button -->
+              <button type="button" class="header__search-btn" aria-label="Open search">
+                <img src="../assets/images/search.svg" alt="" aria-hidden="true">
+              </button>
+
+              <!-- Login Button -->
+              <a href="/login" class="btn header__login-btn">
+                Water Provider Login
+                <img src="../assets/images/arrow-right.svg" alt="" aria-hidden="true">
+              </a>
+            </div>
+          </div>
+        </div>
+      </nav>
+
+      <!-- Bottom Border -->
+      <div class="header__border"></div>
+    </header>
+
+    <script src="../assets/dist/main.min.js"></script>
+</body>
+</html>
