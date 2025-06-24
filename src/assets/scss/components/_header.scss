@@ -1,1 +1,236 @@
-// Header v1
+// Header Component
+@import "../utils/rem-convert";
+
+.header {
+  position: relative;
+  background-color: $gray;
+    @include media-breakpoint-up(lg) {
+        @include rem-convert(padding, 5px 0);
+    }
+  // Navbar Base Styles
+  .navbar {
+    padding: 0;
+    @include rem-convert(min-height, 56px);
+  }
+
+  // Logo
+  &__logo {
+    display: block;
+    @include rem-convert((width, height), 149px, 56px);
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+
+  // Navigation
+  &__navigation {
+    @include media-breakpoint-up(lg) {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      @include rem-convert(margin-left, 21px);
+    }
+  }
+
+  // Menu
+  &__menu {
+    @include media-breakpoint-up(lg) {
+      display: flex;
+      @include rem-convert(gap, 16px);
+      margin-right: auto;
+    }
+  }
+
+  // Menu Item
+  &__menu-item {
+    position: relative;
+  }
+
+  // Menu Link
+  &__menu-link {
+    display: flex !important;
+    align-items: center;
+    @include rem-convert(column-gap, 16px);
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    @include rem-convert(font-size, 16px);
+    line-height: 1.2;
+    color: $white !important;
+    @include rem-convert(padding, 8px 0);
+
+    @include media-breakpoint-up(lg) {
+      @include rem-convert(padding, 16px 0);
+    }
+    @include media-breakpoint-down(lg) {
+        justify-content: space-between;
+    }
+
+    &:hover,
+    &:focus {
+      color: rgba($white, 0.8) !important;
+    }
+
+    // Remove Bootstrap's default dropdown arrow
+    &.dropdown-toggle::after {
+      display: none;
+    }
+  }
+
+  // Menu Icon (chevron)
+  &__menu-icon {
+    @include rem-convert((width, height), 12px, 6px);
+    transition: transform 0.3s ease;
+
+    &.rotated {
+      transform: rotate(180deg);
+    }
+
+    .show > .nav-link & {
+      transform: rotate(180deg);
+    }
+  }
+
+  // Submenu
+  &__submenu {
+    background-color: #314459;
+    border: none;
+    @include rem-convert(border-radius, 8px);
+    @include rem-convert(padding, 8px 0);
+    @include rem-convert(min-width, 200px);
+
+    @include media-breakpoint-down(lg) {
+      border-radius: 0;
+      box-shadow: none;
+      background-color: rgba($white, 0.1);
+    }
+  }
+
+  // Submenu Link
+  &__submenu-link {
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    @include rem-convert(font-size, 14px);
+    line-height: 1.2;
+    color: $white;
+    @include rem-convert(padding, 8px 16px);
+
+    &:hover,
+    &:focus {
+      background-color: rgba($white, 0.1);
+      color: rgba($white, 0.8);
+    }
+  }
+
+  // Actions Container
+  &__actions {
+    display: flex;
+    align-items: center;
+    @include rem-convert(gap, 24px);
+    @include rem-convert(margin-top, 16px);
+
+    @include media-breakpoint-up(lg) {
+      margin-top: 0;
+    }
+    @include media-breakpoint-down(lg) {
+        justify-content: space-between;
+    }
+  }
+
+  // Search Button
+  &__search-btn {
+    background: none;
+    border: none;
+    padding: 0;
+    @include rem-convert((width, height), 28px, 28px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: opacity 0.2s ease;
+
+    &:hover,
+    &:focus {
+      opacity: 0.8;
+    }
+
+    img {
+      @include rem-convert((width, height), 18.67px, 18.67px);
+    }
+  }
+
+  // Login Button
+  &__login-btn {
+    display: flex;
+    align-items: center;
+    @include rem-convert(gap, 8px);
+    background-color: $white;
+    @include rem-convert(border-radius, 8px);
+    @include rem-convert(padding, 12px 24px);
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    @include rem-convert(font-size, 16px);
+    line-height: 1.2;
+    color: #314459;
+    text-decoration: none;
+    transition: background-color 0.2s ease;
+
+    &:hover,
+    &:focus {
+      background-color: darken($white, 5%);
+    }
+
+    img {
+      @include rem-convert((width, height), 16px, 16px);
+    }
+  }
+
+  // Mobile Toggle Button
+  &__toggle {
+    padding: 0;
+    border: none;
+    @include rem-convert((width, height), 32px, 32px);
+    transition: all 0.3s ease;
+
+    @include media-breakpoint-up(lg) {
+      display: none;
+    }
+
+    .navbar-toggler-icon {
+      background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M3 12H21M3 6H21M3 18H21' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+      transition: background-image 0.3s ease;
+    }
+
+    &[aria-expanded="true"] {
+      .navbar-toggler-icon {
+        background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path fill="%23FFFFFF" d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z"/></svg>');
+      }
+    }
+  }
+
+  // Bottom Border
+  &__border {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    @include rem-convert(height, 1px);
+    background-color: #90B0D7;
+  }
+
+  // Responsive Styles
+  @include media-breakpoint-down(lg) {
+    .navbar-collapse {
+      position: fixed;
+      @include rem-convert(top, 56px);
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: rgba(#314459, 0.95);
+      @include rem-convert(padding, 24px 16px);
+      overflow-y: auto;
+    }
+  }
+}
