@@ -7,6 +7,7 @@ $site-colors: (
   "gray": #4c6785,
   "blue": #0079fe,
   "light-blue": #0084FF,
+  "primary-dark": #314459,
 );
 
 // Rebranding
@@ -15,3 +16,4 @@ $white: map.get($site-colors, "white");
 $gray: map.get($site-colors, "gray");
 $blue: map.get($site-colors, "blue");
 $light-blue: map.get($site-colors, "light-blue");
+$primary-dark: map.get($site-colors, "primary-dark");

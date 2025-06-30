@@ -20,6 +20,7 @@ import './card-with-icon.js';
 import './icon-with-text.js';
 import './header.js';
 import './footer.js';
+import './exemplifi-header.js';
 
 
 
