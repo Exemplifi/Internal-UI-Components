@@ -11,7 +11,7 @@
     "build:js": "vite build --config vite.config.js --mode production"
   },
   "devDependencies": {
-    "figma-developer-mcp": "^0.4.2",
+    "figma-developer-mcp": "^0.6.3",
     "vite": "^6.3.5"
   },
   "dependencies": {
