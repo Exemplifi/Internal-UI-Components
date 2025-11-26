@@ -11,8 +11,8 @@
     "build:js": "vite build --config vite.config.js --mode production"
   },
   "devDependencies": {
-    "figma-developer-mcp": "^0.6.3",
-    "vite": "^6.3.5"
+    "figma-developer-mcp": "^0.4.2",
+    "vite": "^6.4.1"
   },
   "dependencies": {
     "@popperjs/core": "^2.11.8",
