@@ -1,7 +1,12 @@
+// Bootstrap styles
 @import "../../../../node_modules/bootstrap/scss/bootstrap";
-@import "./swiper";
+
+// Slick Carousel styles
 @import "../../../../node_modules/slick-carousel/slick/slick";
 @import "../../../../node_modules/slick-carousel/slick/slick-theme";
 
-// Import components
+// Swiper custom overrides (core/module styles are imported via JS)
+@import "./swiper";
+
+// Components
 @import "../components/components";
