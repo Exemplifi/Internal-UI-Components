@@ -1,110 +1,27 @@
 import $ from "jquery";
+import "slick-carousel";
+import * as bootstrap from "bootstrap";
+import { createIcons, icons } from "lucide";
 
 // Make jQuery globally available
 window.$ = window.jQuery = $;
 
-// Import Swiper styles
-import 'swiper/css';
-import 'swiper/css/navigation';
-import 'swiper/css/pagination';
+// Import styles
+import "../css/styles.css";
 
-import "../scss/styles.scss";
-import * as bootstrap from "bootstrap";
-import { createIcons, icons } from "lucide";
-import Swiper from 'swiper';
-import { Navigation, Pagination, Autoplay } from 'swiper/modules';
+// Initialize Lucide icons
+createIcons({ icons });
 
-// Initialize Swiper instances
-document.addEventListener('DOMContentLoaded', () => {
-  // Carousel Variant 1
-  const carousel1 = new Swiper('.carousel-v1', {
-    modules: [Navigation, Pagination, Autoplay],
-    slidesPerView: 1,
-    spaceBetween: 30,
-    loop: true,
-    autoplay: {
-      delay: 3000,
-      disableOnInteraction: false,
-    },
-    pagination: {
-      el: '.swiper-pagination',
-      clickable: true,
-    },
-    navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
-    },
-    breakpoints: {
-      768: {
-        slidesPerView: 2,
-      },
-      992: {
-        slidesPerView: 3,
-      },
-      1200: {
-        slidesPerView: 4,
-      },
-    },
-  });
+// Import component scripts
+import './form.js';
+import './hero.js';
+import './script.js';
+import './card-with-icon.js';
+import './icon-with-text.js';
+import './header.js';
+import './footer.js';
+import './exemplifi-header.js';
 
-  // Carousel Variant 2
-  const carousel2 = new Swiper('.carousel-v2', {
-    modules: [Navigation, Pagination, Autoplay],
-    slidesPerView: 1,
-    spaceBetween: 30,
-    loop: true,
-    autoplay: {
-      delay: 3000,
-      disableOnInteraction: false,
-    },
-    pagination: {
-      el: '.swiper-pagination',
-      clickable: true,
-    },
-    navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
-    },
-    breakpoints: {
-      768: {
-        slidesPerView: 2,
-      },
-      992: {
-        slidesPerView: 3,
-      },
-    },
-  });
-
-  // Carousel Variant 3
-  const carousel3 = new Swiper('.carousel-v3', {
-    modules: [Navigation, Pagination, Autoplay],
-    slidesPerView: 1,
-    spaceBetween: 30,
-    loop: true,
-    autoplay: {
-      delay: 3000,
-      disableOnInteraction: false,
-    },
-    pagination: {
-      el: '.swiper-pagination',
-      clickable: true,
-    },
-    navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
-    },
-    breakpoints: {
-      768: {
-        slidesPerView: 2,
-      },
-      992: {
-        slidesPerView: 3,
-      },
-    },
-  });
-
-  createIcons({ icons });
-});
 
 
 

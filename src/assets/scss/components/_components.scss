@@ -3,10 +3,12 @@
 
 // @import "../../../node_modules/bootstrap/scss/bootstrap.scss";
 @import "../utils/vars-global";
+@import '../utils/vars-colors';
 
 @import 'accordions';
 @import 'buttons';
 @import 'calenders';
+@import 'card-with-icon';
 @import 'cards';
 @import 'carousels';
 @import 'footer';
@@ -18,5 +20,5 @@
 @import 'stats';
 @import 'tables';
 @import 'text-only';
-@import 'heros';
 @import "typography";
+@import "exemplifi-header";

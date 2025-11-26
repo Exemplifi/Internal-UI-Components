@@ -1,0 +1,164 @@
+---
+description:
+globs:
+alwaysApply: true
+---
+# Enhanced Web Accessibility Coding Standards (WCAG 2.1 AA)
+
+## Images
+- All `<img>` elements MUST have a valid `alt` attribute
+  - Use `alt=""` for decorative images
+  - Provide meaningful, concise alternative text for informative images
+- All inline SVGs conveying meaning MUST have:
+  - `role="img"`
+  - `aria-label` or `aria-labelledby`
+- Complex images (charts, diagrams) MUST have:
+  - Long descriptions (`<figcaption>` or `aria-describedby`)
+  - Or link to detailed explanations
+
+## Interactive Elements (Links, Buttons, etc.)
+- All `<button>` and `<a>` elements MUST have:
+  - Descriptive visible text OR
+  - `aria-label` / `aria-labelledby`
+- Links MUST:
+  - Avoid vague text ("click here", "read more")
+  - Be programmatically and visually distinct from surrounding text
+  - Include visible focus indicators (not removed via outline: none)
+- All interactive elements MUST:
+  - Be operable using keyboard only
+  - Use `role` attributes only when native semantics aren't sufficient
+  - Have a `tabindex="0"` if not natively focusable
+  - Be spaced sufficiently to prevent mis-taps on mobile (`44x44px` minimum)
+- No duplicate links pointing to the same destination with different labels
+
+## Forms
+- Every form input MUST be:
+  - Labeled using `<label for="id">` OR
+  - `aria-label` OR
+  - `aria-labelledby`
+- Groups of radio buttons/checkboxes MUST:
+  - Use `<fieldset>` and `<legend>` or equivalent ARIA
+- All error messages MUST:
+  - Be associated with the input via `aria-describedby`
+  - Be exposed to screen readers with `role="alert"` or `aria-live="assertive"`
+  - Be visually distinct (color + icon or text)
+- Inputs MUST include:
+  - `autocomplete` attributes where applicable
+  - Accessible descriptions where additional context is required
+- Required fields MUST be indicated using:
+  - Visible indicators AND
+  - `aria-required="true"`
+
+## Page Structure
+- Use semantic elements (`<header>`, `<main>`, `<nav>`, `<footer>`, etc.)
+- Ensure **only one** `<main>` element per page
+- Page MUST include **skip to content** link at the top of body
+- Ensure proper landmark structure:
+  - `<header>`, `<nav>`, `<main>`, `<aside>`, `<footer>` or ARIA roles
+- Heading hierarchy MUST be logical:
+  - Only one `<h1>` per page
+  - Levels must not be skipped (e.g., h1 → h3 is invalid)
+- Landmark roles (if used) must not be nested incorrectly
+
+## Color and Contrast
+- Text contrast ratio MUST meet:
+  - 4.5:1 for normal text
+  - 3:1 for large text (≥18pt or 14pt bold)
+- UI components (buttons, links, borders) MUST meet:
+  - 3:1 contrast ratio against adjacent background
+- Graphs/charts/color indicators MUST:
+  - Not rely on color alone (use patterns, labels, or symbols)
+- Ensure visible focus states with at least 2px contrast difference
+
+## Keyboard Accessibility
+- All interactive elements MUST be accessible using Tab, Enter, and Space
+- Focus order MUST follow logical visual order
+- Ensure no keyboard traps (focus MUST be able to exit modal/dialogs)
+- Keyboard users MUST be able to:
+  - Access menus, tooltips, accordions, sliders, tabs, and carousels
+- Custom widgets MUST:
+  - Use ARIA roles/states
+  - Handle keyboard events (`keydown`, `keyup`)
+  - Be announced correctly via screen readers
+
+## Dynamic Content (ARIA, JavaScript)
+- Use ARIA sparingly and correctly:
+  - `aria-expanded`, `aria-pressed`, `aria-hidden`, etc.
+- Dynamically added content MUST:
+  - Be announced via `aria-live`, `role="status"` or `role="alert"`
+- Modal dialogs MUST:
+  - Use `role="dialog"` or `role="alertdialog"`
+  - Have `aria-modal="true"`
+  - Trap focus inside
+  - Return focus to trigger on close
+- Custom dropdowns and accordions MUST:
+  - Support keyboard navigation
+  - Maintain appropriate ARIA states
+
+## Media (Audio, Video)
+- Videos MUST have:
+  - Synchronized captions
+  - Audio descriptions (or transcript if not feasible)
+- Audio-only content MUST have:
+  - Transcripts
+- All media players MUST be:
+  - Fully keyboard operable
+  - Accessible with screen readers
+- Autoplay content MUST:
+  - Not auto-play with sound OR
+  - Be user-initiated
+  - Be stoppable via keyboard
+
+## Language and Meta
+- Every page MUST specify a valid language:
+  - `<html lang="en">`
+- For multilingual pages, specify:
+  - `lang` attribute on inline elements (e.g., `<span lang="fr">`)
+- Set character encoding in `<head>`:
+  - `<meta charset="UTF-8">`
+- Title tag MUST be unique and meaningful
+- Document MUST have:
+  - Logical tab order
+  - Unique `id` attributes where used
+
+## Tables
+- Tables MUST use semantic tags:
+  - `<table>`, `<thead>`, `<tbody>`, `<th>`, `<caption>`
+- Use `<th scope="col|row">` for headers
+- Include `<caption>` for summary of table purpose
+- Complex tables MUST use:
+  - `headers` and `id` attributes for cell relationships
+
+## Animation and Motion
+- Avoid auto-playing animation longer than 5 seconds
+- Provide controls to pause/stop/mute animation
+- Avoid content that triggers motion sickness (e.g., parallax, flashes)
+- Respect `prefers-reduced-motion` media query:
+  ```css
+  @media (prefers-reduced-motion: reduce) {
+    * {
+      animation: none !important;
+      transition: none !important;
+    }
+  }
+  ```
+
+## Document Title and Focus Management
+- Page MUST have a unique `<title>`
+- Title MUST change appropriately on page navigation (SPA, modals, etc.)
+- Set initial focus after page load or modal open
+- Use `aria-hidden="true"` on background when modal is open
+
+## Miscellaneous
+- Ensure all tooltips are accessible (triggered via keyboard, readable by screen readers)
+- Remove or correct empty links/buttons
+- Avoid `role="presentation"` on interactive elements
+- Never override native focus behavior unless replicating it correctly
+- Avoid `tabindex` > 0; use natural DOM order or `tabindex="0"`
+
+## Performance/Tooling Tips for AA Compliance
+- Use Axe DevTools, Lighthouse, WAVE, or Silktide browser extensions
+- Validate color contrast with tools like TPGi, WhoCanUse, or Contrast Ratio
+- Test with screen readers (NVDA, VoiceOver, JAWS)
+- Test with only a keyboard (no mouse)
+- Add automated accessibility testing with axe-core, pa11y, or jest-axe in CI

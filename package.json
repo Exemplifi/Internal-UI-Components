@@ -7,8 +7,8 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "sass": "sass --watch --style=compressed --load-path=node_modules src/assets/scss/styles.scss src/assets/css/styles.css",
-    "base:sass": "sass --watch --style=compressed src/assets/scss/base.scss src/assets/css/base.css"
+    "watch:scss": "sass --watch --style=compressed --load-path=node_modules --load-path=src/assets/scss src/assets/scss/styles.scss src/assets/css/styles.css",
+    "build:js": "vite build --config vite.config.js --mode production"
   },
   "devDependencies": {
     "figma-developer-mcp": "^0.4.2",

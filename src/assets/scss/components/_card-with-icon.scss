@@ -1,0 +1,109 @@
+// Card Grid Container
+.card-grid {
+    padding: 2rem 0;
+
+    &__container {
+        display: flex;
+        flex-wrap: nowrap;
+        gap: 24px;
+        justify-content: center;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 1rem;
+
+        @media (max-width: 768px) {
+            flex-wrap: wrap;
+            gap: 16px;
+        }
+    }
+}
+
+// Card with Icon Component
+.card-icon {
+    flex: 1;
+    min-width: 0;
+    padding: 24px;
+    border-radius: 24px;
+    transition: transform 0.3s ease;
+
+    // Color Variants
+    &--blue {
+        background-color: #DCECFF;
+        color: #4C6785;
+    }
+
+    &--navy {
+        background-color: #4C6785;
+        color: #FFFFFF;
+    }
+
+    &--light-blue {
+        background-color: #D7E6F5;
+        color: #4C6785;
+    }
+
+    &--dark-blue {
+        background-color: #5A85B8;
+        color: #FFFFFF;
+    }
+
+    // Hover State
+    &:hover {
+        transform: translateY(-4px);
+    }
+
+    // Focus State for Accessibility
+    &:focus-within {
+        outline: 2px solid #4C6785;
+        outline-offset: 2px;
+    }
+
+    // Content Container
+    &__content {
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+        width: 100%;
+    }
+
+    // Image Wrapper
+    &__image-wrapper {
+        width: 64px;
+        height: 64px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    // Image
+    &__image {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+    }
+
+    // Text
+    &__text {
+        margin: 0;
+        font-size: 16px;
+        line-height: 1.21;
+        font-family: 'Inter', sans-serif;
+        font-weight: 400;
+    }
+
+    // Reduced Motion
+    @media (prefers-reduced-motion: reduce) {
+        transition: none;
+
+        &:hover {
+            transform: none;
+        }
+    }
+
+    // Responsive Adjustments
+    @media (max-width: 768px) {
+        width: 100%;
+        max-width: 282px;
+        flex: none;
+    }
+}

@@ -1,13 +1,377 @@
 // Icon & Text- v1
 
+// Utility class for screen reader only content
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
 
+.icon-text-section {
+  padding: 0;
+  width: 100%;
 
-// Icon & Text- v1.1
+  .icon-text-container {
+    max-width: 1200px;
+    margin: 0 auto;
 
+    @include media-breakpoint-down(xl) {
+      max-width: 960px; // Adjust container width for xl devices
+    }
 
+    @include media-breakpoint-down(lg) {
+      max-width: 720px; // Adjust container width for lg devices
+    }
 
-// Icon & Text- v2
+    @include media-breakpoint-down(md) {
+      max-width: 540px; // Adjust container width for md devices
+    }
 
+    @include media-breakpoint-down(sm) {
+      max-width: 100%; // Full width for mobile
+      padding: 0 16px; // Add some padding on mobile
+    }
+  }
 
+  .icon-text-wrapper {
+    background-color: #f4f9ff;
+    border-radius: 24px;
+    padding: 32px;
 
+    @include media-breakpoint-down(md) {
+      padding: 24px; // Reduce padding on tablet
+      border-radius: 16px; // Slightly reduce border radius
+    }
 
+    @include media-breakpoint-down(sm) {
+      padding: 16px; // Further reduce padding on mobile
+      border-radius: 12px; // Further reduce border radius
+    }
+  }
+
+  .icon-text-header {
+    margin-bottom: 16px;
+
+    .date-icon {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+
+      @include media-breakpoint-down(md) {
+        gap: 12px; // Reduce gap on tablet
+      }
+
+      .calendar-icon {
+        width: 30px;
+        height: 30px;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        @include media-breakpoint-down(md) {
+          width: 24px; // Slightly reduce icon size on tablet
+          height: 24px;
+        }
+      }
+
+      .date {
+        font-family: "Inter", sans-serif;
+        font-size: 32px;
+        font-weight: 600;
+        line-height: 130%;
+        letter-spacing: 0.03em;
+        color: #0079fe;
+
+        @include media-breakpoint-down(lg) {
+          font-size: 28px; // Reduce font size on tablet landscape
+        }
+
+        @include media-breakpoint-down(md) {
+          font-size: 24px; // Further reduce font size on tablet portrait
+        }
+
+        @include media-breakpoint-down(sm) {
+          font-size: 20px; // Smallest font size for mobile
+        }
+      }
+    }
+  }
+
+  .icon-text-content {
+    background: #ffffff;
+    border: 1px solid #90b0d7;
+    border-radius: 12px;
+    padding: 12px;
+
+    @include media-breakpoint-down(md) {
+      padding: 10px; // Slightly reduce padding on tablet
+    }
+
+    @include media-breakpoint-down(sm) {
+      padding: 8px; // Further reduce padding on mobile
+      border-radius: 8px; // Reduce border radius on mobile
+    }
+
+    .content-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 12px;
+
+      @include media-breakpoint-down(sm) {
+        flex-direction: column; // Stack elements on mobile
+        align-items: flex-end;
+        gap: 8px;
+      }
+
+      .event-info {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+
+        @include media-breakpoint-down(md) {
+          gap: 8px; // Reduce gap on tablet
+        }
+
+        .event-icon {
+          width: 24px;
+          height: 24px;
+
+          @include media-breakpoint-down(md) {
+            width: 20px; // Reduce icon size on tablet
+            height: 20px;
+          }
+        }
+
+        .event-title {
+          font-family: "Inter", sans-serif;
+          font-size: 16px;
+          font-weight: 700;
+          line-height: 137.5%;
+          color: #314459;
+          margin: 0;
+
+          @include media-breakpoint-down(sm) {
+            font-size: 14px; // Reduce font size on mobile
+          }
+        }
+      }
+
+      .view-more {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        cursor: pointer;
+
+        @include media-breakpoint-down(md) {
+          gap: 8px; // Reduce gap on tablet
+        }
+
+        span {
+          font-family: "Inter", sans-serif;
+          font-size: 16px;
+          font-weight: 600;
+          line-height: 130%;
+          color: #314459;
+
+          @include media-breakpoint-down(sm) {
+            font-size: 14px; // Reduce font size on mobile
+          }
+        }
+
+        .arrow-circle {
+          width: 32px;
+          height: 32px;
+          background: #459dff;
+          border-radius: 50%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+
+          img {
+            width: 13.5px;
+            height: 13.5px;
+            transition: transform 0.3s ease;
+
+            &.rotate {
+              transform: rotate(-180deg);
+            }
+          }
+
+          @include media-breakpoint-down(md) {
+            width: 28px; // Reduce circle size on tablet
+            height: 28px;
+          }
+
+          @include media-breakpoint-down(sm) {
+            width: 24px; // Further reduce circle size on mobile
+            height: 24px;
+          }
+        }
+      }
+    }
+
+    .content-details {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 12px;
+
+      @include media-breakpoint-down(sm) {
+        flex-direction: column; // Stack on mobile
+        align-items: flex-start;
+        gap: 8px;
+      }
+
+      .time-info,
+      .event-type {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+
+        @include media-breakpoint-down(md) {
+          gap: 8px; // Reduce gap on tablet
+        }
+
+        .time-icon {
+          width: 24px;
+          height: 24px;
+
+          @include media-breakpoint-down(md) {
+            width: 20px; // Reduce icon size on tablet
+            height: 20px;
+          }
+        }
+
+        .time,
+        .type {
+          font-family: "Inter", sans-serif;
+          font-size: 16px;
+          font-weight: 500;
+          line-height: 137.5%;
+          color: $gray;
+
+          @include media-breakpoint-down(sm) {
+            font-size: 14px; // Reduce font size on mobile
+          }
+        }
+      }
+
+      .divider {
+        width: 1px;
+        height: 32px;
+        background-color: #596f8b;
+
+        @include media-breakpoint-down(sm) {
+          display: none; // Hide divider on mobile when stacked
+        }
+      }
+    }
+    .content-hidden {
+      max-height: 0;
+      overflow: hidden;
+      margin-top: 0;
+      opacity: 0;
+      transition: max-height 0.3s ease-out, opacity 0.3s ease-out, margin-top 0.3s ease-out;
+
+      &.show {
+        max-height: 500px; // Adjust this value based on your content's maximum height
+        margin-top: 1rem;
+        opacity: 1;
+      }
+    }
+    .content-description,
+    .content-description p,
+    .content-location,
+    .content-location p {
+      font-family: "Inter", sans-serif;
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 22px;
+      color: $gray;
+    }
+    .content-description {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 12px;
+      .info-icon {
+        width: 24px;
+        height: 24px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    }
+    .content-location {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 12px;
+      .location-icon {
+        width: 24px;
+        height: 24px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    }
+    .content-map-link {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 12px;
+      .map-icon {
+        width: 24px;
+        height: 24px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .map-link {
+        font-family: "Inter", sans-serif;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 22px;
+        color: $light-blue;
+      }
+    }
+  }
+}
+
+// Hover effects
+.icon-text-content {
+  .view-more {
+    &:hover {
+      .arrow-circle {
+        background: darken(#459dff, 10%);
+      }
+      span {
+        color: #0079fe;
+      }
+    }
+
+    &:focus {
+      outline: 2px solid #0079fe;
+      outline-offset: 2px;
+      border-radius: 4px;
+    }
+  }
+}
+
+.view-more {
+  img {
+    transition: transform 0.3s ease;
+
+    &.rotate {
+      transform: rotate(180deg);
+    }
+  }
+}

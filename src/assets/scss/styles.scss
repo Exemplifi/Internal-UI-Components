@@ -1,9 +1,7 @@
 @use "sass:math";
 
-// all base styles
-@use "./base/colors" as *;
-@use "./base/screenres" as *;
-
+// Import utilities first
+@use "utils" as *;
 
 @use './base/bootstrap' as *;
 
