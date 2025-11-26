@@ -1,30 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Hero Section</title>
   <link rel="stylesheet" href="../assets/dist/style.min.css">
 </head>
+
 <body>
-  <section class="hero">
-    <div class="container">
-      <div class="row">
-        <div class="col-12">
-          <div class="hero-section">
-            <div class="hero-video-wrapper">
-              <video class="hero-video" src="/video.mp4" autoplay loop muted playsinline></video>
-            </div>
-            <div class="hero-content">
-              <h1 class="hero-title">Your Water.<br>Our Commitment.</h1>
-              <p class="hero-subtext">Where engineering meets ecology - protecting every drop from source to tap with care, innovation, and 85+ years of expertise.</p>
-              <button class="hero-btn">Water for Tomorrow</button>
+  <a class="skip-link" href="#hero-main">Skip to main content</a>
+  <main id="hero-main" role="main" tabindex="-1">
+    <section class="hero" aria-labelledby="hero-heading">
+      <div class="hero-video-wrapper" aria-hidden="true">
+        <video class="hero-video" src="../assets/videos/video.mp4" autoplay loop muted playsinline></video>
+      </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="hero-section">
+              <div class="hero-content">
+                <h1 class="hero-title" id="hero-heading">Your Water.<br>Our Commitment.</h1>
+                <p class="hero-subtext">
+                  Where engineering meets ecology - protecting every drop from source to tap with care,
+                  innovation, and 85+ years of expertise.
+                </p>
+                <button type="button" class="hero-btn" aria-label="Learn more about water for tomorrow">
+                  Water for Tomorrow
+                </button>
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
+  </main>
   <script src="../assets/dist/main.min.js"></script>
 </body>
+
 </html>

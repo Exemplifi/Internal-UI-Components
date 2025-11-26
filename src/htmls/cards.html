@@ -8,21 +8,25 @@
 </head>
 <body>
   <!-- Card Variant 1 -->
-  <section class="cards cards--v1 py-5">
+  <section class="cards cards--v1 py-5" aria-labelledby="cards-v1-title">
     <div class="container">
+      <header class="mb-4 text-center">
+        <h1 id="cards-v1-title">Cards Component Variants</h1>
+        <p class="text-muted mb-0">Reusable card layouts for data, features, testimonials, and step-by-step flows.</p>
+      </header>
       <div class="row g-4 justify-content-center">
         <div class="col-12 col-md-6 col-lg-4">
           <div class="card-v1">
             <div class="card-v1__img-bg">
-              <img src="/assets/img/card1.jpg" class="card-v1__img" alt="Card image">
+              <img src="../assets/images/development-card-img-1.png" class="card-v1__img" alt="Flow data visualization over a river landscape">
             </div>
             <div class="card-v1__body">
               <h3 class="card-v1__title">Flow Data</h3>
               <p class="card-v1__desc">Data from our rivers, streams, canals and snow</p>
-              <button class="card-v1__btn">
+              <button type="button" class="card-v1__btn" aria-label="Load more about Flow Data">
                 Load More
                 <span class="card-v1__btn-icon">
-                  <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
                     <circle cx="7" cy="7" r="7" fill="#459DFF"/>
                     <path d="M6 4L9 7L6 10" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
                   </svg>
@@ -34,15 +38,15 @@
         <div class="col-12 col-md-6 col-lg-4">
           <div class="card-v1">
             <div class="card-v1__img-bg">
-              <img src="/assets/img/card2.jpg" class="card-v1__img" alt="Card image">
+              <img src="../assets/images/maintance-card-img-1.png" class="card-v1__img" alt="GIS and map view of Northern Water service area">
             </div>
             <div class="card-v1__body">
               <h3 class="card-v1__title">GIS and Maps</h3>
               <p class="card-v1__desc">Maps of our projects and service area</p>
-              <button class="card-v1__btn">
+              <button type="button" class="card-v1__btn" aria-label="Load more about GIS and Maps">
                 Load More
                 <span class="card-v1__btn-icon">
-                  <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
                     <circle cx="7" cy="7" r="7" fill="#459DFF"/>
                     <path d="M6 4L9 7L6 10" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
                   </svg>
@@ -56,21 +60,25 @@
   </section>
 
   <!-- Card Variant 2 -->
-  <section class="cards cards--v2 py-5 bg-light">
+  <section class="cards cards--v2 py-5 bg-light" aria-labelledby="cards-v2-title">
     <div class="container">
+      <header class="mb-4 text-center">
+        <h2 id="cards-v2-title">Feature Highlight Cards</h2>
+        <p class="text-muted mb-0">Compact cards with icons and short descriptions for key features.</p>
+      </header>
       <div class="row g-4 justify-content-center">
         <div class="col-12 col-md-6 col-lg-3">
           <div class="card-v2">
             <div class="card-v2__img-bg">
-              <img src="/assets/img/icon1.svg" class="card-v2__icon" alt="Icon">
+              <img src="../assets/images/card-icons/demand-icon.png" class="card-v2__icon" alt="">
             </div>
             <div class="card-v2__body">
               <h4 class="card-v2__title">Feature One</h4>
               <p class="card-v2__desc">Description for feature one. Use icons and short text for highlights.</p>
-              <button class="card-v2__btn">
+              <button type="button" class="card-v2__btn" aria-label="Read more about Feature One">
                 Read More
                 <span class="card-v2__btn-icon">
-                  <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
                     <circle cx="7" cy="7" r="7" fill="#459DFF"/>
                     <path d="M6 4L9 7L6 10" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
                   </svg>
@@ -82,15 +90,15 @@
         <div class="col-12 col-md-6 col-lg-3">
           <div class="card-v2">
             <div class="card-v2__img-bg">
-              <img src="/assets/img/icon2.svg" class="card-v2__icon" alt="Icon">
+              <img src="../assets/images/card-icons/environment-icon.png" class="card-v2__icon" alt="">
             </div>
             <div class="card-v2__body">
               <h4 class="card-v2__title">Feature Two</h4>
               <p class="card-v2__desc">Description for feature two. Use icons and short text for highlights.</p>
-              <button class="card-v2__btn">
+              <button type="button" class="card-v2__btn" aria-label="Read more about Feature Two">
                 Read More
                 <span class="card-v2__btn-icon">
-                  <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
                     <circle cx="7" cy="7" r="7" fill="#459DFF"/>
                     <path d="M6 4L9 7L6 10" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
                   </svg>
@@ -102,15 +110,15 @@
         <div class="col-12 col-md-6 col-lg-3">
           <div class="card-v2">
             <div class="card-v2__img-bg">
-              <img src="/assets/img/icon3.svg" class="card-v2__icon" alt="Icon">
+              <img src="../assets/images/card-icons/recreation-icon.png" class="card-v2__icon" alt="">
             </div>
             <div class="card-v2__body">
               <h4 class="card-v2__title">Feature Three</h4>
               <p class="card-v2__desc">Description for feature three. Use icons and short text for highlights.</p>
-              <button class="card-v2__btn">
+              <button type="button" class="card-v2__btn" aria-label="Read more about Feature Three">
                 Read More
                 <span class="card-v2__btn-icon">
-                  <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
                     <circle cx="7" cy="7" r="7" fill="#459DFF"/>
                     <path d="M6 4L9 7L6 10" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
                   </svg>
@@ -124,13 +132,17 @@
   </section>
 
   <!-- Card Variant 3 -->
-  <section class="cards cards--v3 py-5">
+  <section class="cards cards--v3 py-5" aria-labelledby="cards-v3-title">
     <div class="container">
+      <header class="mb-4 text-center">
+        <h2 id="cards-v3-title">Testimonial Cards</h2>
+        <p class="text-muted mb-0">Use for people stories, reviews, or team spotlights.</p>
+      </header>
       <div class="row g-4 justify-content-center">
         <div class="col-12 col-md-6 col-lg-4">
           <div class="card-v3">
             <div class="card-v3__header d-flex align-items-center mb-3">
-              <img src="/assets/img/avatar1.jpg" class="card-v3__avatar me-3" alt="Avatar">
+              <img src="../assets/images/northern-water-logo.svg" class="card-v3__avatar me-3" alt="Portrait placeholder for Jane Doe">
               <div>
                 <div class="card-v3__name">Jane Doe</div>
                 <div class="card-v3__role">Project Manager</div>
@@ -138,9 +150,9 @@
             </div>
             <div class="card-v3__body">
               <p class="card-v3__desc">“Testimonial or quote goes here. This card is great for team or testimonial sections.”</p>
-              <button class="card-v3__btn ms-auto">
+              <button type="button" class="card-v3__btn ms-auto" aria-label="Read more from Jane Doe">
                 <span class="card-v3__btn-icon">
-                  <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
                     <circle cx="7" cy="7" r="7" fill="#459DFF"/>
                     <path d="M6 4L9 7L6 10" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
                   </svg>
@@ -152,7 +164,7 @@
         <div class="col-12 col-md-6 col-lg-4">
           <div class="card-v3">
             <div class="card-v3__header d-flex align-items-center mb-3">
-              <img src="/assets/img/avatar2.jpg" class="card-v3__avatar me-3" alt="Avatar">
+              <img src="../assets/images/northern-water-colorful-logo.svg" class="card-v3__avatar me-3" alt="Portrait placeholder for John Smith">
               <div>
                 <div class="card-v3__name">John Smith</div>
                 <div class="card-v3__role">Engineer</div>
@@ -160,9 +172,9 @@
             </div>
             <div class="card-v3__body">
               <p class="card-v3__desc">“Another testimonial or quote. Use for team, reviews, or customer stories.”</p>
-              <button class="card-v3__btn ms-auto">
+              <button type="button" class="card-v3__btn ms-auto" aria-label="Read more from John Smith">
                 <span class="card-v3__btn-icon">
-                  <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
                     <circle cx="7" cy="7" r="7" fill="#459DFF"/>
                     <path d="M6 4L9 7L6 10" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
                   </svg>
@@ -176,8 +188,12 @@
   </section>
 
   <!-- Card Variant 4 -->
-  <section class="cards cards--v4 py-5 bg-light">
+  <section class="cards cards--v4 py-5 bg-light" aria-labelledby="cards-v4-title">
     <div class="container">
+      <header class="mb-4 text-center">
+        <h2 id="cards-v4-title">Step-by-step Cards</h2>
+        <p class="text-muted mb-0">Use these numbered cards to communicate processes and timelines.</p>
+      </header>
       <div class="row g-4 justify-content-center">
         <div class="col-12 col-md-6 col-lg-3">
           <div class="card-v4">
@@ -185,9 +201,9 @@
             <div class="card-v4__body">
               <h5 class="card-v4__title">Step One</h5>
               <p class="card-v4__desc">Description for step one. Use for process or numbered steps.</p>
-              <button class="card-v4__btn ms-auto">
+              <button type="button" class="card-v4__btn ms-auto" aria-label="Read more about Step One">
                 <span class="card-v4__btn-icon">
-                  <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
                     <circle cx="7" cy="7" r="7" fill="#459DFF"/>
                     <path d="M6 4L9 7L6 10" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
                   </svg>
@@ -202,9 +218,9 @@
             <div class="card-v4__body">
               <h5 class="card-v4__title">Step Two</h5>
               <p class="card-v4__desc">Description for step two. Use for process or numbered steps.</p>
-              <button class="card-v4__btn ms-auto">
+              <button type="button" class="card-v4__btn ms-auto" aria-label="Read more about Step Two">
                 <span class="card-v4__btn-icon">
-                  <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
                     <circle cx="7" cy="7" r="7" fill="#459DFF"/>
                     <path d="M6 4L9 7L6 10" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
                   </svg>
@@ -219,9 +235,9 @@
             <div class="card-v4__body">
               <h5 class="card-v4__title">Step Three</h5>
               <p class="card-v4__desc">Description for step three. Use for process or numbered steps.</p>
-              <button class="card-v4__btn ms-auto">
+              <button type="button" class="card-v4__btn ms-auto" aria-label="Read more about Step Three">
                 <span class="card-v4__btn-icon">
-                  <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
                     <circle cx="7" cy="7" r="7" fill="#459DFF"/>
                     <path d="M6 4L9 7L6 10" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
                   </svg>

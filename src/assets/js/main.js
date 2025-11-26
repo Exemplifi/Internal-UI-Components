@@ -22,3 +22,4 @@ import "./header.js";
 import "./footer.js";
 import "./exemplifi-header.js";
 import "./calendar.js";
+import "./swiper-init.js";
