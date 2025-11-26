@@ -3,14 +3,13 @@
 // Import utilities first
 @use "utils" as *;
 
-@use './base/bootstrap' as *;
+@use "./base/bootstrap" as *;
 
 // // all page styles
-@use './page/home' as *;
+@use "./page/home" as *;
 
 // Importing base
 @use "base";
 
 // Importing ncludes
 @use "includes/includes";
-

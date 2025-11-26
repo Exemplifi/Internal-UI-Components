@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Card with Icon</title>
+  <link rel="stylesheet" href="../assets/dist/style.min.css">
+</head>
+
+<body>
+  <main>
+    <section class="ex-calendar-container" data-current-date="">
+      <!-- Calendar Component -->
+      <div class="ex-calendar" role="application" aria-label="Event Calendar">
+        <!-- Calendar Header -->
+        <div class="ex-calendar-header">
+          <h2 class="ex-calendar-month-year" aria-live="polite">
+            <?php echo esc_html($current_month); ?>
+          </h2>
+          <div class="ex-calendar-navigation">
+            <button class="ex-calendar-nav-btn ex-calendar-prev" aria-label="Previous month" type="button">
+              <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M8 2L4 7L8 12" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg>
+            </button>
+            <button class="ex-calendar-nav-btn ex-calendar-next" aria-label="Next month" type="button">
+              <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M6 2L10 7L6 12" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg>
+            </button>
+          </div>
+        </div>
+
+        <!-- Calendar Grid -->
+        <div class="ex-calendar-grid" role="grid" aria-label="Calendar">
+          <!-- Weekday Headers -->
+          <div class="ex-calendar-weekdays" role="row">
+            <div class="ex-calendar-weekday" role="columnheader">Mo</div>
+            <div class="ex-calendar-weekday" role="columnheader">Tu</div>
+            <div class="ex-calendar-weekday" role="columnheader">We</div>
+            <div class="ex-calendar-weekday" role="columnheader">Th</div>
+            <div class="ex-calendar-weekday" role="columnheader">Fr</div>
+            <div class="ex-calendar-weekday" role="columnheader">Sa</div>
+            <div class="ex-calendar-weekday" role="columnheader">Su</div>
+          </div>
+
+          <!-- Calendar Days -->
+          <div class="ex-calendar-days" role="rowgroup">
+            <!-- Days will be populated by JavaScript -->
+          </div>
+        </div>
+      </div>
+
+      <!-- Event Display Component -->
+      <div class="ex-event-display" aria-live="polite">
+        <div class="ex-event-card">
+          <div class="ex-event-date-badge">
+            <div class="ex-event-date-content">
+              <span class="ex-event-month"></span>
+              <span class="ex-event-day"></span>
+            </div>
+          </div>
+          <div class="ex-event-details">
+            <h3 class="ex-event-title"></h3>
+            <div class="ex-event-meta">
+              <div class="ex-event-time">
+                <span class="ex-event-icon">
+                  <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="11" cy="11" r="9" stroke="currentColor" stroke-width="2" />
+                    <path d="M11 5V11L15 13" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                  </svg>
+                </span>
+                <span class="ex-event-time-text"></span>
+              </div>
+              <div class="ex-event-location">
+                <span class="ex-event-icon">
+                  <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M11 2C7.13 2 4 5.13 4 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"
+                      stroke="currentColor" stroke-width="2" />
+                    <circle cx="11" cy="9" r="2.5" stroke="currentColor" stroke-width="2" />
+                  </svg>
+                </span>
+                <a href="#" class="ex-event-location-link" target="_blank" rel="noopener noreferrer"
+                  aria-label="Open location in Google Maps">
+                  <span class="ex-event-location-text"></span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js" crossorigin="anonymous"></script>
+  <script src="../assets/dist/main.min.js"></script>
+</body>
+
+</html>
