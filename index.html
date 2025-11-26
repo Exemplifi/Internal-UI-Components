@@ -1,133 +1,155 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
-    <link rel="manifest" href="/site.webmanifest" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Standard UI Components</title>
-    <style>
-      body { background: #f4f9ff; }
-      .component-list { max-width: 900px; margin: 40px auto; }
-      .component-card { transition: box-shadow 0.2s, transform 0.2s; border-radius: 16px; }
-      .component-card:hover { box-shadow: 0 4px 24px rgba(49,68,89,0.10); transform: translateY(-2px) scale(1.03); }
-      .component-link { text-decoration: none; color: inherit; display: block; }
-      .component-title { font-size: 1.25rem; font-weight: 700; color: #184479; margin-bottom: 0.5rem; }
-      .component-path { font-size: 0.95rem; color: #6E7A89; }
-    </style>
-  </head>
-  <body>
-    <div class="container component-list py-5">
-      <h1 class="mb-4 text-center">Standard UI Components</h1>
-      <div class="row g-4">
-        <div class="col-12 col-md-6 col-lg-4">
-          <a class="component-link" href="src/htmls/hero.html" target="_blank">
-            <div class="card component-card p-4 h-100">
-              <div class="component-title">Hero</div>
-              <div class="component-path">src/htmls/hero.html</div>
-            </div>
-          </a>
-        </div>
-        <div class="col-12 col-md-6 col-lg-4">
-          <a class="component-link" href="src/htmls/cards.html" target="_blank">
-            <div class="card component-card p-4 h-100">
-              <div class="component-title">Cards</div>
-              <div class="component-path">src/htmls/cards.html</div>
-            </div>
-          </a>
-        </div>
-        <div class="col-12 col-md-6 col-lg-4">
-          <a class="component-link" href="src/htmls/accordion.html" target="_blank">
-            <div class="card component-card p-4 h-100">
-              <div class="component-title">Accordion</div>
-              <div class="component-path">src/htmls/accordion.html</div>
-            </div>
-          </a>
-        </div>
-        <div class="col-12 col-md-6 col-lg-4">
-          <a class="component-link" href="src/htmls/form.html" target="_blank">
-            <div class="card component-card p-4 h-100">
-              <div class="component-title">Form</div>
-              <div class="component-path">src/htmls/form.html</div>
-            </div>
-          </a>
-        </div>
-        <div class="col-12 col-md-6 col-lg-4">
-          <a class="component-link" href="src/htmls/table.html" target="_blank">
-            <div class="card component-card p-4 h-100">
-              <div class="component-title">Table</div>
-              <div class="component-path">src/htmls/table.html</div>
-            </div>
-          </a>
-        </div>
-        <div class="col-12 col-md-6 col-lg-4">
-          <a class="component-link" href="src/htmls/stats.html" target="_blank">
-            <div class="card component-card p-4 h-100">
-              <div class="component-title">Stats</div>
-              <div class="component-path">src/htmls/stats.html</div>
-            </div>
-          </a>
-        </div>
-        <div class="col-12 col-md-6 col-lg-4">
-          <a class="component-link" href="src/htmls/image-text.html" target="_blank">
-            <div class="card component-card p-4 h-100">
-              <div class="component-title">Image & Text</div>
-              <div class="component-path">src/htmls/image-text.html</div>
-            </div>
-          </a>
-        </div>
-        <div class="col-12 col-md-6 col-lg-4">
-          <a class="component-link" href="src/htmls/carousel.html" target="_blank">
-            <div class="card component-card p-4 h-100">
-              <div class="component-title">Carousel</div>
-              <div class="component-path">src/htmls/carousel.html</div>
-            </div>
-          </a>
-        </div>
-        <div class="col-12 col-md-6 col-lg-4">
-          <a class="component-link" href="src/htmls/card-with-icon.html" target="_blank">
-            <div class="card component-card p-4 h-100">
-              <div class="component-title">Card with Icon</div>
-              <div class="component-path">src/htmls/card-with-icon.html</div>
-            </div>
-          </a>
-        </div>
-        <div class="col-12 col-md-6 col-lg-4">
-          <a class="component-link" href="src/htmls/icon-and-text.html" target="_blank">
-            <div class="card component-card p-4 h-100">
-              <div class="component-title">Icon & Text</div>
-              <div class="component-path">src/htmls/icon-and-text.html</div>
-            </div>
-          </a>
-        </div>
-        <div class="col-12 col-md-6 col-lg-4">
-          <a class="component-link" href="src/htmls/header.html" target="_blank">
-            <div class="card component-card p-4 h-100">
-              <div class="component-title">Header</div>
-              <div class="component-path">src/htmls/header.html</div>
-            </div>
-          </a>
-        </div>
-        <div class="col-12 col-md-6 col-lg-4">
-          <a class="component-link" href="src/htmls/exemplifi-header.html" target="_blank">
-            <div class="card component-card p-4 h-100">
-              <div class="component-title">Exemplifi Header</div>
-              <div class="component-path">src/htmls/exemplifi-header.html</div>
-            </div>
-          </a>
-        </div>
-        <div class="col-12 col-md-6 col-lg-4">
-          <a class="component-link" href="src/htmls/footer.html" target="_blank">
-            <div class="card component-card p-4 h-100">
-              <div class="component-title">Footer</div>
-              <div class="component-path">src/htmls/footer.html</div>
-            </div>
-          </a>
-        </div>
-      </div>
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+  <link rel="manifest" href="/site.webmanifest" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Standard UI Components</title>
+  <link rel="stylesheet" href="src/assets/css/base.css">
+  <link rel="stylesheet" href="src/assets/css/styles.css">
+</head>
+
+<body class="bg-light">
+  <a class="skip-link btn btn-primary visually-hidden-focusable position-absolute top-0 start-0 ms-2 mt-2"
+    href="#components-list">
+    Skip to component list
+  </a>
+  <header class="py-4" role="banner">
+    <div class="container text-center">
+      <h1 class="mb-3 display-5 fw-bold " id="component-heading">Standard UI Components</h1>
+      <p>
+        Browse each component in a dedicated demo tab. Links announce that they open in a new window for screen readers.
+      </p>
     </div>
-    <script type="module" src="./src/assets/js/main.js"></script>
-  </body>
+  </header>
+  <main id="components-list" class="container py-5" tabindex="-1">
+    <section aria-labelledby="component-heading">
+      <ul class="row g-4 list-unstyled" role="list">
+        <li class="col-12 col-md-6 col-lg-4">
+          <a href="src/htmls/hero.html" target="_blank" rel="noopener noreferrer"
+            aria-label="View Hero component in a new tab">
+            <div class="card p-4 h-100 shadow-sm border-0 rounded-3">
+              <h2 class="h5 fw-semibold mb-2">Hero</h2>
+              <p class="text-muted mb-0">src/htmls/hero.html</p>
+            </div>
+          </a>
+        </li>
+        <li class="col-12 col-md-6 col-lg-4">
+          <a href="src/htmls/cards.html" target="_blank" rel="noopener noreferrer"
+            aria-label="View Cards component in a new tab">
+            <div class="card p-4 h-100 shadow-sm border-0 rounded-3">
+              <h2 class="h5 fw-semibold mb-2">Cards</h2>
+              <p class="text-muted mb-0">src/htmls/cards.html</p>
+            </div>
+          </a>
+        </li>
+        <li class="col-12 col-md-6 col-lg-4">
+          <a href="src/htmls/accordion.html" target="_blank" rel="noopener noreferrer"
+            aria-label="View Accordion component in a new tab">
+            <div class="card p-4 h-100 shadow-sm border-0 rounded-3">
+              <h2 class="h5 fw-semibold mb-2">Accordion</h2>
+              <p class="text-muted mb-0">src/htmls/accordion.html</p>
+            </div>
+          </a>
+        </li>
+        <li class="col-12 col-md-6 col-lg-4">
+          <a href="src/htmls/form.html" target="_blank" rel="noopener noreferrer"
+            aria-label="View Form component in a new tab">
+            <div class="card p-4 h-100 shadow-sm border-0 rounded-3">
+              <h2 class="h5 fw-semibold mb-2">Form</h2>
+              <p class="text-muted mb-0">src/htmls/form.html</p>
+            </div>
+          </a>
+        </li>
+        <li class="col-12 col-md-6 col-lg-4">
+          <a href="src/htmls/table.html" target="_blank" rel="noopener noreferrer"
+            aria-label="View Table component in a new tab">
+            <div class="card p-4 h-100 shadow-sm border-0 rounded-3">
+              <h2 class="h5 fw-semibold mb-2">Table</h2>
+              <p class="text-muted mb-0">src/htmls/table.html</p>
+            </div>
+          </a>
+        </li>
+        <li class="col-12 col-md-6 col-lg-4">
+          <a href="src/htmls/stats.html" target="_blank" rel="noopener noreferrer"
+            aria-label="View Stats component in a new tab">
+            <div class="card p-4 h-100 shadow-sm border-0 rounded-3">
+              <h2 class="h5 fw-semibold mb-2">Stats</h2>
+              <p class="text-muted mb-0">src/htmls/stats.html</p>
+            </div>
+          </a>
+        </li>
+        <li class="col-12 col-md-6 col-lg-4">
+          <a href="src/htmls/image-text.html" target="_blank" rel="noopener noreferrer"
+            aria-label="View Image and Text component in a new tab">
+            <div class="card p-4 h-100 shadow-sm border-0 rounded-3">
+              <h2 class="h5 fw-semibold mb-2">Image &amp; Text</h2>
+              <p class="text-muted mb-0">src/htmls/image-text.html</p>
+            </div>
+          </a>
+        </li>
+        <li class="col-12 col-md-6 col-lg-4">
+          <a href="src/htmls/carousel.html" target="_blank" rel="noopener noreferrer"
+            aria-label="View Carousel component in a new tab">
+            <div class="card p-4 h-100 shadow-sm border-0 rounded-3">
+              <h2 class="h5 fw-semibold mb-2">Carousel</h2>
+              <p class="text-muted mb-0">src/htmls/carousel.html</p>
+            </div>
+          </a>
+        </li>
+        <li class="col-12 col-md-6 col-lg-4">
+          <a href="src/htmls/card-with-icon.html" target="_blank" rel="noopener noreferrer"
+            aria-label="View Card with Icon component in a new tab">
+            <div class="card p-4 h-100 shadow-sm border-0 rounded-3">
+              <h2 class="h5 fw-semibold mb-2">Card with Icon</h2>
+              <p class="text-muted mb-0">src/htmls/card-with-icon.html</p>
+            </div>
+          </a>
+        </li>
+        <li class="col-12 col-md-6 col-lg-4">
+          <a href="src/htmls/icon-and-text.html" target="_blank" rel="noopener noreferrer"
+            aria-label="View Icon and Text component in a new tab">
+            <div class="card p-4 h-100 shadow-sm border-0 rounded-3">
+              <h2 class="h5 fw-semibold mb-2">Icon &amp; Text</h2>
+              <p class="text-muted mb-0">src/htmls/icon-and-text.html</p>
+            </div>
+          </a>
+        </li>
+        <li class="col-12 col-md-6 col-lg-4">
+          <a href="src/htmls/header.html" target="_blank" rel="noopener noreferrer"
+            aria-label="View Header component in a new tab">
+            <div class="card p-4 h-100 shadow-sm border-0 rounded-3">
+              <h2 class="h5 fw-semibold mb-2">Header</h2>
+              <p class="text-muted mb-0">src/htmls/header.html</p>
+            </div>
+          </a>
+        </li>
+        <li class="col-12 col-md-6 col-lg-4">
+          <a href="src/htmls/exemplifi-header.html" target="_blank" rel="noopener noreferrer"
+            aria-label="View Exemplifi Header component in a new tab">
+            <div class="card p-4 h-100 shadow-sm border-0 rounded-3">
+              <h2 class="h5 fw-semibold mb-2">Exemplifi Header</h2>
+              <p class="text-muted mb-0">src/htmls/exemplifi-header.html</p>
+            </div>
+          </a>
+        </li>
+        <li class="col-12 col-md-6 col-lg-4">
+          <a href="src/htmls/footer.html" target="_blank" rel="noopener noreferrer"
+            aria-label="View Footer component in a new tab">
+            <div class="card p-4 h-100 shadow-sm border-0 rounded-3">
+              <h2 class="h5 fw-semibold mb-2">Footer</h2>
+              <p class="text-muted mb-0">src/htmls/footer.html</p>
+            </div>
+          </a>
+        </li>
+      </ul>
+    </section>
+  </main>
+  <script type="module" src="./src/assets/js/main.js"></script>
+</body>
+
 </html>
