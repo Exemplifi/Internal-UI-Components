@@ -60,6 +60,10 @@ document.addEventListener("DOMContentLoaded", function () {
 document.addEventListener("DOMContentLoaded", function () {
   // Select key elements
   const menuToggleBtn = document.querySelector(".navbar-toggler");
+  if (!menuToggleBtn) {
+    console.error("Menu toggle button not found");
+    return;
+  }
   const menu = document.querySelector("#eX-navbarNav");
   const header = document.querySelector(".ex-header"); // Header element
   const exMenu = document.querySelector(".ex-menu"); // Menu wrapper
