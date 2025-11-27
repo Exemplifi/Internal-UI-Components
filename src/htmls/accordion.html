@@ -1,87 +1,151 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Accordion Component</title>
   <link rel="stylesheet" href="../assets/dist/style.min.css">
 </head>
+
 <body>
-  <section class="accordion-section py-5">
-    <div class="container">
-      <div class="row justify-content-center">
-        <div class="col-12 col-lg-10">
-          <div class="accordion accordion--v1" id="faqAccordion">
-            <div class="accordion__item mb-3">
-              <div class="accordion__header d-flex align-items-center justify-content-between" data-bs-toggle="collapse" data-bs-target="#faq1" aria-expanded="true" aria-controls="faq1" role="button" tabindex="0">
-                <span class="accordion__question">Where does the Regional Pool Program water come from?</span>
-                <span class="accordion__icon">
-                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M6 9L12 15L18 9" stroke="#3F5773" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                  </svg>
-                </span>
+  <a class="skip-link btn btn-primary visually-hidden-focusable position-absolute top-0 start-0 ms-2 mt-2"
+    href="#accordion-main">
+    Skip to accordion content
+  </a>
+  <main id="accordion-main" role="main" tabindex="-1">
+    <section class="accordion-section py-5" aria-labelledby="accordion-heading">
+      <div class="container">
+        <header class="mb-4 text-center">
+          <h1 id="accordion-heading" class="display-5 fw-bold mb-3">Frequently Asked Questions</h1>
+          <p class="text-muted mb-0">Click on any question below to expand and view the answer.</p>
+        </header>
+        <div class="row justify-content-center">
+          <div class="col-12 col-lg-10">
+            <div class="accordion accordion--v1" id="faqAccordion" role="region" aria-label="FAQ accordion">
+              <div class="accordion__item mb-3">
+                <h2 class="h5 mb-0">
+                  <button id="faq1-heading"
+                    class="accordion__header d-flex align-items-center justify-content-between w-100 text-start border-0 bg-transparent p-0"
+                    type="button" data-bs-toggle="collapse" data-bs-target="#faq1" aria-expanded="true"
+                    aria-controls="faq1">
+                    <span class="accordion__question">Where does the Regional Pool Program water come from?</span>
+                    <span class="accordion__icon" aria-hidden="true">
+                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
+                        aria-hidden="true" focusable="false">
+                        <path d="M6 9L12 15L18 9" stroke="#3F5773" stroke-width="2" stroke-linecap="round"
+                          stroke-linejoin="round" />
+                      </svg>
+                    </span>
+                  </button>
+                </h2>
+                <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion" role="region"
+                  aria-labelledby="faq1-heading">
+                  <div class="accordion__body pt-3">
+                    <p>Answer for FAQ 1 goes here.</p>
+                  </div>
+                </div>
               </div>
-              <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
-                <div class="accordion__body pt-3">Answer for FAQ 1 goes here.</div>
+              <div class="accordion__item mb-3">
+                <h2 class="h5 mb-0">
+                  <button id="faq2-heading"
+                    class="accordion__header d-flex align-items-center justify-content-between w-100 text-start border-0 bg-transparent p-0 collapsed"
+                    type="button" data-bs-toggle="collapse" data-bs-target="#faq2" aria-expanded="false"
+                    aria-controls="faq2">
+                    <span class="accordion__question">How and when is water allocated from the Regional Pool?</span>
+                    <span class="accordion__icon" aria-hidden="true">
+                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
+                        aria-hidden="true" focusable="false">
+                        <path d="M6 9L12 15L18 9" stroke="#3F5773" stroke-width="2" stroke-linecap="round"
+                          stroke-linejoin="round" />
+                      </svg>
+                    </span>
+                  </button>
+                </h2>
+                <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion" role="region"
+                  aria-labelledby="faq2-heading">
+                  <div class="accordion__body pt-3">
+                    <p>Answer for FAQ 2 goes here.</p>
+                  </div>
+                </div>
               </div>
-            </div>
-            <div class="accordion__item mb-3">
-              <div class="accordion__header d-flex align-items-center justify-content-between collapsed" data-bs-toggle="collapse" data-bs-target="#faq2" aria-expanded="false" aria-controls="faq2" role="button" tabindex="0">
-                <span class="accordion__question">How and when is water allocated from the Regional Pool?</span>
-                <span class="accordion__icon">
-                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M6 9L12 15L18 9" stroke="#3F5773" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                  </svg>
-                </span>
+              <div class="accordion__item mb-3">
+                <h2 class="h5 mb-0">
+                  <button id="faq3-heading"
+                    class="accordion__header d-flex align-items-center justify-content-between w-100 text-start border-0 bg-transparent p-0 collapsed"
+                    type="button" data-bs-toggle="collapse" data-bs-target="#faq3" aria-expanded="false"
+                    aria-controls="faq3">
+                    <span class="accordion__question">Who gets to use the Regional Pool water?</span>
+                    <span class="accordion__icon" aria-hidden="true">
+                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
+                        aria-hidden="true" focusable="false">
+                        <path d="M6 9L12 15L18 9" stroke="#3F5773" stroke-width="2" stroke-linecap="round"
+                          stroke-linejoin="round" />
+                      </svg>
+                    </span>
+                  </button>
+                </h2>
+                <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion" role="region"
+                  aria-labelledby="faq3-heading">
+                  <div class="accordion__body pt-3">
+                    <p>Answer for FAQ 3 goes here.</p>
+                  </div>
+                </div>
               </div>
-              <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-                <div class="accordion__body pt-3">Answer for FAQ 2 goes here.</div>
+              <div class="accordion__item mb-3">
+                <h2 class="h5 mb-0">
+                  <button id="faq4-heading"
+                    class="accordion__header d-flex align-items-center justify-content-between w-100 text-start border-0 bg-transparent p-0 collapsed"
+                    type="button" data-bs-toggle="collapse" data-bs-target="#faq4" aria-expanded="false"
+                    aria-controls="faq4">
+                    <span class="accordion__question">How can the water be used?</span>
+                    <span class="accordion__icon" aria-hidden="true">
+                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
+                        aria-hidden="true" focusable="false">
+                        <path d="M6 9L12 15L18 9" stroke="#3F5773" stroke-width="2" stroke-linecap="round"
+                          stroke-linejoin="round" />
+                      </svg>
+                    </span>
+                  </button>
+                </h2>
+                <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion" role="region"
+                  aria-labelledby="faq4-heading">
+                  <div class="accordion__body pt-3">
+                    <p>Answer for FAQ 4 goes here.</p>
+                  </div>
+                </div>
               </div>
-            </div>
-            <div class="accordion__item mb-3">
-              <div class="accordion__header d-flex align-items-center justify-content-between collapsed" data-bs-toggle="collapse" data-bs-target="#faq3" aria-expanded="false" aria-controls="faq3" role="button" tabindex="0">
-                <span class="accordion__question">Who gets to use the Regional Pool water?</span>
-                <span class="accordion__icon">
-                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M6 9L12 15L18 9" stroke="#3F5773" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                  </svg>
-                </span>
-              </div>
-              <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-                <div class="accordion__body pt-3">Answer for FAQ 3 goes here.</div>
-              </div>
-            </div>
-            <div class="accordion__item mb-3">
-              <div class="accordion__header d-flex align-items-center justify-content-between collapsed" data-bs-toggle="collapse" data-bs-target="#faq4" aria-expanded="false" aria-controls="faq4" role="button" tabindex="0">
-                <span class="accordion__question">How can the water be used?</span>
-                <span class="accordion__icon">
-                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M6 9L12 15L18 9" stroke="#3F5773" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                  </svg>
-                </span>
-              </div>
-              <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-                <div class="accordion__body pt-3">Answer for FAQ 4 goes here.</div>
-              </div>
-            </div>
-            <div class="accordion__item">
-              <div class="accordion__header d-flex align-items-center justify-content-between collapsed" data-bs-toggle="collapse" data-bs-target="#faq5" aria-expanded="false" aria-controls="faq5" role="button" tabindex="0">
-                <span class="accordion__question">Will the Regional Pool Program restrict an entity's ability to lease its own C-BT Project water?</span>
-                <span class="accordion__icon">
-                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M6 9L12 15L18 9" stroke="#3F5773" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                  </svg>
-                </span>
-              </div>
-              <div id="faq5" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-                <div class="accordion__body pt-3">Answer for FAQ 5 goes here.</div>
+              <div class="accordion__item">
+                <h2 class="h5 mb-0">
+                  <button id="faq5-heading"
+                    class="accordion__header d-flex align-items-center justify-content-between w-100 text-start border-0 bg-transparent p-0 collapsed"
+                    type="button" data-bs-toggle="collapse" data-bs-target="#faq5" aria-expanded="false"
+                    aria-controls="faq5">
+                    <span class="accordion__question">Will the Regional Pool Program restrict an entity's ability to
+                      lease its own C-BT Project water?</span>
+                    <span class="accordion__icon" aria-hidden="true">
+                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
+                        aria-hidden="true" focusable="false">
+                        <path d="M6 9L12 15L18 9" stroke="#3F5773" stroke-width="2" stroke-linecap="round"
+                          stroke-linejoin="round" />
+                      </svg>
+                    </span>
+                  </button>
+                </h2>
+                <div id="faq5" class="accordion-collapse collapse" data-bs-parent="#faqAccordion" role="region"
+                  aria-labelledby="faq5-heading">
+                  <div class="accordion__body pt-3">
+                    <p>Answer for FAQ 5 goes here.</p>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
+  </main>
   <script src="../assets/dist/main.min.js"></script>
 </body>
+
 </html>

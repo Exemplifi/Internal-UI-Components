@@ -1,84 +1,137 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Image and Text Components (v1, v2, v3)</title>
   <link rel="stylesheet" href="../assets/dist/style.min.css">
 </head>
-<body>
+
+<body class="image-text-page">
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <header class="page-header" role="banner">
+    <div class="container text-center">
+      <p class="page-header__eyebrow">Component Library</p>
+      <h1 class="page-header__title">Image &amp; Text Variations</h1>
+      <p class="page-header__desc">
+        Three responsive layouts showcasing how feature images and supporting copy can work together.
+        Each section below is labeled for screen reader clarity and keeps critical actions reachable
+        with both mouse and keyboard.
+      </p>
+    </div>
+  </header>
+
+  <main id="main-content" tabindex="-1">
   <!-- Version 1 -->
-  <section class="image-text image-text--v1">
+    <section class="image-text image-text--v1" role="region" aria-labelledby="image-text-v1-title">
     <div class="container">
-      <div class="row justify-content-center">
-        <div class="col-12">
-          <h2 class="image-text__title text-center">Northern Water: Securing Colorado's Water Future</h2>
-        </div>
-      </div>
-      <div class="row align-items-center mt-4">
-        <div class="col-md-6 mb-4 mb-md-0">
-          <div class="image-text__media">
-            <div class="image-text__media-bg"></div>
-            <img class="image-text__img" src="/assets/img/sample-image.jpg" alt="Northern Water" />
-          </div>
-        </div>
-        <div class="col-md-6">
-          <p class="image-text__desc">Serving 1 million residents. Sustaining 600,000 acres of farmland. Delivering reliability through innovation since 1937.</p>
+        <header class="image-text__header">
+          <h2 id="image-text-v1-title" class="image-text__title text-center">Northern Water: Securing Colorado's Water
+            Future</h2>
+        </header>
+        <div class="image-text__container">
+          <figure class="image-text__media">
+            <picture>
+              <source media="(max-width: 768px)"
+                srcset="https://images.pexels.com/photos/2325447/pexels-photo-2325447.jpeg?auto=compress&cs=tinysrgb&w=800">
+              <img id="image-text-v1-photo" class="image-text__img"
+                src="https://images.pexels.com/photos/2325447/pexels-photo-2325447.jpeg?auto=compress&cs=tinysrgb&w=1200"
+                alt="Northern Water infrastructure and reservoirs" loading="lazy" />
+            </picture>
+            <figcaption class="visually-hidden">Aerial view of Northern Water infrastructure.</figcaption>
+          </figure>
+          <div class="image-text__content">
+            <p class="image-text__desc">Serving 1 million residents. Sustaining 600,000 acres of farmland.
+              Delivering reliability through innovation since 1937.</p>
           <div class="image-text__bullets">
-            <div class="image-text__bullets-title">Our Work:</div>
-            <ul class="image-text__bullets-list">
+              <div class="image-text__bullets-title" id="our-work-title">Our Work:</div>
+              <ul class="image-text__bullets-list" aria-labelledby="our-work-title">
               <li>Managing critical water infrastructure</li>
               <li>Balancing growth with sustainability</li>
               <li>Protecting watersheds for future generations</li>
             </ul>
           </div>
-          <button class="image-text__btn btn w-100 mt-4">Visit Our Campus <span class="image-text__btn-icon">→</span></button>
-        </div>
+            <button type="button" class="image-text__btn btn w-100 mt-4"
+              aria-label="Visit the Northern Water campus information page">
+              Visit Our Campus <span class="image-text__btn-icon" aria-hidden="true">→</span>
+            </button>
+          </div>
       </div>
     </div>
   </section>
 
   <!-- Version 2 -->
-  <section class="image-text image-text--v2">
+    <section class="image-text image-text--v2" role="region" aria-labelledby="image-text-v2-title">
     <div class="container">
-      <div class="row align-items-center">
-        <div class="col-md-6 mb-4 mb-md-0">
-          <div class="image-text__media">
-            <div class="image-text__media-bg"></div>
-            <img class="image-text__img" src="/assets/img/sample-image2.jpg" alt="Bradley D. Wind" />
-          </div>
-        </div>
-        <div class="col-md-6">
-          <h2 class="image-text__title">Bradley D. Wind, General Manager</h2>
-          <p class="image-text__desc">Bradley Wind was promoted to general manager in 2018, the sixth general manager in the history of Northern Water. He has worked at Northern Water since 1994 serving as an engineer and deputy manager of operations. Wind has several degrees from Colorado State University - a bachelor's in civil engineering and agricultural engineering, and a master's in business administration. He also has a master's in agricultural engineering from the University of California at Davis.</p>
-          <button class="image-text__btn image-text__btn--email btn rounded-pill mt-4">Email Brad <span class="image-text__btn-icon">✉️</span></button>
+        <div class="image-text__container image-text__container--reverse">
+          <figure class="image-text__media">
+            <picture>
+              <source media="(max-width: 768px)"
+                srcset="https://images.pexels.com/photos/5668850/pexels-photo-5668850.jpeg?auto=compress&cs=tinysrgb&w=800">
+              <img id="image-text-v2-photo" class="image-text__img"
+                src="https://images.pexels.com/photos/5668850/pexels-photo-5668850.jpeg?auto=compress&cs=tinysrgb&w=1200"
+                alt="Portrait of Bradley D. Wind" loading="lazy" />
+            </picture>
+            <figcaption class="visually-hidden">Portrait of Bradley D. Wind.</figcaption>
+          </figure>
+          <div class="image-text__content">
+            <h2 id="image-text-v2-title" class="image-text__title">Bradley D. Wind, General Manager</h2>
+            <p class="image-text__desc">Bradley Wind was promoted to general manager in 2018, the sixth general manager
+              in the history of Northern Water. He has worked at Northern Water since 1994 serving as an engineer and
+              deputy manager of operations. Wind has several degrees from Colorado State University - a bachelor's in
+              civil engineering and agricultural engineering, and a master's in business administration. He also has a
+              master's in agricultural engineering from the University of California at Davis.</p>
+            <button type="button" class="image-text__btn image-text__btn--email btn rounded-pill mt-4"
+              aria-label="Email Bradley D. Wind">
+              Email Brad <span class="image-text__btn-icon" aria-hidden="true">✉️</span>
+            </button>
         </div>
       </div>
     </div>
   </section>
 
   <!-- Version 3 -->
-  <section class="image-text image-text--v3">
+    <section class="image-text image-text--v3" role="region" aria-labelledby="image-text-v3-title">
     <div class="container">
-      <div class="row align-items-center">
-        <div class="col-md-6 mb-4 mb-md-0">
-          <div class="image-text__media">
-            <div class="image-text__media-bg"></div>
-            <img class="image-text__img" src="/assets/img/sample-image3.jpg" alt="Jeff Drager" />
+        <div class="image-text__container">
+          <figure class="image-text__media">
+            <picture>
+              <source media="(max-width: 768px)"
+                srcset="https://images.pexels.com/photos/386144/pexels-photo-386144.jpeg?auto=compress&cs=tinysrgb&w=800">
+              <img id="image-text-v3-photo" class="image-text__img"
+                src="https://images.pexels.com/photos/386144/pexels-photo-386144.jpeg?auto=compress&cs=tinysrgb&w=1200"
+                alt="Portrait of Jeff Drager" loading="lazy" />
+            </picture>
+            <figcaption class="visually-hidden">Portrait of Jeff Drager.</figcaption>
+          </figure>
+          <div class="image-text__content">
+            <h2 id="image-text-v3-title" class="image-text__title">Jeff Drager, Director of Engineering</h2>
+          <p class="image-text__desc">Jeff Drager has a bachelor's degree in civil engineering from Colorado State
+            University and a master's in water resources engineering from Stanford University. He is a registered
+            professional engineer in Colorado and California. Drager has worked at Northern Water since 1995 where he
+              has also served as project manager for the Windy Gap Firming Project, which involved an 18-year
+            NEPA/permitting process. He has also served as project manager for other water supply projects in Colorado
+            and California as both a consultant and owner's representative.</p>
+            <div class="image-text__subsection" aria-labelledby="engineering-division-title">
+              <h3 id="engineering-division-title" class="image-text__subtitle">About the Engineering Division</h3>
+            <p class="image-text__subdesc">The Engineering Division helps ensure efficient and timely water deliveries
+              while also planning for future water supplies and other organizational goals. Responsibilities include:
+              water supply planning and forecasting to maximize operations; designing improvements to existing water
+              supply and delivery systems; planning new water supply projects; protecting water supplies through water
+              rights and permitting issues; and managing property and real estate.</p>
           </div>
-        </div>
-        <div class="col-md-6">
-          <h2 class="image-text__title">Jeff Drager, Director of Engineering</h2>
-          <p class="image-text__desc">Jeff Drager has a bachelor's degree in civil engineering from Colorado State University and a master's in water resources engineering from Stanford University. He is a registered professional engineer in Colorado and California. Drager has worked at Northern Water since 1995 where he has also served as project manager for the Windy Gap... Firming Project, which involved a 18-year NEPA/permitting process. He has also served as project manager for other water supply projects in Colorado and California as both a consultant and owner's representative.</p>
-          <div class="image-text__subsection">
-            <h3 class="image-text__subtitle">About the Engineering Division</h3>
-            <p class="image-text__subdesc">The Engineering Division helps ensure efficient and timely water deliveries while also planning for future water supplies and other organizational goals. Responsibilities include: water supply planning and forecasting to maximize operations; designing improvements to existing water supply and delivery systems; planning new water supply projects; protecting water supplies through water rights and permitting issues; and managing property and real estate.</p>
+            <button type="button" class="image-text__btn image-text__btn--showmore btn btn-outline-primary mt-4"
+              aria-label="Show more details about the Engineering Division" aria-expanded="false">
+              Show More <span class="image-text__btn-icon" aria-hidden="true">→</span>
+            </button>
           </div>
-          <button class="image-text__btn image-text__btn--showmore btn btn-outline-primary mt-4">Show More <span class="image-text__btn-icon">→</span></button>
-        </div>
       </div>
     </div>
   </section>
+  </main>
   <script src="../assets/dist/main.min.js"></script>
 </body>
+
 </html>
