@@ -1,230 +1,164 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Footer Component</title>
-    <link rel="stylesheet" href="../assets/dist/style.min.css" />
-  </head>
-  <body>
-    <script src="../assets/dist/main.min.js"></script>
 
-    <!-- Footer -->
-    <footer class="footer" role="contentinfo">
-      <div class="container-fluid">
-        <div class="container">
-          <!-- Newsletter Section -->
-          <div class="row footer__newsletter">
-            <div class="col-12 col-md-6">
-              <h2 class="footer__newsletter-title">Stay Informed</h2>
-              <p class="footer__newsletter-text">
-                Sign up for our newsletter to receive the latest updates on
-                projects, events, and water conservation efforts.
-              </p>
-            </div>
-            <div class="col-12 col-md-6">
-              <form class="footer__form" aria-label="Newsletter Subscription">
-                <div class="footer__form-group d-flex align-items-end">
-                  <div class="form-floating flex-grow-1">
-                    <input
-                      type="email"
-                      id="newsletter-email"
-                      class="footer__input form-control"
-                      placeholder="Enter your email ID"
-                      required
-                      aria-required="true"
-                    />
-                    <label for="newsletter-email">Enter your email ID</label>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Footer Component</title>
+  <link rel="stylesheet" href="../assets/dist/style.min.css" />
+</head>
+
+<body>
+  <!-- Footer -->
+  <footer class="footer" role="contentinfo">
+    <div class="container-fluid">
+      <div class="container">
+        <!-- Newsletter Section -->
+        <div class="row footer__newsletter">
+          <div class="col-12 col-md-6">
+            <h2 class="footer__newsletter-title">Stay Informed</h2>
+            <p class="footer__newsletter-text">
+              Sign up for our newsletter to receive the latest updates on
+              projects, events, and water conservation efforts.
+            </p>
+          </div>
+          <div class="col-12 col-md-6">
+            <form class="footer__form" aria-label="Newsletter Subscription" id="newsletter-form" novalidate>
+              <div class="footer__form-group d-flex align-items-end">
+                <div class="form-floating flex-grow-1">
+                  <input type="email" id="newsletter-email" class="footer__input form-control"
+                    placeholder="Enter your email ID" required aria-required="true"
+                    aria-describedby="newsletter-error newsletter-success" autocomplete="email" />
+                  <label for="newsletter-email">Enter your email ID</label>
+                  <div id="newsletter-error" class="footer__form-error visually-hidden" role="alert" aria-live="polite">
                   </div>
-                  <button
-                    type="submit"
-                    class="footer__submit btn ms-4 d-flex align-items-center"
-                  >
-                    Subscribe
-                    <img
-                      src="../assets/images/arrow-right-white.svg"
-                      alt=""
-                      class="footer__submit-arrow ms-2"
-                      aria-hidden="true"
-                    />
-                  </button>
                 </div>
-              </form>
-            </div>
+                <button type="submit" class="footer__submit btn ms-4 d-flex align-items-center"
+                  aria-label="Subscribe to newsletter">
+                  <span>Subscribe</span>
+                  <img src="../assets/images/arrow-right-white.svg" alt="" class="footer__submit-arrow ms-2"
+                    aria-hidden="true" />
+                </button>
+              </div>
+              <div id="newsletter-success" class="footer__form-success visually-hidden" role="status"
+                aria-live="polite"></div>
+            </form>
           </div>
-          <div class="footer__container">
-            <!-- Logo Section -->
-            <div class="footer__logo">
-              <img
-                src="../assets/images/northern-water-colorful-logo.svg"
-                alt="Northern Water Logo"
-                class="footer__logo-img img-fluid"
-              />
-            </div>
+        </div>
+        <div class="footer__container">
+          <!-- Logo Section -->
+          <div class="footer__logo">
+            <a href="#" class="footer__logo-link" aria-label="Northern Water - Home">
+              <img src="../assets/images/northern-water-colorful-logo.svg" alt="Northern Water Logo"
+                class="footer__logo-img img-fluid" />
+            </a>
+          </div>
 
-            <!-- Quick Links Section -->
-            <div class="footer__quick-links">
-              <h3 class="footer__section-title border-bottom pb-3">
-                Quick Link
-              </h3>
-              <div class="footer__links-grid row">
-                <div class="footer__links-column col-sm-6">
-                  <a href="#" class="footer__link d-flex align-items-center">
-                    Contact Us
-                    <img
-                      src="../assets/images/arrow-right-blue.svg"
-                      alt=""
-                      class="footer__link-arrow ms-2"
-                      aria-hidden="true"
-                    />
-                  </a>
-                  <a href="#" class="footer__link d-flex align-items-center">
-                    Data Policy
-                    <img
-                      src="../assets/images/arrow-right-blue.svg"
-                      alt=""
-                      class="footer__link-arrow ms-2"
-                      aria-hidden="true"
-                    />
-                  </a>
-                </div>
-                <div class="footer__links-column col-sm-6">
-                  <a href="#" class="footer__link d-flex align-items-center">
-                    Accessibility
-                    <img
-                      src="../assets/images/arrow-right-blue.svg"
-                      alt=""
-                      class="footer__link-arrow ms-2"
-                      aria-hidden="true"
-                    />
-                  </a>
-                  <a href="#" class="footer__link d-flex align-items-center">
-                    Social Media Policy
-                    <img
-                      src="../assets/images/arrow-right-blue.svg"
-                      alt=""
-                      class="footer__link-arrow ms-2"
-                      aria-hidden="true"
-                    />
-                  </a>
-                </div>
+          <!-- Quick Links Section -->
+          <div class="footer__quick-links">
+            <h3 class="footer__section-title border-bottom pb-3">
+              Quick Links
+            </h3>
+            <nav class="footer__links-grid row" aria-label="Quick Links Navigation">
+              <div class="footer__links-column col-sm-6">
+                <a href="#" class="footer__link d-flex align-items-center"
+                  aria-label="Contact Us - Opens in same window">
+                  <span>Contact Us</span>
+                  <img src="../assets/images/arrow-right-blue.svg" alt="" class="footer__link-arrow ms-2"
+                    aria-hidden="true" />
+                </a>
+                <a href="#" class="footer__link d-flex align-items-center"
+                  aria-label="Data Policy - Opens in same window">
+                  <span>Data Policy</span>
+                  <img src="../assets/images/arrow-right-blue.svg" alt="" class="footer__link-arrow ms-2"
+                    aria-hidden="true" />
+                </a>
               </div>
-            </div>
+              <div class="footer__links-column col-sm-6">
+                <a href="#" class="footer__link d-flex align-items-center"
+                  aria-label="Accessibility - Opens in same window">
+                  <span>Accessibility</span>
+                  <img src="../assets/images/arrow-right-blue.svg" alt="" class="footer__link-arrow ms-2"
+                    aria-hidden="true" />
+                </a>
+                <a href="#" class="footer__link d-flex align-items-center"
+                  aria-label="Social Media Policy - Opens in same window">
+                  <span>Social Media Policy</span>
+                  <img src="../assets/images/arrow-right-blue.svg" alt="" class="footer__link-arrow ms-2"
+                    aria-hidden="true" />
+                </a>
+              </div>
+            </nav>
+          </div>
 
-            <!-- Contact Section -->
-            <div class="footer__contact">
-              <h3 class="footer__section-title border-bottom pb-3">
-                Contact Us
-              </h3>
-              <div class="footer__contact-info">
-                <div class="footer__contact-item d-flex align-items-center">
-                  <img
-                    src="../assets/images/location-fill.svg"
-                    alt=""
-                    class="footer__contact-icon"
-                    aria-hidden="true"
-                  />
-                  <address class="footer__address mb-0">
-                    220 Water Ave., Berthoud, CO 80513
-                  </address>
-                </div>
-                <div class="footer__contact-item d-flex align-items-center">
-                  <img
-                    src="../assets/images/phone.svg"
-                    alt=""
-                    class="footer__contact-icon"
-                    aria-hidden="true"
-                  />
-                  <a href="tel:800-369-7246" class="footer__phone"
-                    >800-369-7246</a
-                  >
-                </div>
+          <!-- Contact Section -->
+          <div class="footer__contact">
+            <h3 class="footer__section-title border-bottom pb-3">
+              Contact Us
+            </h3>
+            <div class="footer__contact-info">
+              <div class="footer__contact-item d-flex align-items-center">
+                <img src="../assets/images/location-fill.svg" alt="" class="footer__contact-icon" aria-hidden="true" />
+                <address class="footer__address mb-0">
+                  <span class="visually-hidden">Address: </span>
+                  220 Water Ave., Berthoud, CO 80513
+                </address>
               </div>
-            </div>
-            <!-- Social Media Section -->
-            <div class="footer__social">
-              <h3 class="footer__section-title border-bottom pb-3">
-                Follow us
-              </h3>
-              <div class="footer__social-links d-flex">
-                <a
-                  href="#"
-                  class="footer__social-link d-flex align-items-center justify-content-center"
-                  aria-label="Visit our Facebook page"
-                >
-                  <img
-                    src="../assets/images/facebook.svg"
-                    alt=""
-                    aria-hidden="true"
-                  />
-                </a>
-                <a
-                  href="#"
-                  class="footer__social-link d-flex align-items-center justify-content-center"
-                  aria-label="Visit our Twitter page"
-                >
-                  <img
-                    src="../assets/images/twitter.svg"
-                    alt=""
-                    aria-hidden="true"
-                  />
-                </a>
-                <a
-                  href="#"
-                  class="footer__social-link d-flex align-items-center justify-content-center"
-                  aria-label="Visit our Instagram page"
-                >
-                  <img
-                    src="../assets/images/instagram.svg"
-                    alt=""
-                    aria-hidden="true"
-                  />
-                </a>
-                <a
-                  href="#"
-                  class="footer__social-link d-flex align-items-center justify-content-center"
-                  aria-label="Visit our LinkedIn page"
-                >
-                  <img
-                    src="../assets/images/linkedin.svg"
-                    alt=""
-                    aria-hidden="true"
-                  />
-                </a>
-                <a
-                  href="#"
-                  class="footer__social-link d-flex align-items-center justify-content-center"
-                  aria-label="Visit our YouTube channel"
-                >
-                  <img
-                    src="../assets/images/youtube.svg"
-                    alt=""
-                    aria-hidden="true"
-                  />
+              <div class="footer__contact-item d-flex align-items-center">
+                <img src="../assets/images/phone.svg" alt="" class="footer__contact-icon" aria-hidden="true" />
+                <a href="tel:800-369-7246" class="footer__phone" aria-label="Call us at 800-369-7246">
+                  <span class="visually-hidden">Phone: </span>
+                  800-369-7246
                 </a>
               </div>
             </div>
           </div>
+          <!-- Social Media Section -->
+          <div class="footer__social">
+            <h3 class="footer__section-title border-bottom pb-3">
+              Follow us
+            </h3>
+            <nav class="footer__social-links d-flex" aria-label="Social Media Links">
+              <a href="#" class="footer__social-link d-flex align-items-center justify-content-center"
+                aria-label="Visit our Facebook page - Opens in new window" target="_blank" rel="noopener noreferrer">
+                <img src="../assets/images/facebook.svg" alt="" aria-hidden="true" />
+              </a>
+              <a href="#" class="footer__social-link d-flex align-items-center justify-content-center"
+                aria-label="Visit our Twitter page - Opens in new window" target="_blank" rel="noopener noreferrer">
+                <img src="../assets/images/twitter.svg" alt="" aria-hidden="true" />
+              </a>
+              <a href="#" class="footer__social-link d-flex align-items-center justify-content-center"
+                aria-label="Visit our Instagram page - Opens in new window" target="_blank" rel="noopener noreferrer">
+                <img src="../assets/images/instagram.svg" alt="" aria-hidden="true" />
+              </a>
+              <a href="#" class="footer__social-link d-flex align-items-center justify-content-center"
+                aria-label="Visit our LinkedIn page - Opens in new window" target="_blank" rel="noopener noreferrer">
+                <img src="../assets/images/linkedin.svg" alt="" aria-hidden="true" />
+              </a>
+              <a href="#" class="footer__social-link d-flex align-items-center justify-content-center"
+                aria-label="Visit our YouTube channel - Opens in new window" target="_blank" rel="noopener noreferrer">
+                <img src="../assets/images/youtube.svg" alt="" aria-hidden="true" />
+              </a>
+            </nav>
+          </div>
         </div>
       </div>
+    </div>
 
-      <!-- Copyright Section -->
-      <div class="footer__bottom">
-        <div
-          class="container footer__bottom-container d-flex justify-content-between align-items-center"
-        >
-          <p class="footer__copyright mb-0">Copyright © 2025 Northern Water</p>
-          <a href="#" class="footer__privacy-link d-flex align-items-center">
-            Privacy Policy
-            <img
-              src="../assets/images/arrow-right-white.svg"
-              alt=""
-              class="footer__link-arrow ms-2"
-              aria-hidden="true"
-            />
-          </a>
-        </div>
+    <!-- Copyright Section -->
+    <div class="footer__bottom">
+      <div class="container footer__bottom-container d-flex justify-content-between align-items-center">
+        <p class="footer__copyright mb-0">Copyright © 2025 Northern Water</p>
+        <a href="#" class="footer__privacy-link d-flex align-items-center"
+          aria-label="Privacy Policy - Opens in same window">
+          <span>Privacy Policy</span>
+          <img src="../assets/images/arrow-right-white.svg" alt="" class="footer__link-arrow ms-2" aria-hidden="true" />
+        </a>
       </div>
-    </footer>
-  </body>
+    </div>
+  </footer>
+
+  <script src="../assets/dist/main.min.js"></script>
+</body>
+
 </html>
