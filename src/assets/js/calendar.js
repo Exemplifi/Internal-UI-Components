@@ -17,6 +17,7 @@
       this.bindEvents();
       this.renderCalendar();
       this.loadEvents();
+      this.updateMonthYear();
     }
 
     bindEvents() {
