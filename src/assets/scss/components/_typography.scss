@@ -12,6 +12,7 @@ body {
 .display-1,
 .display-2,
 .dynamic,
+// Base heading styles
 h1,
 .h1,
 h2,
@@ -73,6 +74,7 @@ h1,
   font-size: 4rem;
   line-height: 1.1em;
   letter-spacing: -0.02em;
+  color: var(--bs-heading-color, inherit);
   @include media-breakpoint-down(lg) {
     font-size: 3.5rem;
   }
