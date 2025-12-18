@@ -49,8 +49,7 @@
 .card-v2:focus-within .card-v2__icon,
 .card-v4:hover .card-v4__circle,
 .card-v4:focus-within .card-v4__circle {
-  // transform: translateY(-2px) scale(1.06);
-  transform: translate3d(0px, 0px, 0px) scale3d(1.3, 1.3, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
+  transform: translate3d(0px, 0px, 0px) scale3d(1.2, 1.2, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
   transform-style: preserve-3d;
   will-change: transform;
 }
