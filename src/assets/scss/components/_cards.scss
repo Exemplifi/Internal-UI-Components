@@ -26,17 +26,15 @@
   will-change: transform, box-shadow;
 }
 
-// .card-v1:hover,
-// .card-v1:focus-within,
-// .card-v2:hover,
-// .card-v2:focus-within,
-// .card-v3:hover,
-// .card-v3:focus-within,
-// .card-v4:hover,
-// .card-v4:focus-within {
-//   transform: translateY(-4px);
-//   box-shadow: 0 10px 30px rgba(49, 68, 89, 0.16);
-// }
+.card-v2:hover,
+.card-v2:focus-within,
+.card-v3:hover,
+.card-v3:focus-within,
+.card-v4:hover,
+.card-v4:focus-within {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 30px rgba(49, 68, 89, 0.16);
+}
 
 // subtle motion on key visuals
 .card-v1__img,
