@@ -28,6 +28,6 @@
     "sass": "^1.89.2",
     "sass-rem": "^4.0.0",
     "slick-carousel": "^1.8.1",
-    "swiper": "^11.0.7"
+    "swiper": "^12.1.2"
   }
 }
