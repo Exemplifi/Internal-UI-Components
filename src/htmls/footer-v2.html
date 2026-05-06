@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Footer V2</title>
+  <link rel="stylesheet" href="../assets/css/styles.css" />
+</head>
+
+<body>
+  <!-- Footer -->
+  <footer class="footer-v2">
+    <div class="container">
+      <!-- Newsletter Section -->
+      <div class="row">
+        <div class="col-12 footer-v2__newsletter">
+          <h2>Stay Connected</h2>
+          <p>Get timely updates on DART, learn how transit works, and read stories of impact -- delivered every few
+            weeks to your inbox.
+          </p>
+          <form class="footer__newsletter-form">
+            <div class="footer__form-group d-flex">
+              <div class="form-floating flex-grow-1">
+
+                <input type="email" id="newsletter-email" class="footer__input form-control"
+                  placeholder="Enter your email ID" required aria-required="true"
+                  aria-describedby="newsletter-error newsletter-success" autocomplete="email" />
+                <label for="newsletter-email">Enter your email ID</label>
+                <div id="newsletter-error" class="footer__form-error visually-hidden" role="alert" aria-live="polite">
+                </div>
+              </div>
+              <button type="submit" class="btn primary-btn" aria-label="Subscribe to newsletter">
+                Subscribe
+              </button>
+            </div>
+            <div id="newsletter-success" class="footer__form-success visually-hidden" role="status" aria-live="polite">
+            </div>
+          </form>
+        </div>
+      </div>
+      <div class="footer-v2__container">
+        <div class="footer__links-wrapper">
+          <!-- Logo Section -->
+          <div class="footer-v2__logo">
+            <a href="#" class="footer__logo-link" aria-label="DART Home Page">
+              <img src="../assets/images/dart-f-logo.svg" alt="Dart Logo" class="footer__logo-img img-fluid" />
+            </a>
+          </div>
+
+          <!-- Quick Links Section -->
+          <div class="footer__customer-services">
+            <h3>
+              DART Customer Service
+            </h3>
+            <ul class="footer__customer-services-list">
+              <li>
+                <span class="icon-wrapper">
+                  <img src="../assets/images/marker-pin.svg" alt="" />
+                </span>
+                620 Cherry Street Des Moines, IA 50309
+              </li>
+              <li>
+                <span class="icon-wrapper">
+                  <img src="../assets/images/phone.svg" alt="" />
+                </span>
+                <a href="tel:5152838100">515-283-8100</a>
+              </li>
+              <li>
+                <span class="icon-wrapper">
+                  <img src="../assets/images/calendar.svg" alt="" />
+                </span>
+                Monday - Saturday:<br aria-hidden="true" />
+                7 a.m. to 5 p.m.<br aria-hidden="true" />
+                Sunday: Closed
+              </li>
+            </ul>
+
+          </div>
+
+          <!-- Links-->
+          <div class="footer__links">
+            <h3>
+              Business
+            </h3>
+            <ul>
+              <li>
+                <a href="#">Partner Program</a>
+              </li>
+              <li>
+                <a href="#">Advertising</a>
+              </li>
+              <li>
+                <a href="#">Procurement</a>
+              </li>
+              <li>
+                <a href="#">Developer Resources</a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Links-->
+          <div class="footer__links">
+            <h3>
+              Resources
+            </h3>
+            <ul>
+              <li>
+                <a href="#">Blog</a>
+              </li>
+              <li>
+                <a href="#">Media Center</a>
+              </li>
+              <li>
+                <a href="#">Policies</a>
+              </li>
+              <li>
+                <a href="#">DART Leadership</a>
+              </li>
+              <li>
+                <a href="#">Transit Riders Advisory Committee</a>
+              </li>
+              <li>
+                <a href="#">EEO Program</a>
+              </li>
+            </ul>
+          </div>
+          <!-- Social Media Section -->
+          <div class="footer-v2__social">
+            <h3>
+              Follow us
+            </h3>
+            <ul class="footer-v2__social-links">
+              <li>
+                <a href="#" aria-label="Facebook">
+                  <img src="../assets/images/facebook.svg" alt="" />
+                </a>
+              </li>
+              <li>
+                <a href="#" aria-label="Instagram">
+                  <img src="../assets/images/insta.svg" alt="" />
+                </a>
+              </li>
+              <li>
+                <a href="#" aria-label="LinkedIn">
+                  <img src="../assets/images/linkedin.svg" alt="" />
+                </a>
+              </li>
+              <li>
+                <a href="#" aria-label="YouTube">
+                  <img src="../assets/images/youtube.svg" alt="" />
+                </a>
+              </li>
+            </ul>
+            <div class="footer__social-app">
+              <h3>
+                Get the MyDART App
+              </h3>
+              <div class="footer__social-app-link-wrapper">
+                <a href="#" class="footer__social-app-link">
+                  <svg width="18" height="22" viewBox="0 0 18 22" fill="none" xmlns="http://www.w3.org/2000/svg"
+                    aria-hidden="true">
+                    <path
+                      d="M14.7973 11.5804C14.819 9.89936 15.7217 8.30876 17.1539 7.4283C16.2504 6.13798 14.7371 5.31988 13.1627 5.27062C11.4835 5.09436 9.85552 6.27545 8.99981 6.27545C8.12754 6.27545 6.81004 5.28812 5.39131 5.31731C3.54206 5.37705 1.81809 6.42844 0.918393 8.04518C-1.01561 11.3936 0.426982 16.3146 2.27959 19.0213C3.20649 20.3466 4.28977 21.8271 5.70722 21.7746C7.09428 21.717 7.61232 20.8901 9.28662 20.8901C10.9454 20.8901 11.4314 21.7746 12.8776 21.7412C14.366 21.717 15.3038 20.4099 16.1981 19.072C16.8641 18.1277 17.3766 17.084 17.7166 15.9795C15.9674 15.2397 14.7994 13.4795 14.7973 11.5804Z"
+                      fill="white" />
+                    <path
+                      d="M12.0656 3.49062C12.8772 2.51641 13.277 1.26423 13.1802 0C11.9403 0.13022 10.7951 0.722779 9.97259 1.65961C9.1683 2.57494 8.74975 3.80509 8.82888 5.021C10.0692 5.03377 11.2885 4.45727 12.0656 3.49062Z"
+                      fill="white" />
+                  </svg>
+                  <div class="footer__social-app-link-text">
+                    <span>Download on the </span>App Store
+                  </div>
+                </a>
+                <a href="#" class="footer__social-app-link" >
+                  <svg width="24" height="26" viewBox="0 0 24 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                      d="M16.6973 17.3389L2.54102 25.3848C1.9062 25.7448 1.32406 25.8046 0.87793 25.6133L12.9238 13.5655L16.6973 17.3389ZM12.2168 12.8584L0.183594 24.8936C0.0656134 24.6264 0 24.2987 0 23.917V1.80178C0 1.4206 0.0655179 1.09269 0.183594 0.82522L12.2168 12.8584ZM22.042 11.416C23.439 12.21 23.439 13.5097 22.042 14.3047L17.5996 16.8272L13.6309 12.8584L17.5977 8.89065L22.042 11.416ZM0.878906 0.106469C1.32496 -0.084604 1.90655 -0.0245826 2.54102 0.335962L16.6963 8.37795L12.9238 12.1514L0.878906 0.106469Z"
+                      fill="white" />
+                  </svg>
+                  <div class="footer__social-app-link-text">
+                    <span>Get it on </span>Google Play
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer__copyright">
+          <p>
+            © Copyright 2026, DART - Des Moines Area Regional Transit Authority
+          </p>
+          <ul class="footer__copyright-links">
+            <li>
+              <a href="#">Privacy Policy</a>
+            </li>
+            <li>
+              <a href="#">Terms of Use</a>
+            </li>
+            <li>
+              <a href="#">Site Map</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+  <script src="../assets/dist/main.min.js"></script>
+</body>
+
+</html>
