@@ -35,8 +35,8 @@ import "./footer.js";
 import "./exemplifi-header.js";
 import "./calendar.js";
 import "./swiper-init.js";
-import { initPlCarousel } from "./pl-carousel.js";
+import { initExCarousel } from "./pl-carousel.js";
 
 $(function () {
-  initPlCarousel($);
+  initExCarousel($);
 });
