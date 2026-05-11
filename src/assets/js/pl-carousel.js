@@ -5,7 +5,7 @@
 export function initPlCarousel($) {
   if (!$ || !$.fn || !$.fn.slick) return;
 
-  const $plSlick = $(".pl-slick");
+  const $plSlick = $(".ex-slick");
   if ($plSlick.length) {
     $plSlick.slick({
       autoplay: true,

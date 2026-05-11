@@ -3,17 +3,17 @@
 // -----------------------------------------------------------------------------
 // Port Laredo (source of truth)
 // File: Client-Port-Laredo/.../htmls/src/scss/components/_carousel.scss
-// Block: .pl-carousel (lines 152–236) — copied structure; rem + Internal-only fixes below.
+// Block: .ex-carousel (lines 152–236) — copied structure; rem + Internal-only fixes below.
 // Internal file: src/assets/scss/components/_pl-carousel.scss
 // -----------------------------------------------------------------------------
 
-.pl-carousel {
+.ex-carousel {
   position: relative;
   overflow: hidden;
   @include media-breakpoint-down(md) {
     margin-bottom: rem-convert(24px);
   }
-  .pl-slick {
+  .ex-slick {
     width: 100vw;
     overflow: hidden;
     &:before,
