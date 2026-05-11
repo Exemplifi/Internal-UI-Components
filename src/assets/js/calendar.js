@@ -1,3 +1,5 @@
+import $ from "jquery";
+
 (function ($) {
   "use strict";
 
@@ -497,4 +499,4 @@
       new EXCalendar($(this));
     });
   });
-})(jQuery);
+})($);
