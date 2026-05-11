@@ -1,13 +1,9 @@
-/**
- * Port Laredo: htmls/src/js/main.js — "pl-carousel scripts" block (lines 150–178).
- * Internal: bundled via main.js → $(function () { initPlCarousel($); })
- */
-export function initExCarousel($) {
+export function initPgCarousel($) {
   if (!$ || !$.fn || !$.fn.slick) return;
 
-  const $exSlick = $(".ex-slick");
-  if ($exSlick.length) {
-    $exSlick.slick({
+  const $pgSlick = $(".pg-slick");
+  if ($pgSlick.length) {
+    $pgSlick.slick({
       autoplay: true,
       autoplaySpeed: 0,
       speed: 3000,
@@ -26,10 +22,10 @@ export function initExCarousel($) {
         },
       ],
     });
-    $exSlick.on("mouseenter", function () {
+    $pgSlick.on("mouseenter", function () {
       $(this).slick("slickPause");
     });
-    $exSlick.on("mouseleave", function () {
+    $pgSlick.on("mouseleave", function () {
       $(this).slick("slickPlay");
     });
   }

@@ -6,7 +6,6 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 
-// Initialize Swiper instances (only when markup exists — avoids throwing on minimal demos e.g. pl-carousel.html)
 const initSwipers = () => {
   const el1 = document.querySelector(".carousel-v1");
   if (el1) {
