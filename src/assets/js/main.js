@@ -1,6 +1,7 @@
 import $ from "jquery";
 import "slick-carousel";
 import * as bootstrap from "bootstrap";
+import "bs5-lightbox";
 import { createIcons, icons } from "lucide";
 import AOS from "aos";
 import "aos/dist/aos.css";
@@ -34,3 +35,8 @@ import "./footer.js";
 import "./exemplifi-header.js";
 import "./calendar.js";
 import "./swiper-init.js";
+import { initPlCarousel } from "./pl-carousel.js";
+
+$(function () {
+  initPlCarousel($);
+});
