@@ -2,18 +2,18 @@
   "name": "northernwaters",
   "private": true,
   "version": "0.0.0",
-  "description": "Dev (SCSS + JS): npm run watch:dist — Sass watch + Vite --watch → src/assets/dist (static HTML). npm run dev:watch — Vite dev + Sass watch. Release: npm run build:all.",
+  "description": "Dev: npm run watch:all (Sass + Vite watch → src/assets/dist). npm run dev:watch — Vite dev + Sass watch. Release: npm run build:all.",
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "build": "npm run build:js",
     "preview": "vite preview",
-    "watch:scss": "sass --watch --style=compressed --load-path=node_modules --load-path=src/assets/scss src/assets/scss/styles.scss src/assets/css/styles.css",
     "sass:build": "sass --style=compressed --load-path=node_modules --load-path=src/assets/scss src/assets/scss/styles.scss src/assets/css/styles.css",
     "build:js": "vite build --config vite.config.js --mode production",
     "build:all": "npm run sass:build && npm run build:js",
-    "watch:vite": "vite build --watch --config vite.config.js --mode production",
-    "watch:dist": "run-p watch:scss watch:vite",
+    "watch:scss": "sass --watch --style=compressed --load-path=node_modules --load-path=src/assets/scss src/assets/scss/styles.scss src/assets/css/styles.css",
+    "watch:js": "vite build --watch --config vite.config.js --mode production",
+    "watch:all": "run-p watch:scss watch:js",
     "dev:watch": "run-p dev watch:scss"
   },
   "devDependencies": {
