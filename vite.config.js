@@ -15,7 +15,7 @@ export default defineConfig({
         entryFileNames: '[name].min.js',
         chunkFileNames: '[name]-[hash].min.js',
         assetFileNames: (assetInfo) => {
-          if (assetInfo.name.endsWith('.css')) {
+          if (assetInfo.name && assetInfo.name.endsWith('.css')) {
             return 'style.min.css';
           }
           return '[name][extname]';

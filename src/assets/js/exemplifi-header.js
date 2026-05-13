@@ -1,10 +1,12 @@
 document.addEventListener("DOMContentLoaded", () => {
   $(function () {
-    $(".navbar-toggler").on("click", function () {
+    if (!$(".ex-header").length) return;
+
+    $(".ex-header .navbar-toggler").on("click", function () {
       $(".ex-header, .ex-menu").toggleClass("white-bg");
     });
 
-    $(".navbar-toggler").on("click", function () {
+    $(".ex-header .navbar-toggler").on("click", function () {
       $("body").toggleClass("overflow-y-hidden");
     });
 
@@ -58,15 +60,13 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 document.addEventListener("DOMContentLoaded", function () {
-  // Select key elements
-  const menuToggleBtn = document.querySelector(".navbar-toggler");
-  if (!menuToggleBtn) {
-    console.error("Menu toggle button not found");
+  const menuToggleBtn = document.querySelector(".ex-header .navbar-toggler");
+  const menu = document.querySelector("#eX-navbarNav");
+  if (!menuToggleBtn || !menu) {
     return;
   }
-  const menu = document.querySelector("#eX-navbarNav");
-  const header = document.querySelector(".ex-header"); // Header element
-  const exMenu = document.querySelector(".ex-menu"); // Menu wrapper
+  const header = document.querySelector(".ex-header");
+  const exMenu = document.querySelector(".ex-menu");
 
   let focusableElements;
   let firstFocusable;
@@ -93,8 +93,6 @@ document.addEventListener("DOMContentLoaded", function () {
     lastFocusable = focusableElements[focusableElements.length - 1];
 
     const focused = document.activeElement;
-    console.log("First:", firstFocusable);
-    console.log("Last:", lastFocusable);
 
     if (e.shiftKey) {
       // If Shift+Tab and focus is at the first element, loop to last

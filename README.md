@@ -1,74 +1,79 @@
-## Standard Repo
+# Internal UI Components
 
-### Overview
-This repository uses Vite for development and builds, SASS for styling, and a set of Cursor rule files to standardize project scaffolding, coding conventions, and accessibility. Follow the workflow below to run scripts and apply rules consistently.
+## What this repository is
 
-### Prerequisites
-- Node.js and npm installed
+This repo is an **internal Exemplifi UI kit**: **static HTML pages** that demonstrate reusable patterns (heroes, headers, forms, carousels, and so on). Styles are written in **Sass** (with **Bootstrap 5**). All demo pages load one **minified JavaScript bundle** and one **minified CSS file** produced by **Sass + Vite** into `src/assets/dist/`.
 
-### Install
+It is **not** a React or npm component library. It is a **reference and copy-paste source** for markup, class names, styles, and behavior—plus a place to review layout and accessibility before patterns go into client projects.
+
+## Who it is for
+
+- Developers integrating or matching Exemplifi front-end patterns  
+- Designers checking how patterns render in code  
+- Anyone who needs a **stable, browsable set of demos** with a documented build
+
+## Quick start
+
+**Prerequisites:** Node.js 18+ and npm.
+
 ```bash
 npm install
+npm run build:all
 ```
 
-### Scripts and What They Do
-```json
-{
-  "scripts": {
-    "dev": "vite",
-    "build": "vite build",
-    "preview": "vite preview",
-    "watch:scss": "sass --watch --style=compressed --load-path=node_modules --load-path=src/assets/scss src/assets/scss/styles.scss src/assets/css/styles.css",
-    "build:js": "vite build --config vite.config.js --mode production"
-  }
-}
+After a clone you **must** run `build:all` once so `src/assets/dist/style.min.css` and `main.min.js` exist. Then open **`index.html`** at the repo root (or serve the folder) and use the **component hub** to open each demo in `src/htmls/`.
+
+For local work on HTML + SCSS + JS:
+
+```bash
+npm run watch:all
 ```
 
-- **dev**: Starts the Vite development server with hot module replacement for rapid local development.
-- **build**: Creates a production build of the site using Vite (outputs to `dist`).
-- **preview**: Serves the production build locally so you can test the `dist` output.
-- **watch:scss**: Compiles SASS to CSS in watch mode. Uses compressed output and includes both `node_modules` and `src/assets/scss` in the SASS load paths. It watches `src/assets/scss/styles.scss` and writes to `src/assets/css/styles.css`.
-- **build:js**: Runs a production JS build explicitly using `vite.config.js` and `--mode production`.
+## How demos load assets
 
-### Common Commands
-- Start dev server: `npm run dev`
-- Watch and compile SCSS: `npm run watch:scss`
-- Build for production: `npm run build`
-- Preview production build: `npm run preview`
-- Production JS build (explicit): `npm run build:js`
+Files under `src/htmls/` link to **`../assets/dist/style.min.css`** and **`../assets/dist/main.min.js`**. Load the script with a normal `<script src="...">` (not `type="module"`).
 
-## Cursor Rule Files Workflow
-Use the following rule files in the specified order for a consistent workflow across project setup, coding standards, and accessibility compliance.
+## Project layout
 
-### 1) Project Setup — `@starter-pack.mdc`
-Run at the beginning of the project or when bootstrapping new modules/pages.
+| Path | Role |
+|------|------|
+| `index.html` | Hub: links to every component demo |
+| `src/htmls/` | One standalone HTML demo per pattern (or variant) |
+| `src/assets/scss/` | Sass source; entry `styles.scss` |
+| `src/assets/css/styles.css` | **Generated** by Sass—do not edit; imported by Vite |
+| `src/assets/js/main.js` | Vite entry: imports CSS and all feature scripts |
+| `src/assets/dist/` | **Build output:** `style.min.css`, `main.min.js`, emitted assets |
+| `public/` | Static assets (favicons, manifest, sample images) |
+| `docs/` | Human-readable documentation beyond this file |
 
-Example prompts:
-- "Use `@starter-pack.mdc` to verify the project structure, ensure Vite and SASS are configured, and confirm scripts are correct."
-- "Run `@starter-pack.mdc` and list any missing directories or files under `src/assets/scss`, `src/assets/js`, and `src/htmls`."
-- "With `@starter-pack.mdc`, generate or validate base scaffolding and report what changed."
+## Build commands
 
-### 2) Coding Standards — `@coding-standard.mdc`
-Use while building or refactoring any component or page to maintain consistent code quality.
+| Command | When to use |
+|---------|-------------|
+| `npm run build:all` | Full production build: `sass:build` then `build:js` → `src/assets/dist/` |
+| `npm run build` / `npm run build:js` | Vite production bundle only (after CSS exists from Sass) |
+| `npm run watch:all` | **Sass + Vite** in parallel; use while editing static HTML / SCSS / JS for `dist/` |
+| `npm run watch:scss` | Sass watch only → `src/assets/css/styles.css` |
+| `npm run watch:js` | Vite `--watch` only → `src/assets/dist/` |
+| `npm run dev:watch` | Vite dev server + Sass watch |
+| `npm run dev` | Vite dev server only |
+| `npm run preview` | Preview Vite build output |
 
-Example prompts:
-- "Run `@coding-standard.mdc` to review `src/assets/js/main.js` and suggest improvements per ES6 and project guidelines."
-- "Apply `@coding-standard.mdc` to SCSS in `src/assets/scss/components/_cards.scss` for naming, variables, and mixins."
-- "Using `@coding-standard.mdc`, flag any deviations from the coding rules in recently modified files and propose edits."
+## Documentation (reading order)
 
-### 3) Accessibility — `@accessibilitystandards.mdc`
-Run before pushing individual components/pages to ensure WCAG 2.1 AA compliance.
+| Order | File | What you get |
+|-------|------|----------------|
+| 1 | **This README** | What the repo is, how to run and browse it |
+| 2 | [docs/README.md](./docs/README.md) | Repository map, build pipeline, checklist for changes, stack, standards |
+| 3 | [docs/components.md](./docs/components.md) | **Every demo listed**, SCSS ↔ JS mapping, bundle behavior, naming, assets, accessibility |
+| 4 | [VERSIONING.md](./VERSIONING.md) | SemVer, tags, release workflow |
+| 5 | [CHANGELOG.md](./CHANGELOG.md) | What changed in each version |
 
-Example prompts:
-- "Audit `src/htmls/cards.html` with `@accessibilitystandards.mdc` for heading hierarchy, focus states, and link text."
-- "Use `@accessibilitystandards.mdc` to check all `<img>` tags for meaningful `alt` text and identify any decorative images that need `alt=\"\"`."
-- "With `@accessibilitystandards.mdc`, review forms in `src/htmls/form.html` for labels, `aria-*` attributes, and error message semantics."
+## Releases and versioning
 
-### Recommended Order
-1. Start project: `@starter-pack.mdc`
-2. While coding components/pages: `@coding-standard.mdc`
-3. Before pushing components/pages: `@accessibilitystandards.mdc`
+- [CHANGELOG.md](./CHANGELOG.md) — release history  
+- [VERSIONING.md](./VERSIONING.md) — how to choose versions and cut releases  
 
-### Notes
-- Keep `watch:scss` running alongside `dev` for immediate SASS compilation feedback.
-- Always preview a production build (`npm run build && npm run preview`) before final reviews.
+## Cursor (optional)
+
+When using Cursor in this repo, rule packs under `.cursor/rules/` can be applied in order where relevant: `starter-pack.mdc`, `coding-standard.mdc`, `accessibilitystandards.mdc`.

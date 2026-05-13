@@ -8,8 +8,7 @@ const setupHeader = () => {
   const navbarCollapse = header.querySelector('.navbar-collapse');
 
   const handleSearch = () => {
-    // TODO: Implement search functionality
-    console.log('Search clicked');
+    // Search wiring can be added when the header search UX is defined.
   };
 
   const handleMobileMenu = () => {
