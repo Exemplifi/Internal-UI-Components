@@ -1,0 +1,289 @@
+.timeline-section {
+    padding: 0;
+    .timeline-navigation-wrapper {
+        position: sticky;
+        top: 0;
+        z-index: 2;
+        background-color: #040404;
+    }
+}
+
+.timeline-section .container {
+    margin: 0 auto;
+    padding: 0 rem.convert(24px);
+}
+
+.timeline-items-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: rem.convert(32px) 0;
+    color: #9a9a9a;
+    font-size: rem.convert(14px);
+    letter-spacing: 0.04em;
+    flex-wrap: nowrap;
+    white-space: nowrap;
+    overflow-x: auto;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+
+    @include media-breakpoint-down(md) {
+        justify-content: flex-start;
+        scroll-padding-left: rem.convert(24px);
+        scroll-padding-right: rem.convert(24px);
+    }
+
+    &::-webkit-scrollbar {
+        display: none;
+    }
+
+    &::-webkit-scrollbar-track {
+        background: transparent;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background: transparent;
+    }
+
+    &::-webkit-scrollbar-thumb:hover {
+        background: transparent;
+    }
+}
+
+.timeline-content {
+    position: relative;
+    padding-left: rem.convert(74px);
+    max-width: rem.convert(864px);
+    --timeline-line-height: 100%;
+
+    @include media-breakpoint-down(md) {
+        padding-left: rem.convert(32px);
+    }
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: rem.convert(31px);
+        bottom: auto;
+        height: calc(var(--timeline-line-height) + 3rem);
+        border-left: 2px dashed #cda631;
+
+        @include media-breakpoint-down(md) {
+            left: 0;
+        }
+    }
+}
+
+.timeline-content .timeline-item {
+    position: relative;
+    margin-bottom: rem.convert(64px);
+    scroll-margin-top: var(--nav-article-gap, 3rem);
+    @include media-breakpoint-down(md) {
+        margin-bottom: rem.convert(48px);
+    }
+
+    .timeline-title {
+        margin-bottom: rem.convert(12px);
+
+        span {
+            font-size: rem.convert(24px);
+            line-height: 1.2;
+            font-weight: 600;
+            letter-spacing: 0em;
+            color: var(--white);
+
+            @media (max-width: 767px) {
+                font-size: rem.convert(20px);
+            }
+        }
+    }
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: rem.convert(-58px);
+        width: rem.convert(32px);
+        height: rem.convert(32px);
+        border-radius: 999px;
+        background: var(--white);
+        border: 8px solid #C48D25;
+        transition: transform 0.3s ease-in-out;
+
+        @include media-breakpoint-down(md) {
+            width: rem.convert(24px);
+            height: rem.convert(24px);
+            border-width: rem.convert(8px);
+            left: rem.convert(-42px);
+        }
+    }
+
+    p {
+        max-width: rem.convert(800px);
+        line-height: 1.57;
+        font-size: rem.convert(16px);
+        color: #c8c8c8;
+        font-weight: 400;
+        margin-bottom: rem.convert(16px);
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    img {
+        margin-bottom: rem.convert(16px);
+        display: block;
+        width: 100%;
+        height: auto;
+        border: 1px solid #3b3b3b;
+    }
+
+    &.active {
+        &::before {
+            transform: scale(1.3);
+        }
+    }
+
+    &:focus-visible {
+        outline: 2px solid var(--white);
+        outline-offset: 4px;
+    }
+}
+
+@include media-breakpoint-down(lg) {
+    .timeline-range {
+        font-size: rem.convert(12px);
+        gap: rem.convert(10px);
+    }
+
+    .timeline-content::before {
+        height: var(--timeline-line-height);
+    }
+
+    .timeline-item::before {
+        left: rem.convert(-38px);
+    }
+
+    .timeline-item h3 {
+        font-size: rem.convert(28px);
+    }
+}
+
+.timeline-range {
+    position: relative;
+    padding-left: rem.convert(32px);
+    @include media-breakpoint-down(md) {
+        padding-left: 0;
+    }
+
+    .timeline-dashed-line {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 1;
+    }
+
+    /* &::after {
+                content: '';
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 100%;
+                height: 1.2px;
+                border-top: 2px dashed #cda631;
+            } */
+
+    .timeline-range-item {
+        background-color: #040404;
+        border: none;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: rem.convert(14px);
+        line-height: 1.57;
+        font-weight: 500;
+        color: var(--meteorite);
+        transition: color 0.3s ease-in-out;
+        padding: 0 rem.convert(16px);
+        z-index: 2;
+        margin: 0 rem.convert(156px);
+        text-decoration: none;
+
+        @include media-breakpoint-down(md) {
+            margin: 0 rem.convert(40px);
+
+            &:first-child {
+                padding-left: 0;
+            }
+        }
+
+        &:last-child {
+            margin-right: 0;
+        }
+
+        &:first-child {
+            margin-left: 0;
+        }
+
+        &.active,
+        &:hover {
+            color: var(--white);
+
+            svg {
+                path {
+                    fill: var(--white);
+                }
+            }
+        }
+
+        &:focus-visible {
+            outline: 2px solid var(--white);
+            outline-offset: 2px;
+        }
+
+        svg {
+            margin: 0 1rem;
+            transition: all 0.3s ease-in-out;
+
+            path {
+                transition: fill 0.3s ease-in-out;
+            }
+        }
+    }
+}
+
+.index-progress {
+    width: 100%;
+    min-height: 2px;
+    border-bottom: 1px solid var(--meteorite);
+    position: relative;
+
+    .index-progress-bar {
+        width: 0;
+        max-width: 100%;
+        height: 2px;
+        background-color: var(--white);
+        position: absolute;
+        left: 0;
+        top: calc(50% + 1px);
+        transform: translateY(-50%);
+        transition: width 0.08s ease-out;
+        box-sizing: border-box;
+    }
+}
+
+.timeline-content-wrapper {
+    padding: rem.convert(96px 0 114px 0);
+    background-color: #121212;
+    background-image: url("data:image/svg+xml,%3Csvg%20width%3D%221279%22%20height%3D%2231%22%20viewBox%3D%220%200%201279%2031%22%20fill%3D%22none%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cpath%20d%3D%22M1.5%2030.0001L1.5%200.000111089%22%20stroke%3D%22%23A9A9A9%22%20stroke-width%3D%223%22%20stroke-linejoin%3D%22bevel%22/%3E%3Cpath%20d%3D%22M350.5%2030.0001L350.5%2012.0001%22%20stroke%3D%22%23747474%22%20stroke-linecap%3D%22square%22%20stroke-linejoin%3D%22bevel%22/%3E%3Cpath%20d%3D%22M702.5%2030.0001L702.5%2012.0001%22%20stroke%3D%22%23747474%22%20stroke-linecap%3D%22square%22%20stroke-linejoin%3D%22bevel%22/%3E%3Cpath%20d%3D%22M31.5%2030.0001L31.5%2012.0001%22%20stroke%3D%22%23747474%22%20stroke-linecap%3D%22square%22%20stroke-linejoin%3D%22bevel%22/%3E%3Cpath%20d%3D%22M382.5%2030.0001L382.5%2012.0001%22%20stroke%3D%22%23747474%22%20stroke-linecap%3D%22square%22%20stroke-linejoin%3D%22bevel%22/%3E%3Cpath%20d%3D%22M733.5%2030.0001L733.5%2012.0001%22%20stroke%3D%22%23747474%22%20stroke-linecap%3D%22square%22%20stroke-linejoin%3D%22bevel%22/%3E%3Cpath%20d%3D%22M63.5%2030.0001L63.5%2012.0001%22%20stroke%3D%22%23747474%22%20stroke-linecap%3D%22square%22%20stroke-linejoin%3D%22bevel%22/%3E%3Cpath%20d%3D%22M414.5%2030.0001L414.5%2012.0001%22%20stroke%3D%22%23747474%22%20stroke-linecap%3D%22square%22%20stroke-linejoin%3D%22bevel%22/%3E%3Cpath%20d%3D%22M765.5%2030.0001L765.5%2012.0001%22%20stroke%3D%22%23747474%22%20stroke-linecap%3D%22square%22%20stroke-linejoin%3D%22bevel%22/%3E%3Cpath%20d%3D%22M95.5%2030.0001L95.5%2012.0001%22%20stroke%3D%22%23747474%22%20stroke-linecap%3D%22square%22%20stroke-linejoin%3D%22bevel%22/%3E%3Cpath%20d%3D%22M446.5%2030.0001L446.5%2012.0001%22%20stroke%3D%22%23747474%22%20stroke-linecap%3D%22square%22%20stroke-linejoin%3D%22bevel%22/%3E%3Cpath%20d%3D%22M797.5%2030.0001L797.5%2012.0001%22%20stroke%3D%22%23747474%22%20stroke-linecap%3D%22square%22%20stroke-linejoin%3D%22bevel%22/%3E%3Cpath%20d%3D%22M126.5%2030.0001L126.5%2012.0001%22%20stroke%3D%22%23747474%22%20stroke-linecap%3D%22square%22%20stroke-linejoin%3D%22bevel%22/%3E%3Cpath%20d%3D%22M478.5%2030.0001L478.5%2012.0001%22%20stroke%3D%22%23747474%22%20stroke-linecap%3D%22square%22%20stroke-linejoin%3D%22bevel%22/%3E%3Cpath%20d%3D%22M829.5%2030.0001L829.5%2012.0001%22%20stroke%3D%22%23747474%22%20stroke-linecap%3D%22square%22%20stroke-linejoin%3D%22bevel%22/%3E%3Cpath%20d%3D%22M158.5%2030.0001L158.5%2012.0001%22%20stroke%3D%22%23747474%22%20stroke-linecap%3D%22square%22%20stroke-linejoin%3D%22bevel%22/%3E%3Cpath%20d%3D%22M510.5%2030.0001L510.5%2012.0001%22%20stroke%3D%22%23747474%22%20stroke-linecap%3D%22square%22%20stroke-linejoin%3D%22bevel%22/%3E%3Cpath%20d%3D%22M861.5%2030.0001L861.5%2012.0001%22%20stroke%3D%22%23747474%22%20stroke-linecap%3D%22square%22%20stroke-linejoin%3D%22bevel%22/%3E%3Cpath%20d%3D%22M190.5%2030.0001L190.5%2012.0001%22%20stroke%3D%22%23747474%22%20stroke-linecap%3D%22square%22%20stroke-linejoin%3D%22bevel%22/%3E%3Cpath%20d%3D%22M541.5%2030.0001L541.5%2012.0001%22%20stroke%3D%22%23747474%22%20stroke-linecap%3D%22square%22%20stroke-linejoin%3D%22bevel%22/%3E%3Cpath%20d%3D%22M893.5%2029.9996L893.5%2011.9996%22%20stroke%3D%22%23747474%22%20stroke-linecap%3D%22square%22%20stroke-linejoin%3D%22bevel%22/%3E%3Cpath%20d%3D%22M222.5%2030.0001L222.5%2012.0001%22%20stroke%3D%22%23747474%22%20stroke-linecap%3D%22square%22%20stroke-linejoin%3D%22bevel%22/%3E%3Cpath%20d%3D%22M573.5%2030.0001L573.5%2012.0001%22%20stroke%3D%22%23747474%22%20stroke-linecap%3D%22square%22%20stroke-linejoin%3D%22bevel%22/%3E%3Cpath%20d%3D%22M924.5%2029.9996L924.5%2011.9996%22%20stroke%3D%22%23747474%22%20stroke-linecap%3D%22square%22%20stroke-linejoin%3D%22bevel%22/%3E%3Cpath%20d%3D%22M255.5%2030.0001L255.5%2012.0001%22%20stroke%3D%22%23747474%22%20stroke-linecap%3D%22square%22%20stroke-linejoin%3D%22bevel%22/%3E%3Cpath%20d%3D%22M605.5%2030.0001L605.5%2012.0001%22%20stroke%3D%22%23747474%22%20stroke-linecap%3D%22square%22%20stroke-linejoin%3D%22bevel%22/%3E%3Cpath%20d%3D%22M956.5%2029.9996L956.5%2011.9996%22%20stroke%3D%22%23747474%22%20stroke-linecap%3D%22square%22%20stroke-linejoin%3D%22bevel%22/%3E%3Cpath%20d%3D%22M287.5%2030.0001L287.5%2012.0001%22%20stroke%3D%22%23747474%22%20stroke-linecap%3D%22square%22%20stroke-linejoin%3D%22bevel%22/%3E%3Cpath%20d%3D%22M637.5%2030.0001L637.5%2012.0001%22%20stroke%3D%22%23747474%22%20stroke-linecap%3D%22square%22%20stroke-linejoin%3D%22bevel%22/%3E%3Cpath%20d%3D%22M988.5%2029.9996L988.5%2011.9996%22%20stroke%3D%22%23747474%22%20stroke-linecap%3D%22square%22%20stroke-linejoin%3D%22bevel%22/%3E%3Cpath%20d%3D%22M318.5%2030.0001L318.5%2012.0001%22%20stroke%3D%22%23747474%22%20stroke-linecap%3D%22square%22%20stroke-linejoin%3D%22bevel%22/%3E%3Cpath%20d%3D%22M669.5%2030.0001L669.5%2012.0001%22%20stroke%3D%22%23747474%22%20stroke-linecap%3D%22square%22%20stroke-linejoin%3D%22bevel%22/%3E%3Cpath%20d%3D%22M1020.5%2029.9996L1020.5%2011.9996%22%20stroke%3D%22%23747474%22%20stroke-linecap%3D%22square%22%20stroke-linejoin%3D%22bevel%22/%3E%3Cpath%20d%3D%22M1052.5%2030.0001L1052.5%2012.0001%22%20stroke%3D%22%23747474%22%20stroke-linecap%3D%22square%22%20stroke-linejoin%3D%22bevel%22/%3E%3Cpath%20d%3D%22M1084.5%2030.0001L1084.5%2012.0001%22%20stroke%3D%22%23747474%22%20stroke-linecap%3D%22square%22%20stroke-linejoin%3D%22bevel%22/%3E%3Cpath%20d%3D%22M1116.5%2030.0001L1116.5%2012.0001%22%20stroke%3D%22%23747474%22%20stroke-linecap%3D%22square%22%20stroke-linejoin%3D%22bevel%22/%3E%3Cpath%20d%3D%22M1148.5%2030.0001L1148.5%2012.0001%22%20stroke%3D%22%23747474%22%20stroke-linecap%3D%22square%22%20stroke-linejoin%3D%22bevel%22/%3E%3Cpath%20d%3D%22M1180.5%2030.0001L1180.5%2012.0001%22%20stroke%3D%22%23747474%22%20stroke-linecap%3D%22square%22%20stroke-linejoin%3D%22bevel%22/%3E%3Cpath%20d%3D%22M1212.5%2030.0001L1212.5%2012.0001%22%20stroke%3D%22%23747474%22%20stroke-linecap%3D%22square%22%20stroke-linejoin%3D%22bevel%22/%3E%3Cpath%20d%3D%22M1244.5%2030.0001L1244.5%2012.0001%22%20stroke%3D%22%23747474%22%20stroke-linecap%3D%22square%22%20stroke-linejoin%3D%22bevel%22/%3E%3Cpath%20d%3D%22M1277.5%2030.0001L1277.5%200.000111089%22%20stroke%3D%22%23A9A9A9%22%20stroke-width%3D%223%22%20stroke-linejoin%3D%22bevel%22/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: center bottom 96px;
+    background-size: 100% 31px;
+
+    @media (max-width: 768px) {
+        padding: rem.convert(64px) 0;
+    }
+}
