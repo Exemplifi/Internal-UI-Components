@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Timeline Component V1</title>
+    <link rel="stylesheet" href="../assets/css/styles.css" />
+</head>
+
+<body>
+    <section class="timeline-section" aria-label="Historical timeline">
+        <div id="timeline-v1-announce" class="visually-hidden" role="status" aria-live="polite" aria-atomic="true"></div>
+        <div class="timeline-navigation-wrapper" role="navigation" aria-label="Timeline dates">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="timeline-range">
+                            <div class="timeline-items-wrapper">
+                                <a href="#01" class="timeline-range-item active">
+                                    <span class="timeline-range-to">1840s</span>
+                                    <svg width="18" height="15" viewBox="0 0 18 15" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                        <path
+                                            d="M1 6.36395H0V8.36395H1V7.36395V6.36395ZM17.7071 8.07106C18.0976 7.68054 18.0976 7.04737 17.7071 6.65685L11.3431 0.292885C10.9526 -0.0976396 10.3195 -0.0976396 9.92893 0.292885C9.53841 0.683409 9.53841 1.31657 9.92893 1.7071L15.5858 7.36395L9.92893 13.0208C9.53841 13.4113 9.53841 14.0445 9.92893 14.435C10.3195 14.8255 10.9526 14.8255 11.3431 14.435L17.7071 8.07106ZM1 7.36395V8.36395H17V7.36395V6.36395H1V7.36395Z"
+                                            fill="#3D3D3D" />
+                                    </svg>
+                                    <span class="timeline-range-from">1870s</span>
+                                </a>
+                                <a href="#02" class="timeline-range-item">
+                                    <span class="timeline-range-to">1845s</span>
+                                    <svg width="18" height="15" viewBox="0 0 18 15" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                        <path
+                                            d="M1 6.36395H0V8.36395H1V7.36395V6.36395ZM17.7071 8.07106C18.0976 7.68054 18.0976 7.04737 17.7071 6.65685L11.3431 0.292885C10.9526 -0.0976396 10.3195 -0.0976396 9.92893 0.292885C9.53841 0.683409 9.53841 1.31657 9.92893 1.7071L15.5858 7.36395L9.92893 13.0208C9.53841 13.4113 9.53841 14.0445 9.92893 14.435C10.3195 14.8255 10.9526 14.8255 11.3431 14.435L17.7071 8.07106ZM1 7.36395V8.36395H17V7.36395V6.36395H1V7.36395Z"
+                                            fill="#3D3D3D" />
+                                    </svg>
+                                    <span class="timeline-range-to">1849s</span>
+                                </a>
+                                <a href="#03" class="timeline-range-item">
+                                    <span class="timeline-range-to">1849</span>
+                                    <svg width="18" height="15" viewBox="0 0 18 15" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                        <path
+                                            d="M1 6.36395H0V8.36395H1V7.36395V6.36395ZM17.7071 8.07106C18.0976 7.68054 18.0976 7.04737 17.7071 6.65685L11.3431 0.292885C10.9526 -0.0976396 10.3195 -0.0976396 9.92893 0.292885C9.53841 0.683409 9.53841 1.31657 9.92893 1.7071L15.5858 7.36395L9.92893 13.0208C9.53841 13.4113 9.53841 14.0445 9.92893 14.435C10.3195 14.8255 10.9526 14.8255 11.3431 14.435L17.7071 8.07106ZM1 7.36395V8.36395H17V7.36395V6.36395H1V7.36395Z"
+                                            fill="#3D3D3D" />
+                                    </svg>
+                                    <span class="timeline-range-to">1850</span>
+                                </a>
+                                <a href="#04" class="timeline-range-item">
+                                    <span class="timeline-range-to">1853</span>
+                                    <svg width="18" height="15" viewBox="0 0 18 15" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                        <path
+                                            d="M1 6.36395H0V8.36395H1V7.36395V6.36395ZM17.7071 8.07106C18.0976 7.68054 18.0976 7.04737 17.7071 6.65685L11.3431 0.292885C10.9526 -0.0976396 10.3195 -0.0976396 9.92893 0.292885C9.53841 0.683409 9.53841 1.31657 9.92893 1.7071L15.5858 7.36395L9.92893 13.0208C9.53841 13.4113 9.53841 14.0445 9.92893 14.435C10.3195 14.8255 10.9526 14.8255 11.3431 14.435L17.7071 8.07106ZM1 7.36395V8.36395H17V7.36395V6.36395H1V7.36395Z"
+                                            fill="#3D3D3D" />
+                                    </svg>
+                                    <span class="timeline-range-to">1854</span>
+                                </a>
+                                <a href="#05" class="timeline-range-item">
+                                    <span class="timeline-range-to">Spring 1854</span>
+                                    <svg width="18" height="15" viewBox="0 0 18 15" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                        <path
+                                            d="M1 6.36395H0V8.36395H1V7.36395V6.36395ZM17.7071 8.07106C18.0976 7.68054 18.0976 7.04737 17.7071 6.65685L11.3431 0.292885C10.9526 -0.0976396 10.3195 -0.0976396 9.92893 0.292885C9.53841 0.683409 9.53841 1.31657 9.92893 1.7071L15.5858 7.36395L9.92893 13.0208C9.53841 13.4113 9.53841 14.0445 9.92893 14.435C10.3195 14.8255 10.9526 14.8255 11.3431 14.435L17.7071 8.07106ZM1 7.36395V8.36395H17V7.36395V6.36395H1V7.36395Z"
+                                            fill="#3D3D3D" />
+                                    </svg>
+                                        <span class="timeline-range-to"></span>
+                                </a>
+                                <a href="#06" class="timeline-range-item">
+                                    <span class="timeline-range-to">September 6, 1854</span>
+                                    <svg width="18" height="15" viewBox="0 0 18 15" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                        <path
+                                            d="M1 6.36395H0V8.36395H1V7.36395V6.36395ZM17.7071 8.07106C18.0976 7.68054 18.0976 7.04737 17.7071 6.65685L11.3431 0.292885C10.9526 -0.0976396 10.3195 -0.0976396 9.92893 0.292885C9.53841 0.683409 9.53841 1.31657 9.92893 1.7071L15.5858 7.36395L9.92893 13.0208C9.53841 13.4113 9.53841 14.0445 9.92893 14.435C10.3195 14.8255 10.9526 14.8255 11.3431 14.435L17.7071 8.07106ZM1 7.36395V8.36395H17V7.36395V6.36395H1V7.36395Z"
+                                            fill="#3D3D3D" />
+                                    </svg>
+                                    <span class="timeline-range-to"></span>
+                                </a>
+                                <a href="#07" class="timeline-range-item">
+                                    <span class="timeline-range-to">December 13, 1854</span>
+                                    <svg width="18" height="15" viewBox="0 0 18 15" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                        <path
+                                            d="M1 6.36395H0V8.36395H1V7.36395V6.36395ZM17.7071 8.07106C18.0976 7.68054 18.0976 7.04737 17.7071 6.65685L11.3431 0.292885C10.9526 -0.0976396 10.3195 -0.0976396 9.92893 0.292885C9.53841 0.683409 9.53841 1.31657 9.92893 1.7071L15.5858 7.36395L9.92893 13.0208C9.53841 13.4113 9.53841 14.0445 9.92893 14.435C10.3195 14.8255 10.9526 14.8255 11.3431 14.435L17.7071 8.07106ZM1 7.36395V8.36395H17V7.36395V6.36395H1V7.36395Z"
+                                            fill="#3D3D3D" />
+                                    </svg>
+                                    <span class="timeline-range-to"></span>
+                                </a>
+                                <a href="#08" class="timeline-range-item">
+                                    <span class="timeline-range-to">1855</span>
+                                    <svg width="18" height="15" viewBox="0 0 18 15" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                        <path
+                                            d="M1 6.36395H0V8.36395H1V7.36395V6.36395ZM17.7071 8.07106C18.0976 7.68054 18.0976 7.04737 17.7071 6.65685L11.3431 0.292885C10.9526 -0.0976396 10.3195 -0.0976396 9.92893 0.292885C9.53841 0.683409 9.53841 1.31657 9.92893 1.7071L15.5858 7.36395L9.92893 13.0208C9.53841 13.4113 9.53841 14.0445 9.92893 14.435C10.3195 14.8255 10.9526 14.8255 11.3431 14.435L17.7071 8.07106ZM1 7.36395V8.36395H17V7.36395V6.36395H1V7.36395Z"
+                                            fill="#3D3D3D" />
+                                    </svg>
+                                    <span class="timeline-range-to"></span>
+                                </a>
+                                <a href="#09" class="timeline-range-item">
+                                    <span class="timeline-range-to">1856</span>
+                                    <svg width="18" height="15" viewBox="0 0 18 15" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                        <path
+                                            d="M1 6.36395H0V8.36395H1V7.36395V6.36395ZM17.7071 8.07106C18.0976 7.68054 18.0976 7.04737 17.7071 6.65685L11.3431 0.292885C10.9526 -0.0976396 10.3195 -0.0976396 9.92893 0.292885C9.53841 0.683409 9.53841 1.31657 9.92893 1.7071L15.5858 7.36395L9.92893 13.0208C9.53841 13.4113 9.53841 14.0445 9.92893 14.435C10.3195 14.8255 10.9526 14.8255 11.3431 14.435L17.7071 8.07106ZM1 7.36395V8.36395H17V7.36395V6.36395H1V7.36395Z"
+                                            fill="#3D3D3D" />
+                                    </svg>
+                                    <span class="timeline-range-to"></span>
+                                </a>
+                                <a href="#10" class="timeline-range-item">
+                                    <span class="timeline-range-to">Mid-1850’s</span>
+                                    <svg width="18" height="15" viewBox="0 0 18 15" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                        <path
+                                            d="M1 6.36395H0V8.36395H1V7.36395V6.36395ZM17.7071 8.07106C18.0976 7.68054 18.0976 7.04737 17.7071 6.65685L11.3431 0.292885C10.9526 -0.0976396 10.3195 -0.0976396 9.92893 0.292885C9.53841 0.683409 9.53841 1.31657 9.92893 1.7071L15.5858 7.36395L9.92893 13.0208C9.53841 13.4113 9.53841 14.0445 9.92893 14.435C10.3195 14.8255 10.9526 14.8255 11.3431 14.435L17.7071 8.07106ZM1 7.36395V8.36395H17V7.36395V6.36395H1V7.36395Z"
+                                            fill="#3D3D3D" />
+                                    </svg>
+                                    <span class="timeline-range-to"></span>
+                                </a>
+                                <a href="#11" class="timeline-range-item">
+                                    <span class="timeline-range-to">Early 1860’s</span>
+                                    <svg width="18" height="15" viewBox="0 0 18 15" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                        <path
+                                            d="M1 6.36395H0V8.36395H1V7.36395V6.36395ZM17.7071 8.07106C18.0976 7.68054 18.0976 7.04737 17.7071 6.65685L11.3431 0.292885C10.9526 -0.0976396 10.3195 -0.0976396 9.92893 0.292885C9.53841 0.683409 9.53841 1.31657 9.92893 1.7071L15.5858 7.36395L9.92893 13.0208C9.53841 13.4113 9.53841 14.0445 9.92893 14.435C10.3195 14.8255 10.9526 14.8255 11.3431 14.435L17.7071 8.07106ZM1 7.36395V8.36395H17V7.36395V6.36395H1V7.36395Z"
+                                            fill="#3D3D3D" />
+                                    </svg>
+                                    <span class="timeline-range-to"></span>
+                                </a>
+                                <a href="#12" class="timeline-range-item">
+                                    <span class="timeline-range-to">1865</span>
+                                    <svg width="18" height="15" viewBox="0 0 18 15" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                        <path
+                                            d="M1 6.36395H0V8.36395H1V7.36395V6.36395ZM17.7071 8.07106C18.0976 7.68054 18.0976 7.04737 17.7071 6.65685L11.3431 0.292885C10.9526 -0.0976396 10.3195 -0.0976396 9.92893 0.292885C9.53841 0.683409 9.53841 1.31657 9.92893 1.7071L15.5858 7.36395L9.92893 13.0208C9.53841 13.4113 9.53841 14.0445 9.92893 14.435C10.3195 14.8255 10.9526 14.8255 11.3431 14.435L17.7071 8.07106ZM1 7.36395V8.36395H17V7.36395V6.36395H1V7.36395Z"
+                                            fill="#3D3D3D" />
+                                    </svg>
+                                    <span class="timeline-range-to">1866</span>
+                                </a>
+                                <a href="#13" class="timeline-range-item">
+                                    <span class="timeline-range-to">1871</span>
+                                    <svg width="18" height="15" viewBox="0 0 18 15" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                        <path
+                                            d="M1 6.36395H0V8.36395H1V7.36395V6.36395ZM17.7071 8.07106C18.0976 7.68054 18.0976 7.04737 17.7071 6.65685L11.3431 0.292885C10.9526 -0.0976396 10.3195 -0.0976396 9.92893 0.292885C9.53841 0.683409 9.53841 1.31657 9.92893 1.7071L15.5858 7.36395L9.92893 13.0208C9.53841 13.4113 9.53841 14.0445 9.92893 14.435C10.3195 14.8255 10.9526 14.8255 11.3431 14.435L17.7071 8.07106ZM1 7.36395V8.36395H17V7.36395V6.36395H1V7.36395Z"
+                                            fill="#3D3D3D" />
+                                    </svg>
+                                    <span class="timeline-range-to"></span>
+                                </a>
+                            </div>
+                            <div class="timeline-dashed-line">
+                                <svg width="100%" height="2" viewBox="0 0 1279 2" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M0 0.750122L1279 0.75001" stroke="#F5B222" stroke-width="1.5"
+                                        stroke-dasharray="6 6" />
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="index-progress">
+                <div class="index-progress-bar"></div>
+            </div>
+        </div>
+
+        <!--  -->
+        <div class="timeline-content-wrapper">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="timeline-content">
+                            <article class="timeline-item" id="01">
+                                <div class="timeline-title">
+                                    <span>1847</span>
+                                </div>
+                                <div class="timeline-description">
+                                    <p>
+                                        The timeline of the Sonoma County Sheriff's Office began prior to California
+                                        receiving
+                                        statehood. In 1847, when California was a territory of the United States
+                                        after
+                                        the
+                                        Mexican-American War, military law governed the region. The district
+                                        stretched
+                                        from
+                                        San
+                                        Francisco Bay to the Oregon line and west of the Sacramento River.
+                                    </p>
+                                </div>
+                            </article>
+
+                            <article class="timeline-item" id="02">
+                                <div class="timeline-title">
+                                    <span>1845 - 1849</span>
+                                </div>
+                                <div class="timeline-description">
+                                    <img src="../assets/images/maintance-card-img-1.png"
+                                        alt="Historic Sonoma district headquarters">
+                                    <p>
+                                        The headquarters for the Sonoma District were located in the village of
+                                        Sonoma
+                                        and
+                                        remained there through early county formation. This period established the
+                                        first
+                                        formal
+                                        law enforcement identity in the region.
+                                    </p>
+                                </div>
+                            </article>
+
+                            <article class="timeline-item" id="03">
+                                <div class="timeline-title">
+                                    <span>1849 - 1850</span>
+                                </div>
+                                <div class="timeline-description">
+                                    <p>
+                                        The headquarters for the Sonoma District were located in the village of
+                                        Sonoma
+                                        and
+                                        remained there through early county formation. This period established the
+                                        first
+                                        formal
+                                        law enforcement identity in the region.
+                                    </p>
+                                </div>
+                            </article>
+
+                            <article class="timeline-item" id="04">
+                                <div class="timeline-title">
+                                    <span>1853 - 1854</span>
+                                </div>
+                                <div class="timeline-description">
+                                    <p>
+                                        The first jail in Sonoma County was located on General Vallejo’s property in
+                                        Sonoma. It remained operational from 1850-1853. The building was constructed
+                                        of adobe so jailbreaks were common, despite the fact that inmates were often
+                                        times kept in chains. Inmates used various methods of escape, including lock
+                                        picking, filing bars, tunneling and some prisoners simply walked away. One
+                                        night, in 1852, the notorious Sarabouse d’Audeville escaped after cutting
+                                        off his leg irons. The soon to be executed d’Audeville left two men sleeping
+                                        and a letter of farewell on the table. He was the third prisoner under a
+                                        death sentence to escape from this jail.
+                                    </p>
+                                </div>
+                            </article>
+
+                            <article class="timeline-item" id="05">
+                                <div class="timeline-title">
+                                    <span>Spring 1854</span>
+                                </div>
+                                <div class="timeline-description">
+                                    <p>In her book, Santa Rosa – A Nineteenth Century Town, historian Gaye LeBaron
+                                        relates one of the first documented hangings to occur in Sonoma County. It
+                                        occurred in the spring of 1854 when a mule rustler by the name of Ritchie
+                                        was accused of absconding with a band of mules. Some of the animals belonged
+                                        to Captain Hereford, who lived on Santa Rosa Creek, and two were the
+                                        property of another valley settler, Mart Tarwater.</p>
+                                    <img src="../assets/images/maintance-card-img-1.png"
+                                        alt="Historic Sonoma district headquarters">
+                                    <p>
+                                        In her book, Santa Rosa – A Nineteenth Century Town, historian Gaye LeBaron
+                                        relates one of the first documented hangings to occur in Sonoma County. It
+                                        occurred in the spring of 1854 when a mule rustler by the name of Ritchie
+                                        was accused of absconding with a band of mules. Some of the animals belonged
+                                        to Captain Hereford, who lived on Santa Rosa Creek, and two were the
+                                        property of another valley settler, Mart Tarwater.
+                                    </p>
+
+                                </div>
+
+                            </article>
+
+                            <article class="timeline-item" id="06">
+                                <div class="timeline-title">
+                                    <span>September 6, 1854</span>
+                                </div>
+                                <div class="timeline-description">
+                                    <p>A new bill was passed which authorized a vote concerning the removal of the
+                                        county seat. As a result of the passing of this bill, an election was held
+                                        in Sonoma County. On September 6, 1854, election poll results showed 716 to
+                                        563 votes favored moving the county seat from Sonoma to Santa Rosa. Santa
+                                        Rosans staged a victory celebration that lasted for two full days.</p>
+                                </div>
+                            </article>
+
+                            <article class="timeline-item" id="07">
+                                <div class="timeline-title">
+                                    <span>December 13, 1854</span>
+                                </div>
+                                <div class="timeline-description">
+                                    <p>December 13, 1854, marks the first documented plans of an official courthouse
+                                        and jail.</p>
+                                </div>
+                            </article>
+
+                            <article class="timeline-item" id="08">
+                                <div class="timeline-title">
+                                    <span>1855</span>
+                                </div>
+                                <div class="timeline-description">
+                                    <p>When the county seat was moved to Santa Rosa, a jail and courthouse were
+                                        built on the northwest corner of Mendocino Avenue and 4th Street. During the
+                                        summer and fall of 1855, the courthouse/jail was built for $22,107.23, and
+                                        included a lower story with space for the sheriff’s office, jail and judge’s
+                                        chambers.</p>
+                                </div>
+                            </article>
+
+                            <article class="timeline-item" id="09">
+                                <div class="timeline-title">
+                                    <span>1856</span>
+                                </div>
+                                <div class="timeline-description">
+                                    <p>In 1856, A.C. Bledsoe was elected Sheriff. He only had six deputies, three of
+                                        which were jailers. During this time, deputies were sworn in only as needed
+                                        and served specific jobs, such as law enforcement, tax collecting, jailer,
+                                        prisoner transport to San Quentin, and janitorial services. Other deputies
+                                        would serve an entire year then have to be sworn in again to serve for
+                                        another year at the Sheriff’s pleasure. Deputy Jacob M. Gallagher, was the
+                                        first permanent jailer and held this position from 1856 to 1861. A
+                                        contemporary of Gallagher, Deputy Nalley, was sworn as the first recorded
+                                        bailiff.</p>
+                                </div>
+                            </article>
+
+                            <article class="timeline-item" id="10">
+                                <div class="timeline-title">
+                                    <span>Mid-1850’s</span>
+                                </div>
+
+                                <div class="timeline-description">
+                                    <img src="../assets/images/accordion-image.png"
+                                        alt="Historic Sonoma district headquarters">
+                                    <p>In 1856, A.C. Bledsoe was elected Sheriff. He only had six deputies, three of
+                                        which were jailers. During this time, deputies were sworn in only as needed
+                                        and served specific jobs, such as law enforcement, tax collecting, jailer,
+                                        prisoner transport to San Quentin, and janitorial services. Other deputies
+                                        would serve an entire year then have to be sworn in again to serve for
+                                        another year at the Sheriff’s pleasure. Deputy Jacob M. Gallagher, was the
+                                        first permanent jailer and held this position from 1856 to 1861. A
+                                        contemporary of Gallagher, Deputy Nalley, was sworn as the first recorded
+                                        bailiff.</p>
+                                </div>
+                            </article>
+
+                            <article class="timeline-item" id="11">
+                                <div class="timeline-title">
+                                    <span>Early 1860’s</span>
+                                </div>
+
+                                <div class="timeline-description">
+                                    <p>At the beginning of the Civil War a large segment of the population in the
+                                        county was sympathetic with the South. This caused a lot of political
+                                        tension in the county. As a result of this tension, Sheriff Bowles had 23
+                                        sworn deputies in the early 1860’s. During another Squatters’ War in the
+                                        Healdsburg area, a standoff occurred between Sheriff Bowles, his 200- man
+                                        posse and 60-armed squatters. One of the posse was shot and killed by a
+                                        squatter and the squatter was not held for the death. This same thing
+                                        happened to a deputy at Stony Point while executing a court order, but the
+                                        shooter again was not held to answer for the incident. These were the first
+                                        two men to die while acting on behalf of the Sheriff’s Office.</p>
+                                </div>
+                            </article>
+
+                            <article class="timeline-item" id="12">
+                                <div class="timeline-title">
+                                    <span>1865–1866</span>
+                                </div>
+
+                                <div class="timeline-description">
+                                    <img src="../assets/images/accordion-image.png"
+                                        alt="Historic Sonoma district headquarters">
+                                    <p>At the beginning of the Civil War a large segment of the population in the
+                                        county was sympathetic with the South. This caused a lot of political
+                                        tension in the county. As a result of this tension, Sheriff Bowles had 23
+                                        sworn deputies in the early 1860’s. During another Squatters’ War in the
+                                        Healdsburg area, a standoff occurred between Sheriff Bowles, his 200- man
+                                        posse and 60-armed squatters. One of the posse was shot and killed by a
+                                        squatter and the squatter was not held for the death. This same thing
+                                        happened to a deputy at Stony Point while executing a court order, but the
+                                        shooter again was not held to answer for the incident. These were the first
+                                        two men to die while acting on behalf of the Sheriff’s Office.</p>
+                                </div>
+                            </article>
+
+                            <article class="timeline-item" id="13">
+                                <div class="timeline-title">
+                                    <span>1871</span>
+                                </div>
+
+                                <div class="timeline-description">
+                                    <p>In February 1871, Sonoma County had its own stagecoach gang of robbers, which
+                                        worked along the mail road from Healdsburg to Ukiah. They were known as the
+                                        Houx Gang and consisted of John Houx, “Big Foot” Andrews, Lodi Brown and
+                                        “Rattle Jack.” Rattle Jack and a stagecoach passenger were killed during
+                                        their fourth hold-up, and several other passengers were wounded. With a
+                                        concerted effort by Sheriff Potter and Wells Fargo, a Wells Fargo agent went
+                                        under cover. After the sixth robbery, the law went to work arresting the
+                                        gang that by then had grown to five members. They were apprehended in
+                                        various locations in the north county. Even though armed, not a shot was
+                                        fired by either side. John Houx spent about a year in prison then was
+                                        paroled; “Big Foot” was killed in prison; Lodi Brown was paroled and left
+                                        the state. The remaining two were released – not guilty.</p>
+                                </div>
+                            </article>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="../assets/dist/main.min.js"></script>
+</body>
+
+</html>

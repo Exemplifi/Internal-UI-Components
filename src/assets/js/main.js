@@ -35,6 +35,7 @@ import "./footer.js";
 import "./exemplifi-header.js";
 import "./calendar.js";
 import "./swiper-init.js";
+import "./timeline-v1.js";
 import { initPgCarousel } from "./pg-carousel.js";
 
 $(function () {
