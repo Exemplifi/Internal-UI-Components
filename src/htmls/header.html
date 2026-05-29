@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Header Component</title>
-    <link rel="stylesheet" href="../assets/dist/style.min.css">
+    <link rel="stylesheet" href="../assets/css/styles.css">
 </head>
 <body>
 
@@ -106,7 +106,7 @@
 <br><br>
 
 
-    <header class="header v2">
+    <header class="dart-header">
      <nav class="navbar navbar-expand-header py-2" aria-label="Primary">
        <div class="container  header-container">
          <div class="navbar-mobile-header">
@@ -231,6 +231,148 @@
                  </ul>
                </div>
              </li>
+
+             <li class="nav-item dropdown-custom">
+               <a
+                 href="#"
+                 class="nav-trigger"
+                 aria-expanded="false"
+                 aria-haspopup="menu"
+                 aria-controls="menu-plan"
+                 id="btn-plan"
+               >
+                 FARES
+                 <span class="nav-chevron-toggle" aria-hidden="true"><i data-lucide="chevron-down"></i></span>
+               </a>
+               <div class="dropdown-panel" id="menu-plan" role="region" aria-labelledby="btn-plan">
+                 <ul class="dropdown-link-list" aria-label="Plan trip">
+                   <li class="dropdown-link">
+                     <a href="#">Service through June 13</a>
+                   </li>
+                   <li class="dropdown-link">
+                     <a href="#">Routes &amp; Schedules</a>
+                   </li>
+                   <li class="dropdown-link has-flyout">
+                     <button
+                       type="button"
+                       class="flyout-trigger"
+                       aria-expanded="false"
+                       aria-controls="flyout-rider-tools"
+                       id="flyout-trigger-rider-tools"
+                     >
+                       Rider Tools
+                       <span class="sub-chevron" aria-hidden="true"><i data-lucide="chevron-right"></i></span>
+                     </button>
+                     <ul class="dropdown-flyout" id="flyout-rider-tools" role="menu" aria-label="Rider Tools">
+                       <li class="dropdown-flyout__back" role="presentation">
+                         <button type="button" class="flyout-back-btn" aria-label="Back to Plan trip menu">
+                           <span class="sub-chevron" aria-hidden="true"><i data-lucide="chevron-left"></i></span>
+                           <span class="flyout-back-btn__label" aria-hidden="true">Rider Tools</span>
+                         </button>
+                       </li>
+                       <li><a href="#" role="menuitem">Trip Planner</a></li>
+                       <li><a href="#" role="menuitem">Next DART Bus</a></li>
+                     </ul>
+                   </li>
+                 </ul>
+               </div>
+             </li>
+
+
+             <li class="nav-item dropdown-custom">
+               <a
+                 href="#"
+                 class="nav-trigger"
+                 aria-expanded="false"
+                 aria-haspopup="menu"
+                 aria-controls="menu-plan"
+                 id="btn-plan"
+               >
+                HOW TO RIDE
+                 <span class="nav-chevron-toggle" aria-hidden="true"><i data-lucide="chevron-down"></i></span>
+               </a>
+               <div class="dropdown-panel" id="menu-plan" role="region" aria-labelledby="btn-plan">
+                 <ul class="dropdown-link-list" aria-label="Plan trip">
+                   <li class="dropdown-link">
+                     <a href="#">Service through June 13</a>
+                   </li>
+                   <li class="dropdown-link">
+                     <a href="#">Routes &amp; Schedules</a>
+                   </li>
+                   <li class="dropdown-link has-flyout">
+                     <button
+                       type="button"
+                       class="flyout-trigger"
+                       aria-expanded="false"
+                       aria-controls="flyout-rider-tools"
+                       id="flyout-trigger-rider-tools"
+                     >
+                       Rider Tools
+                       <span class="sub-chevron" aria-hidden="true"><i data-lucide="chevron-right"></i></span>
+                     </button>
+                     <ul class="dropdown-flyout" id="flyout-rider-tools" role="menu" aria-label="Rider Tools">
+                       <li class="dropdown-flyout__back" role="presentation">
+                         <button type="button" class="flyout-back-btn" aria-label="Back to Plan trip menu">
+                           <span class="sub-chevron" aria-hidden="true"><i data-lucide="chevron-left"></i></span>
+                           <span class="flyout-back-btn__label" aria-hidden="true">Rider Tools</span>
+                         </button>
+                       </li>
+                       <li><a href="#" role="menuitem">Trip Planner</a></li>
+                       <li><a href="#" role="menuitem">Next DART Bus</a></li>
+                     </ul>
+                   </li>
+                 </ul>
+               </div>
+             </li>
+
+
+
+             <li class="nav-item dropdown-custom">
+               <a
+                 href="#"
+                 class="nav-trigger"
+                 aria-expanded="false"
+                 aria-haspopup="menu"
+                 aria-controls="menu-plan"
+                 id="btn-plan"
+               >
+                About
+                 <span class="nav-chevron-toggle" aria-hidden="true"><i data-lucide="chevron-down"></i></span>
+               </a>
+               <div class="dropdown-panel" id="menu-plan" role="region" aria-labelledby="btn-plan">
+                 <ul class="dropdown-link-list" aria-label="Plan trip">
+                   <li class="dropdown-link">
+                     <a href="#">Service through June 13</a>
+                   </li>
+                   <li class="dropdown-link">
+                     <a href="#">Routes &amp; Schedules</a>
+                   </li>
+                   <li class="dropdown-link has-flyout">
+                     <button
+                       type="button"
+                       class="flyout-trigger"
+                       aria-expanded="false"
+                       aria-controls="flyout-rider-tools"
+                       id="flyout-trigger-rider-tools"
+                     >
+                       Rider Tools
+                       <span class="sub-chevron" aria-hidden="true"><i data-lucide="chevron-right"></i></span>
+                     </button>
+                     <ul class="dropdown-flyout" id="flyout-rider-tools" role="menu" aria-label="Rider Tools">
+                       <li class="dropdown-flyout__back" role="presentation">
+                         <button type="button" class="flyout-back-btn" aria-label="Back to Plan trip menu">
+                           <span class="sub-chevron" aria-hidden="true"><i data-lucide="chevron-left"></i></span>
+                           <span class="flyout-back-btn__label" aria-hidden="true">Rider Tools</span>
+                         </button>
+                       </li>
+                       <li><a href="#" role="menuitem">Trip Planner</a></li>
+                       <li><a href="#" role="menuitem">Next DART Bus</a></li>
+                     </ul>
+                   </li>
+                 </ul>
+               </div>
+             </li>
+
 
 
              <!-- Services: equal dual panes on 2nd-level hover; no full-width card -->
@@ -411,7 +553,6 @@
          </div>
        </div>
      </nav>
-
      <div class="header-alerts" role="region" aria-label="Service alerts">
       <div class="container">
 
@@ -437,10 +578,10 @@
         </div>
 
     </div>
-   </div>
+     </header>
 
 
-  </header>
+
 
     <script src="../assets/dist/main.min.js"></script>
 </body>
