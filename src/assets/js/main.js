@@ -38,7 +38,9 @@ import "./swiper-init.js";
 import "./timeline-v1.js";
 import "./dart-header.js";
 import { initPgCarousel } from "./pg-carousel.js";
+import { initNcmSlider } from "./carousel.js";
 
 $(function () {
   initPgCarousel($);
+  initNcmSlider($);
 });

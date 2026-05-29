@@ -78,7 +78,7 @@ Bundled from `main.js` (verify there for the live list):
 - Lucide (`createIcons`)  
 - AOS (+ `prefers-reduced-motion` handling in init)  
 - Swiper (via `swiper-init.js`)  
-- Feature modules: `form.js`, `hero.js`, `script.js`, `card-with-icon.js`, `icon-with-text.js`, `header.js`, `footer.js`, `exemplifi-header.js`, `calendar.js`, `pg-carousel.js`
+- Feature modules: `form.js`, `hero.js`, `script.js`, `card-with-icon.js`, `icon-with-text.js`, `header.js`, `footer.js`, `exemplifi-header.js`, `calendar.js`, `pg-carousel.js`, `carousel.js`
 
 ---
 

@@ -32,7 +32,7 @@ These match the cards in [index.html](../index.html). **Purpose** is a short des
 | 6 | Table | [table.html](../src/htmls/table.html) | Data / content tables | `tables` | — |
 | 7 | Stats | [stats.html](../src/htmls/stats.html) | Stat blocks and figures | `stats` | — |
 | 8 | Image & Text | [image-text.html](../src/htmls/image-text.html) | Image beside or with text | `image-and-text` | — |
-| 9 | Carousel | [carousel.html](../src/htmls/carousel.html) | Bootstrap, Slick, and Swiper carousel examples | `carousels` | `script.js` (Slick `.slick-carousel-v*`, Bootstrap carousel), `swiper-init.js` |
+| 9 | Carousel | [carousel.html](../src/htmls/carousel.html) | Swiper carousels (v1–v3) and NCM spotlight slider (v4, Slick) | `carousels` | `swiper-init.js`, `carousel.js` (`initNcmSlider` in `main.js`) |
 | 10 | Card with Icon | [card-with-icon.html](../src/htmls/card-with-icon.html) | Icon-led cards | `card-with-icon` | `card-with-icon.js` |
 | 11 | Icon & Text | [icon-and-text.html](../src/htmls/icon-and-text.html) | Icon with supporting text | `icon-and-text` | `icon-with-text.js` |
 | 12 | Header | [header.html](../src/htmls/header.html) | Site header / navigation | `header` | `header.js` |
@@ -90,6 +90,7 @@ Imported from [main.js](../src/assets/js/main.js) in this order (after libraries
 | `calendar.js` | Calendar |
 | `swiper-init.js` | Swiper instances for carousel markup |
 | `pg-carousel.js` | PG carousel (`initPgCarousel` called from `main.js` on `$(function(){...})`) |
+| `carousel.js` | NCM spotlight slider (`initNcmSlider` called from `main.js` on `$(function(){...})`) |
 
 Libraries loaded before these: **jQuery**, **slick-carousel**, **Bootstrap**, **bs5-lightbox**, **Lucide**, **AOS** (+ AOS CSS).
 
@@ -116,6 +117,24 @@ Libraries loaded before these: **jQuery**, **slick-carousel**, **Bootstrap**, **
 ## Accessibility
 
 Treat each demo like production: semantic HTML, labels, keyboard use, visible focus, sensible headings. Follow [`.cursor/rules/accessibilitystandards.mdc`](../.cursor/rules/accessibilitystandards.mdc).
+
+---
+
+## NCM spotlight slider (carousel v4)
+
+**Demo:** [carousel.html](../src/htmls/carousel.html) (variant 4) · **SCSS:** `carousels` · **JS:** `carousel.js` → `initNcmSlider($)` in `main.js`
+
+Slick card slider with glass “Featured” pill, Lucide prev/next, and live region. Copy the `<section class="carousel carousel--v4 ncm-slider-section">` block from the demo.
+
+| Hook / class | Role |
+|--------------|------|
+| `.js-ncm-slider` | Slick init target; each `.slider-card` child = one slide |
+| `.slider-btn-wrapper` | Nav buttons mount here |
+| `[data-ncm-slider-live]` | Screen reader slide announcements |
+| `.glass-btn` | Frosted pill on optional featured label |
+| `.body-sm` | Card subtitle text |
+
+**Slides shown:** `1.12` mobile · `2.12` ≥768px · `3.12` ≥992px. Edit `responsive` in `carousel.js` to tune. Rebuild after SCSS/JS changes (`npm run build:all`).
 
 ---
 

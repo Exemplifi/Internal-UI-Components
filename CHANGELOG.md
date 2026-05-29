@@ -7,6 +7,10 @@ Versioning: [Semantic Versioning](https://semver.org/spec/v2.0.0.html) — polic
 
 ## [Unreleased]
 
+### Added
+
+- NCM spotlight slider (carousel variant 4): Slick-based card slider with Lucide nav, live region, and focus guard; wired via `initNcmSlider` in `carousel.js` / `main.js`. See [docs/components.md](./docs/components.md#ncm-spotlight-slider-carousel-v4).
+
 ### Changed
 
 - Documentation aligned across [README.md](./README.md), [docs/README.md](./docs/README.md), [docs/components.md](./docs/components.md), [VERSIONING.md](./VERSIONING.md), and this file: clear repo purpose, numbered reading order, full component/demo map (including all SCSS partials and JS modules), and shorter release policy.
