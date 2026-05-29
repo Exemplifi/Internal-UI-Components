@@ -1,4 +1,3 @@
-console.log('icon-with-text.js loaded');
 // Icon and Text Component Interactions
 document.addEventListener('DOMContentLoaded', function() {
     const viewMoreButtons = document.querySelectorAll('.view-more');

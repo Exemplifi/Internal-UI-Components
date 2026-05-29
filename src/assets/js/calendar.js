@@ -1,3 +1,5 @@
+import $ from "jquery";
+
 (function ($) {
   "use strict";
 
@@ -380,18 +382,10 @@
       }-${this.selectedDate.getDate()}`;
       const events = this.events[dateKey] || [];
 
-      // Debug logging
-      console.log("Selected date:", this.selectedDate);
-      console.log("Date key:", dateKey);
-      console.log("Available events:", this.events);
-      console.log("Events for selected date:", events);
-
       if (events.length > 0) {
         const event = events[0]; // Show first event
-        console.log("Showing event:", event);
         this.showEvent(event);
       } else {
-        console.log("No events found for selected date");
         this.showNoEvents();
       }
     }
@@ -497,4 +491,4 @@
       new EXCalendar($(this));
     });
   });
-})(jQuery);
+})($);

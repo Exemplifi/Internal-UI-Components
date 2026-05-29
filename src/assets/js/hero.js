@@ -1,1 +1,1 @@
-console.log('Hero component JS loaded');
+// Hero demo: add behavior here when needed.

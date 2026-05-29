@@ -1,7 +1,12 @@
 // Header Component
 @import "../utils/rem-convert";
 
+
+
 .header {
+
+
+
   position: relative;
   background-color: $gray;
     @include media-breakpoint-up(lg) {
@@ -234,3 +239,11 @@
     }
   }
 }
+
+
+
+
+
+
+
+
