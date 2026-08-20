@@ -29,7 +29,7 @@ After changing SCSS or JS, run `npm run build:all`.
 ## Behavior
 
 1. **Steps** — Four numbered cards; the active step uses `.is-active` (teal marker + teal card border).
-2. **Autoplay** — When the section is at least 25% in view, highlight resets to step 01 and advances every 5 seconds. Pauses when scrolled off-screen.
+2. **Autoplay** — Highlight starts on step 01 and advances every 5 seconds. Pauses when the steps are fully off-screen, then resumes.
 3. **Reduced motion** — No autoplay; step 01 stays active. Chevron does not slide.
 4. **Chevron** — `.heading-chevron` slides in when its parent enters view.
 
