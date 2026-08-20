@@ -20,29 +20,30 @@ There is **one shared bundle** for all demos: every page loads the same `main.mi
 
 ## Component demos (hub order)
 
-These match the cards in [index.html](../index.html). **Purpose** is a short description of what the demo illustrates.
+These match the cards in [index.html](../index.html), listed alphabetically. **Purpose** is a short description of what the demo illustrates.
 
 | # | Name | Demo file | Purpose | Primary SCSS partial | Primary JS |
 |---|------|-----------|---------|------------------------|------------|
-| 1 | Hero | [hero.html](../src/htmls/hero.html) | Full-width hero with video/headline/CTA | `heros` | `hero.js` |
-| 2 | PG Carousel | [pg-carousel.html](../src/htmls/pg-carousel.html) | Project-style carousel | `pg-carousel` | `pg-carousel.js` (`initPgCarousel` in `main.js`) |
-| 3 | Cards | [cards.html](../src/htmls/cards.html) | Card layouts and variants | `cards` | — (globals only) |
-| 4 | Accordion | [accordion.html](../src/htmls/accordion.html) | FAQ-style expand/collapse | `accordions` | Bootstrap accordion (no dedicated `accordion.js`) |
-| 5 | Form | [form.html](../src/htmls/form.html) | Form layout and controls | `forms` | `form.js` |
-| 6 | Table | [table.html](../src/htmls/table.html) | Data / content tables | `tables` | — |
-| 7 | Stats | [stats.html](../src/htmls/stats.html) | Stat blocks and figures | `stats` | — |
-| 8 | Image & Text | [image-text.html](../src/htmls/image-text.html) | Image beside or with text | `image-and-text` | — |
-| 9 | Carousel | [carousel.html](../src/htmls/carousel.html) | Swiper carousels (v1–v3) and NCM spotlight slider (v4, Slick) | `carousels` | `swiper-init.js`, `carousel.js` (`initNcmSlider` in `main.js`) |
-| 10 | Card with Icon | [card-with-icon.html](../src/htmls/card-with-icon.html) | Icon-led cards | `card-with-icon` | `card-with-icon.js` |
-| 11 | Icon & Text | [icon-and-text.html](../src/htmls/icon-and-text.html) | Icon with supporting text | `icon-and-text` | `icon-with-text.js` |
-| 12 | Header | [header.html](../src/htmls/header.html) | Site header / navigation | `header` | `header.js` |
-| 13 | Exemplifi Header | [exemplifi-header.html](../src/htmls/exemplifi-header.html) | Branded Exemplifi header | `exemplifi-header` | `exemplifi-header.js` |
-| 14 | Calendar | [calendar.html](../src/htmls/calendar.html) | Calendar UI | `calendar` | `calendar.js` |
-| 15 | Footer | [footer.html](../src/htmls/footer.html) | Footer pattern | `footer` | `footer.js` |
-| 16 | Footer V2 | [footer-v2.html](../src/htmls/footer-v2.html) | Alternate footer layout | `footer` | `footer.js` |
-| 17 | Timeline V1 | [timeline-v1.html](../src/htmls/timeline-v1.html) | Scroll-driven historical timeline | `timeline-v1` | `timeline-v1.js` |
-| 18 | Timeline V2 | [timeline-v2.html](../src/htmls/timeline-v2.html) | Four-step reimbursement timeline (VVTA Figma 4803:7223) | `timeline-v2` | `timeline-v2.js` |
-| 19 | Stacked Cards | [stacked-cards.html](../src/htmls/stacked-cards.html) | Sticky stacked service cards (VVTA Specialized Services) | `stacked-cards` | `stacked-cards.js` |
+| 1 | Accordion | [accordion.html](../src/htmls/accordion.html) | FAQ-style expand/collapse | `accordions` | Bootstrap accordion (no dedicated `accordion.js`) |
+| 2 | Calendar | [calendar.html](../src/htmls/calendar.html) | Calendar UI | `calendar` | `calendar.js` |
+| 3 | Card Expansion | [card-expansion.html](../src/htmls/card-expansion.html) | Expandable cards with a details panel | `card-expansion` | `card-expansion.js` |
+| 4 | Card with Icon | [card-with-icon.html](../src/htmls/card-with-icon.html) | Icon-led cards | `card-with-icon` | `card-with-icon.js` |
+| 5 | Cards | [cards.html](../src/htmls/cards.html) | Card layouts and variants | `cards` | — (globals only) |
+| 6 | Carousel | [carousel.html](../src/htmls/carousel.html) | Swiper carousels (v1–v3) and NCM spotlight slider (v4, Slick) | `carousels` | `swiper-init.js`, `carousel.js` (`initNcmSlider` in `main.js`) |
+| 7 | Exemplifi Header | [exemplifi-header.html](../src/htmls/exemplifi-header.html) | Branded Exemplifi header | `exemplifi-header` | `exemplifi-header.js` |
+| 8 | Footer | [footer.html](../src/htmls/footer.html) | Footer pattern | `footer` | `footer.js` |
+| 9 | Footer V2 | [footer-v2.html](../src/htmls/footer-v2.html) | Alternate footer layout | `footer` | `footer.js` |
+| 10 | Form | [form.html](../src/htmls/form.html) | Form layout and controls | `forms` | `form.js` |
+| 11 | Header | [header.html](../src/htmls/header.html) | Site header / navigation | `header` | `header.js` |
+| 12 | Hero | [hero.html](../src/htmls/hero.html) | Full-width hero with video/headline/CTA | `heros` | `hero.js` |
+| 13 | Icon & Text | [icon-and-text.html](../src/htmls/icon-and-text.html) | Icon with supporting text | `icon-and-text` | `icon-with-text.js` |
+| 14 | Image & Text | [image-text.html](../src/htmls/image-text.html) | Image beside or with text | `image-and-text` | — |
+| 15 | PG Carousel | [pg-carousel.html](../src/htmls/pg-carousel.html) | Project-style carousel | `pg-carousel` | `pg-carousel.js` (`initPgCarousel` in `main.js`) |
+| 16 | Stacked Cards | [stacked-cards.html](../src/htmls/stacked-cards.html) | Sticky stacked service cards (VVTA Specialized Services) | `stacked-cards` | `stacked-cards.js` |
+| 17 | Stats | [stats.html](../src/htmls/stats.html) | Stat blocks and figures | `stats` | — |
+| 18 | Table | [table.html](../src/htmls/table.html) | Data / content tables | `tables` | — |
+| 19 | Timeline V1 | [timeline-v1.html](../src/htmls/timeline-v1.html) | Scroll-driven historical timeline | `timeline-v1` | `timeline-v1.js` |
+| 20 | Timeline V2 | [timeline-v2.html](../src/htmls/timeline-v2.html) | Four-step reimbursement timeline (VVTA Figma 4803:7223) | `timeline-v2` | `timeline-v2.js` |
 
 ---
 
