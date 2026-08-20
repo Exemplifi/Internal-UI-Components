@@ -1,0 +1,288 @@
+// Timeline V2 — VVTA How Reimbursement Works (Figma 4803:7223)
+
+.timeline-v2 {
+  --covert-black: #15171a;
+  --white: #ffffff;
+  --solid-teal: #147176;
+  --grey-border: #d0d1d1;
+  --h5-font-size: 1.1875rem;
+  --h5-font-size-lg: 1.5rem;
+  --text-label-font-size: 0.875rem;
+  --text-label-letter-spacing: 0.11em;
+  --text-medium-lg-font-size: 1rem;
+  --text-medium-lg-line-height: 1.6875rem;
+  --text-medium-lg-letter-spacing: -0.02rem;
+  --text-medium-lg-font-size-lg: 1.125rem;
+  --text-medium-lg-line-height-lg: 1.6875rem;
+  --text-medium-lg-letter-spacing-lg: -0.03em;
+  --heading-font-family: "Inter", sans-serif;
+  --body-font-family: "Inter", sans-serif;
+
+  background-color: #f8f8f8;
+  color: var(--covert-black);
+  padding-block: rem.convert(64px);
+
+  @include media-breakpoint-up(lg) {
+    padding-block: 5rem;
+  }
+
+  .text-label {
+    color: var(--covert-black);
+    font-family: var(--heading-font-family);
+    font-size: var(--text-label-font-size);
+    font-weight: $medium;
+    letter-spacing: var(--text-label-letter-spacing);
+    line-height: normal;
+    margin: 0;
+    text-transform: uppercase;
+
+    p {
+      margin: 0;
+    }
+  }
+
+  .text-medium-lg {
+    font-family: var(--body-font-family);
+    font-size: var(--text-medium-lg-font-size);
+    font-weight: $medium;
+    letter-spacing: var(--text-medium-lg-letter-spacing);
+    line-height: var(--text-medium-lg-line-height);
+
+    @include media-breakpoint-up(lg) {
+      font-size: var(--text-medium-lg-font-size-lg);
+      letter-spacing: var(--text-medium-lg-letter-spacing-lg);
+      line-height: var(--text-medium-lg-line-height-lg);
+    }
+  }
+
+  .heading-chevron {
+    transform: translateX(-1.5rem);
+    transition: transform 0.65s cubic-bezier(0.16, 1, 0.3, 1);
+
+    &.is-in-view {
+      transform: translateX(0);
+    }
+  }
+}
+
+.timeline-v2__inner {
+  align-items: stretch;
+  display: flex;
+  flex-direction: column;
+  gap: rem.convert(40px);
+  width: 100%;
+
+  @include media-breakpoint-up(lg) {
+    align-items: center;
+    flex-direction: row;
+    gap: rem.convert(72px);
+  }
+}
+
+.timeline-v2__aside {
+  align-items: flex-start;
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+  gap: rem.convert(40px);
+  min-width: 0;
+  width: 100%;
+
+  @include media-breakpoint-up(lg) {
+    align-self: stretch;
+  }
+}
+
+.timeline-v2__intro {
+  display: flex;
+  flex-direction: column;
+  gap: rem.convert(32px);
+  min-width: 0;
+  width: 100%;
+}
+
+.timeline-v2__header {
+  display: flex;
+  flex-direction: column;
+  gap: rem.convert(16px);
+  width: 100%;
+}
+
+.timeline-v2__title {
+  align-items: flex-start;
+  display: flex;
+  gap: rem.convert(16px);
+  width: 100%;
+}
+
+.timeline-v2__title-arrow {
+  align-items: center;
+  display: flex;
+  flex: 0 0 auto;
+  height: rem.convert(35px);
+  justify-content: center;
+  overflow: hidden;
+  width: rem.convert(23.701px);
+
+  img {
+    display: block;
+    flex: 0 0 auto;
+    height: 23.701px;
+    transform: rotate(90deg);
+    width: 35px;
+  }
+}
+
+.timeline-v2__title h2 {
+  color: var(--covert-black);
+  flex: 1 1 auto;
+  font-family: var(--heading-font-family);
+  font-size: rem.convert(34px);
+  font-weight: $bold;
+  letter-spacing: -0.01em;
+  line-height: 1.12;
+  margin: 0;
+  min-width: 0;
+  text-transform: none;
+
+  @include media-breakpoint-up(lg) {
+    font-size: rem.convert(48px);
+    line-height: 1;
+  }
+}
+
+.timeline-v2__lead {
+  width: 100%;
+
+  p {
+    margin: 0;
+  }
+}
+
+.timeline-v2__steps {
+  display: flex;
+  flex-direction: column;
+  gap: rem.convert(24px);
+  list-style: none;
+  margin: 0;
+  min-width: 0;
+  padding: 0;
+  position: relative;
+  width: 100%;
+
+  @include media-breakpoint-up(lg) {
+    flex: 0 0 auto;
+    width: rem.convert(659px);
+  }
+}
+
+.timeline-v2__step {
+  align-items: flex-start;
+  display: flex;
+  gap: rem.convert(24px);
+  min-width: 0;
+  position: relative;
+  width: 100%;
+  z-index: 1;
+
+  &:not(:last-child)::before {
+    background-color: var(--grey-border);
+    bottom: rem.convert(-24px);
+    content: "";
+    left: rem.convert(28px);
+    pointer-events: none;
+    position: absolute;
+    top: rem.convert(56px);
+    width: 1px;
+    z-index: 0;
+  }
+}
+
+.timeline-v2__marker {
+  align-items: center;
+  background-color: var(--white);
+  border: 1px solid var(--covert-black);
+  border-radius: rem.convert(16px);
+  box-sizing: border-box;
+  color: var(--covert-black);
+  display: flex;
+  flex: 0 0 auto;
+  font-family: var(--heading-font-family);
+  font-size: rem.convert(22px);
+  font-weight: $bold;
+  height: rem.convert(56px);
+  justify-content: center;
+  letter-spacing: -0.01em;
+  line-height: 1.24;
+  padding: rem.convert(12px) rem.convert(10px) rem.convert(10px);
+  transition:
+    background-color 0.45s cubic-bezier(0.16, 1, 0.3, 1),
+    border-color 0.45s cubic-bezier(0.16, 1, 0.3, 1),
+    color 0.45s cubic-bezier(0.16, 1, 0.3, 1);
+  width: rem.convert(56px);
+
+  span {
+    font: inherit;
+  }
+
+  .timeline-v2__step.is-active & {
+    background-color: var(--solid-teal);
+    border-color: transparent;
+    color: var(--white);
+  }
+}
+
+.timeline-v2__card {
+  background-color: var(--white);
+  border: 1px solid var(--grey-border);
+  border-radius: rem.convert(16px);
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+  gap: rem.convert(16px);
+  min-width: 0;
+  overflow: hidden;
+  padding: rem.convert(24px);
+  transition: border-color 0.45s cubic-bezier(0.16, 1, 0.3, 1);
+  width: 100%;
+
+  .timeline-v2__step.is-active & {
+    border-color: var(--solid-teal);
+  }
+
+  .text-medium-lg p {
+    margin: 0;
+  }
+}
+
+.timeline-v2__card-title {
+  margin: 0;
+
+  h3 {
+    color: var(--covert-black);
+    font-family: var(--heading-font-family);
+    font-size: var(--h5-font-size);
+    font-weight: $bold;
+    letter-spacing: -0.03em;
+    line-height: 1;
+    margin: 0;
+    text-transform: none;
+
+    @include media-breakpoint-up(lg) {
+      font-size: var(--h5-font-size-lg);
+    }
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .timeline-v2 .heading-chevron,
+  .timeline-v2__marker,
+  .timeline-v2__card {
+    transform: none;
+    transition: none;
+  }
+
+  .timeline-v2 .heading-chevron {
+    transform: none;
+  }
+}

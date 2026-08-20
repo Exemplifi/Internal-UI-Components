@@ -9,6 +9,7 @@ Versioning: [Semantic Versioning](https://semver.org/spec/v2.0.0.html) — polic
 
 ### Added
 
+- Timeline V2: four-step reimbursement timeline from VVTA Figma 4803:7223 (5s autoplay). Demo: [timeline-v2.html](./src/htmls/timeline-v2.html). See [docs/timeline-v2/README.md](./docs/timeline-v2/README.md).
 - NCM spotlight slider (carousel variant 4): Slick-based card slider with Lucide nav, live region, and focus guard; wired via `initNcmSlider` in `carousel.js` / `main.js`. See [docs/components.md](./docs/components.md#ncm-spotlight-slider-carousel-v4).
 
 ### Changed
