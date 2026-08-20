@@ -1,0 +1,455 @@
+// Stacked Cards — VVTA Specialized Services, generic name in this kit
+
+.stacked-cards {
+  --covert-black: #15171a;
+  --white: #ffffff;
+  --grey-surface: #f1f1f1;
+  --heading-font-family: "Inter", sans-serif;
+  --body-font-family: "Inter", sans-serif;
+  --heading-display-font-size: 2.125rem;
+  --heading-display-line-height: 1.12;
+  --heading-display-letter-spacing: -0.01em;
+  --heading-display-font-size-lg: 3rem;
+  --heading-display-line-height-lg: 1;
+  --heading-display-letter-spacing-lg: -0.01em;
+  color: var(--covert-black);
+
+  &.bg-white,
+  .bg-white {
+    background-color: var(--white);
+  }
+
+  .bg-covert-black {
+    background-color: var(--covert-black);
+  }
+
+  .text-label {
+    color: var(--covert-black);
+    font-family: var(--heading-font-family);
+    font-weight: $medium;
+    line-height: normal;
+    margin: 0;
+    text-transform: uppercase;
+  }
+
+  .heading-chevron {
+    transform: translateX(-1.5rem);
+    transition: transform 0.65s cubic-bezier(0.16, 1, 0.3, 1);
+
+    &.is-in-view {
+      transform: translateX(0);
+    }
+  }
+
+  width: 100%;
+  height: auto;
+  // Horizontal inset belongs to `.container` so this section lines up with every
+  // other one. Figma's 80px frame inset is the design frame, not component padding.
+  padding-block: rem.convert(64px);
+
+  > .container {
+    width: 100%;
+  }
+
+  @include media-breakpoint-up(lg) {
+    // Figma desktop: 64 top / 80 bottom
+    padding-top: rem.convert(64px);
+    padding-bottom: rem.convert(80px);
+  }
+
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    // Figma mobile 3573:1900 — header → stack gap 48
+    gap: rem.convert(48px);
+    width: 100%;
+    height: auto;
+    overflow: visible;
+  }
+
+  &__header {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; // mobile Figma: left-aligned
+    text-align: left;
+    gap: rem.convert(16px);
+    width: 100%;
+
+    @include media-breakpoint-up(lg) {
+      align-items: center;
+      text-align: center;
+    }
+  }
+
+  &__eyebrow,
+  &__title,
+  &__card-title,
+  &__card-text {
+    margin: 0;
+  }
+
+  // Caret + heading always in a row (text may wrap beside caret)
+  &__title {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    // Figma mobile 3573:1904 — items-start (caret top-aligned with wrapped H2)
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: rem.convert(16px);
+    font-family: var(--heading-font-family);
+    font-size: var(--heading-display-font-size);
+    font-weight: $bold;
+    line-height: var(--heading-display-line-height);
+    letter-spacing: var(--heading-display-letter-spacing);
+    text-transform: none;
+
+    > span {
+      min-width: 0; // allow wrap inside the row
+    }
+
+    @include media-breakpoint-up(lg) {
+      align-items: center;
+      justify-content: center;
+      font-size: var(--heading-display-font-size-lg);
+      line-height: var(--heading-display-line-height-lg);
+      letter-spacing: var(--heading-display-letter-spacing-lg);
+    }
+  }
+
+  &__eyebrow {
+    // Figma mobile Label: 14 / tracking 1.54 (11%)
+    font-size: rem.convert(14px);
+    letter-spacing: rem.convert(1.54px);
+
+    @include media-breakpoint-up(lg) {
+      font-size: rem.convert(16px);
+      letter-spacing: rem.convert(1.76px);
+    }
+  }
+
+  // Figma displayed caret: mobile ~15.575×23 | desktop 23.701×35 (3573:741)
+  &__caret {
+    flex-shrink: 0;
+    display: block;
+    width: rem.convert(15.575px);
+    height: rem.convert(23px);
+    object-fit: contain;
+
+    @include media-breakpoint-up(lg) {
+      width: rem.convert(23.701px);
+      height: rem.convert(35px);
+    }
+  }
+
+  // Stack track — Figma mobile 3573:1913: shell px 16 / py 24 / radius 8
+  &__stack {
+    --stack-cards-gap: #{rem.convert(24px)};
+    --stack-top: #{rem.convert(16px)};
+    --shell-pad-x: #{rem.convert(16px)};
+    --shell-pad-y: #{rem.convert(24px)};
+    // JS syncShell reads --shell-pad for vertical hug
+    --shell-pad: var(--shell-pad-y);
+    --shell-radius: #{rem.convert(8px)};
+
+    position: relative;
+    width: 100%;
+    overflow: visible;
+
+    @include media-breakpoint-up(lg) {
+      --stack-top: #{rem.convert(48px)};
+      --shell-pad-x: #{rem.convert(24px)};
+      --shell-pad-y: #{rem.convert(24px)};
+      --shell-pad: #{rem.convert(24px)};
+      --shell-radius: #{rem.convert(16px)};
+    }
+  }
+
+  &__list-shell {
+    position: fixed;
+    z-index: 0;
+    box-sizing: border-box;
+    border-radius: var(--shell-radius);
+    pointer-events: none;
+    opacity: 0;
+    // Opacity only — geometry must track sticky cards 1:1 (no lag / slip)
+    transition: opacity 0.2s ease;
+    will-change: left, top, width, height;
+
+    &.is-ready {
+      opacity: 1;
+    }
+  }
+
+  &__list {
+    position: relative;
+    z-index: 1;
+    display: block;
+    margin: 0;
+    // Top inset must match JS pinTop (header + header-gap + shell-pad). Without
+    // it the first card sticks `shell-pad` too soon and eats the gap to card 2.
+    padding: var(--shell-pad-y) var(--shell-pad-x) 0;
+    width: 100%;
+    box-sizing: border-box;
+    overflow: visible;
+    background: transparent;
+
+    &.is-static-stack {
+      display: flex;
+      flex-direction: column;
+      gap: rem.convert(24px);
+      padding: var(--shell-pad-y) var(--shell-pad-x);
+
+      .stacked-cards__item {
+        position: relative;
+        top: auto;
+        margin-bottom: 0;
+        transform: none !important;
+        will-change: auto;
+      }
+    }
+  }
+
+  &__stack:has(.is-static-stack) {
+    background-color: var(--covert-black);
+    border-radius: var(--shell-radius);
+    padding: var(--shell-pad-y) var(--shell-pad-x);
+
+    .stacked-cards__list {
+      padding: 0;
+    }
+
+    .stacked-cards__list-shell {
+      display: none !important;
+    }
+  }
+
+  &__item {
+    position: sticky;
+    top: var(--stack-top);
+    width: 100%;
+    margin: 0 0 var(--stack-cards-gap);
+    transform-origin: center top;
+    will-change: transform;
+    background: transparent;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    @for $i from 1 through 10 {
+      &:nth-child(#{$i}) {
+        z-index: $i;
+      }
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    &__list-shell {
+      display: none !important;
+      transition: none !important;
+    }
+
+    &__item {
+      position: relative;
+      top: auto;
+      margin-bottom: 0;
+      transform: none !important;
+      will-change: auto;
+    }
+
+    .heading-chevron {
+      transform: none;
+      transition: none;
+    }
+  }
+
+  // —— Card ——
+  // Mobile Figma 3573:1914 — px 24 / py 32 / radius 16
+  // Desktop Figma 3573:750 — py 24 / px 40 outer; 2px border → 22 / 38
+  &__card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-sizing: border-box;
+    width: 100%;
+    max-width: none;
+    height: auto;
+    max-height: none;
+    padding: rem.convert(32px) rem.convert(24px);
+    isolation: isolate;
+    opacity: 1;
+    border: 2px solid var(--covert-black);
+    border-radius: rem.convert(16px);
+    overflow: hidden;
+
+    @include media-breakpoint-up(lg) {
+      height: rem.convert(397px);
+      padding: rem.convert(22px) rem.convert(38px);
+      border-radius: rem.convert(16px);
+    }
+  }
+
+  // Mobile: copy → link → image (column); desktop: row
+  // Figma mobile 3573:1914 — card column gap 24 (body ↔ media)
+  &__card-fg {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: rem.convert(24px);
+    box-sizing: border-box;
+    width: 100%;
+    min-width: 0; // allow children to shrink — prevents overflow clip of media
+    min-height: 0;
+    height: auto;
+    margin: 0;
+    flex: 1 1 auto;
+
+    @include media-breakpoint-up(lg) {
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      gap: rem.convert(32px);
+      height: 100%;
+      min-height: 0;
+    }
+
+    @include media-breakpoint-up(xxl) {
+      gap: rem.convert(64px);
+    }
+  }
+
+  &__card-body {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    // Figma mobile 3573:1918 — title / copy gap 32
+    gap: rem.convert(32px);
+    flex: 0 0 auto;
+    order: 1;
+    align-self: stretch;
+    box-sizing: border-box;
+    width: 100%;
+    max-width: none;
+    min-width: 0;
+    opacity: 1;
+    padding-block: 0;
+
+    @include media-breakpoint-up(lg) {
+      flex: 1 1 0;
+      order: 0;
+      align-self: center;
+      justify-content: flex-start;
+      gap: rem.convert(32px);
+      padding-block: 0;
+      // Share row with media — never lock a width that overflows the card
+      width: auto;
+      max-width: rem.convert(588px);
+    }
+
+  }
+
+  &__card-title {
+    font-family: var(--heading-font-family);
+    font-weight: $bold;
+    font-style: normal;
+    // Figma mobile H3: 30 / 1.16 / -0.3
+    font-size: rem.convert(30px);
+    line-height: 1.16;
+    letter-spacing: rem.convert(-0.3px);
+
+    @include media-breakpoint-up(lg) {
+      font-size: rem.convert(40px);
+      line-height: 100%;
+      // Figma H3 letterSpacing -1% → -0.4px at 40px
+      letter-spacing: rem.convert(-0.4px);
+    }
+  }
+
+  &__card-text {
+    font-family: var(--body-font-family);
+    font-weight: $medium;
+    font-style: normal;
+    // Figma mobile Body 1: 16 / 27 / -0.32
+    font-size: rem.convert(16px);
+    line-height: rem.convert(27px);
+    letter-spacing: rem.convert(-0.32px);
+    max-width: none;
+
+    @include media-breakpoint-up(lg) {
+      font-size: rem.convert(18px);
+      line-height: rem.convert(27px);
+      letter-spacing: rem.convert(-0.54px);
+      // Figma body column 588 — fill the copy column, don’t clip early
+      max-width: rem.convert(588px);
+    }
+  }
+
+  &__card-media {
+    position: relative;
+    z-index: 1;
+    flex: 0 0 auto;
+    order: 2; // mobile: always under copy
+    box-sizing: border-box;
+    width: 100%;
+    min-width: 0;
+    margin: 0;
+    // Figma mobile 3573:1926 — radius 8
+    border-radius: rem.convert(8px);
+    overflow: hidden;
+    background-color: var(--grey-surface);
+
+    // Figma 3573:762 — 482×349, radius 16; fill frame, crop overflow
+    @include media-breakpoint-up(lg) {
+      flex: 0 1 rem.convert(482px);
+      order: 0;
+      align-self: stretch;
+      width: rem.convert(482px);
+      max-width: rem.convert(482px);
+      height: rem.convert(349px);
+      aspect-ratio: 482 / 349;
+      border-radius: rem.convert(16px);
+    }
+
+    img {
+      display: block;
+      width: 100%;
+      height: auto;
+      max-width: 100%;
+
+      @include media-breakpoint-up(lg) {
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+
+  // Figma media crops (3573:762 needles, 3573:773 vanpool). Trip uses cover.
+  &__item:nth-child(1) &__card-media img {
+    @include media-breakpoint-up(lg) {
+      position: absolute;
+      top: 0;
+      left: -8.56%;
+      width: 108.61%;
+      max-width: none;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__item:nth-child(2) &__card-media img {
+    @include media-breakpoint-up(lg) {
+      position: absolute;
+      top: 0;
+      left: -9.43%;
+      width: 128.65%;
+      max-width: none;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+}
