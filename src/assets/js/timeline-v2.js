@@ -1,5 +1,3 @@
-import $ from "jquery";
-
 const ROOT = ".timeline-v2";
 const STEP = ".timeline-v2__step";
 const ACTIVE = "is-active";
@@ -8,9 +6,15 @@ const INTERVAL_MS = 5000;
 const prefersReducedMotion = () =>
   window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
-function setActive($steps, index) {
-  $steps.each((i, el) => {
-    $(el).toggleClass(ACTIVE, i === index);
+function setActive(steps, index) {
+  steps.forEach((el, i) => {
+    const on = i === index;
+    el.classList.toggle(ACTIVE, on);
+    if (on) {
+      el.setAttribute("aria-current", "step");
+    } else {
+      el.removeAttribute("aria-current");
+    }
   });
 }
 
@@ -70,58 +74,55 @@ function initSection(root) {
 
   initHeadingChevrons(root);
 
-  const $root = $(root);
-  const $steps = $root.find(STEP);
-  if ($steps.length < 2) return;
+  const steps = [...root.querySelectorAll(STEP)];
+  if (steps.length < 2) return;
 
   let index = 0;
-  setActive($steps, index);
+  setActive(steps, index);
 
   if (prefersReducedMotion()) return;
 
   let timerId = null;
-  let inView = false;
 
   const clear = () => {
-    if (timerId != null) {
-      window.clearInterval(timerId);
-      timerId = null;
-    }
+    if (timerId == null) return;
+    window.clearInterval(timerId);
+    timerId = null;
   };
 
   const tick = () => {
-    index = (index + 1) % $steps.length;
-    setActive($steps, index);
+    index = (index + 1) % steps.length;
+    setActive(steps, index);
   };
 
-  const startFromBeginning = () => {
-    clear();
-    index = 0;
-    setActive($steps, index);
+  const play = () => {
+    if (timerId != null) return;
     timerId = window.setInterval(tick, INTERVAL_MS);
   };
 
+  play();
+
+  if (!("IntersectionObserver" in window)) return;
+
+  const target = root.querySelector(".timeline-v2__steps") || root;
   const observer = new IntersectionObserver(
     (entries) => {
       entries.forEach((entry) => {
-        const visible = entry.isIntersecting;
-        if (visible && !inView) {
-          inView = true;
-          startFromBeginning();
-        } else if (!visible && inView) {
-          inView = false;
+        if (entry.isIntersecting) {
+          play();
+        } else {
           clear();
         }
       });
     },
-    { threshold: 0.25 }
+    { threshold: 0 }
   );
 
-  observer.observe(root);
+  observer.observe(target);
 }
 
 function initTimelineV2() {
-  $(ROOT).each((_, root) => initSection(root));
+  document.querySelectorAll(ROOT).forEach(initSection);
 }
 
 if (document.readyState === "loading") {
@@ -129,3 +130,5 @@ if (document.readyState === "loading") {
 } else {
   initTimelineV2();
 }
+
+export { initTimelineV2 };
