@@ -10,6 +10,7 @@ function setActive(steps, index) {
   steps.forEach((el, i) => {
     const on = i === index;
     el.classList.toggle(ACTIVE, on);
+    el.classList.toggle("is-complete", i < index);
     if (on) {
       el.setAttribute("aria-current", "step");
     } else {
