@@ -42,6 +42,7 @@ These match the cards in [index.html](../index.html). **Purpose** is a short des
 | 16 | Footer V2 | [footer-v2.html](../src/htmls/footer-v2.html) | Alternate footer layout | `footer` | `footer.js` |
 | 17 | Timeline V1 | [timeline-v1.html](../src/htmls/timeline-v1.html) | Scroll-driven historical timeline | `timeline-v1` | `timeline-v1.js` |
 | 18 | Timeline V2 | [timeline-v2.html](../src/htmls/timeline-v2.html) | Four-step reimbursement timeline (VVTA Figma 4803:7223) | `timeline-v2` | `timeline-v2.js` |
+| 19 | Stacked Cards | [stacked-cards.html](../src/htmls/stacked-cards.html) | Sticky stacked service cards (VVTA Specialized Services) | `stacked-cards` | `stacked-cards.js` |
 
 ---
 
@@ -72,6 +73,7 @@ Declared in [\_components.scss](../src/assets/scss/components/_components.scss) 
 | `exemplifi-header` | `_exemplifi-header.scss` | Exemplifi header demo |
 | `timeline-v1` | `_timeline-v1.scss` | Timeline V1 demo |
 | `timeline-v2` | `_timeline-v2.scss` | Timeline V2 demo |
+| `stacked-cards` | `_stacked-cards.scss` | Stacked Cards demo |
 
 Global variables and Bootstrap wiring also come from `styles.scss` and related `utils/` and `base/` files.
 
@@ -97,6 +99,7 @@ Imported from [main.js](../src/assets/js/main.js) in this order (after libraries
 | `carousel.js` | NCM spotlight slider (`initNcmSlider` called from `main.js` on `$(function(){...})`) |
 | `timeline-v1.js` | Timeline V1 scroll spy and progress |
 | `timeline-v2.js` | Timeline V2 step autoplay and chevron |
+| `stacked-cards.js` | Stacked Cards sticky stack and chevron |
 
 Libraries loaded before these: **jQuery**, **slick-carousel**, **Bootstrap**, **bs5-lightbox**, **Lucide**, **AOS** (+ AOS CSS).
 
