@@ -40,6 +40,8 @@ These match the cards in [index.html](../index.html). **Purpose** is a short des
 | 14 | Calendar | [calendar.html](../src/htmls/calendar.html) | Calendar UI | `calendar` | `calendar.js` |
 | 15 | Footer | [footer.html](../src/htmls/footer.html) | Footer pattern | `footer` | `footer.js` |
 | 16 | Footer V2 | [footer-v2.html](../src/htmls/footer-v2.html) | Alternate footer layout | `footer` | `footer.js` |
+| 17 | Timeline V1 | [timeline-v1.html](../src/htmls/timeline-v1.html) | Scroll-driven historical timeline | `timeline-v1` | `timeline-v1.js` |
+| 18 | Timeline V2 | [timeline-v2.html](../src/htmls/timeline-v2.html) | Four-step reimbursement timeline (VVTA Figma 4803:7223) | `timeline-v2` | `timeline-v2.js` |
 
 ---
 
@@ -68,6 +70,8 @@ Declared in [\_components.scss](../src/assets/scss/components/_components.scss) 
 | `text-only` | `_text-only.scss` | Text-only patterns |
 | `typography` | `_typography.scss` | Typography defaults |
 | `exemplifi-header` | `_exemplifi-header.scss` | Exemplifi header demo |
+| `timeline-v1` | `_timeline-v1.scss` | Timeline V1 demo |
+| `timeline-v2` | `_timeline-v2.scss` | Timeline V2 demo |
 
 Global variables and Bootstrap wiring also come from `styles.scss` and related `utils/` and `base/` files.
 
@@ -91,6 +95,8 @@ Imported from [main.js](../src/assets/js/main.js) in this order (after libraries
 | `swiper-init.js` | Swiper instances for carousel markup |
 | `pg-carousel.js` | PG carousel (`initPgCarousel` called from `main.js` on `$(function(){...})`) |
 | `carousel.js` | NCM spotlight slider (`initNcmSlider` called from `main.js` on `$(function(){...})`) |
+| `timeline-v1.js` | Timeline V1 scroll spy and progress |
+| `timeline-v2.js` | Timeline V2 step autoplay and chevron |
 
 Libraries loaded before these: **jQuery**, **slick-carousel**, **Bootstrap**, **bs5-lightbox**, **Lucide**, **AOS** (+ AOS CSS).
 
