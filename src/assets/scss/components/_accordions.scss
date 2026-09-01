@@ -69,3 +69,133 @@
 // Accordion - v1.1
 
 
+
+
+
+
+
+
+
+             /* Accordian Nested Start */
+             .hco-accordian-neasted {
+               padding: 5rem 0;
+               background-color: #ffffff;
+             }
+             .hco-accordian-item {
+               border: 1px solid lightgrey;
+             padding: 16px;
+             border-radius: 8px;
+             margin-bottom: 1.5rem;
+             }
+             .hco-accordian-content {
+               margin-top: 1rem;
+             }
+             .hco-accordian-header {
+               display: flex;
+               align-items: center;
+               justify-content: space-between;
+               gap: 1rem;
+               /* margin-bottom: 2rem; */
+             }
+             .hco-accordian-header h2 {
+               margin: 0;
+               font-size: 24px;
+               text-transform: none;
+               font-weight: 600;
+             }
+             .hco-accordian-title {
+               /* margin-bottom: 2rem; */
+             }
+             .hco-accordian-toggle{
+               border-radius: 50%;
+               width: 3rem;
+               height: 3rem;
+               border: 1px solid lightgray;
+               background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23212529'%3e%3cpath fill-rule='evenodd' d='M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+               background-size: 1.5rem;
+               background-position: 0.75rem center;
+               background-repeat: no-repeat;
+               transition: transform 0.3s ease-in-out;
+             }
+
+             .hco-accordian-toggle[aria-expanded="true"] {
+               transform: rotate(90deg);
+             }
+
+
+             .hco-accordian-nested {
+               margin-top: 1rem;
+             }
+             .hco-accordian-item .accordion-item {
+               border: 1px solid #e0e0e0;
+               border-radius: 0.5rem;
+               margin-bottom: 1rem;
+               &:last-child {
+                 margin-bottom: 0;
+               }
+             }
+             .hco-accordian-item .accordion-item .accordion-button{
+               font-size: 1.25rem;
+               color: #000000;
+               box-shadow: none !important;
+               background-color: #f4f4f4;
+               border-top-left-radius: 0.5rem;
+               border-top-right-radius: 0.5rem;
+               padding: 1rem;
+               line-height: 1;
+               font-weight: 500;
+             }
+             .hco-accordian-item .accordion-item .accordion-body p {
+               font-size: 1.25rem;
+               line-height: 1.5;
+               color: #000000;
+               margin-bottom: 0;
+               font-weight: 400;
+             }
+             .hco-accordian-item .accordion-item .accordion-body h4 {
+               font-size: 1.25rem;
+               font-weight: 600;
+               line-height: 1.5;
+               color: #000000;
+               margin-bottom: 0.5rem;
+             }
+
+             .hco-accordian-item .accordion-item .accordion-button[aria-expanded="false"] {
+             border-radius: 0.5rem !important;
+             }
+             .hco-accordian-item .accordion-item .accordion-header h2,
+             .hco-accordian-item .accordion-item .accordion-header h3 {
+               margin: 0;
+             }
+             .hco-accordian-item .accordion-item .accordion-button:focus-visible {
+               outline: -webkit-focus-ring-color auto 1px;
+             }
+             @media screen and (max-width: 767px) {
+               .hco-accordian-neasted {
+                 padding: 3rem 0.75rem;
+               }
+               .hco-accordian-title {
+                 margin-bottom: 1.5rem;
+               }
+               .hco-accordian-item{
+                 padding: 0.75rem;
+               }
+               .hco-accordian-item .accordion-item .accordion-button {
+                 font-size: 1.25rem;
+                 padding: 0.75rem;
+               }
+               .hco-accordian-item .accordion-item .accordion-body {
+                 padding: 1rem 0.75rem;
+               }
+               .hco-accordian-item .accordion-item .accordion-body p {
+                 font-size: 1rem;
+               }
+               .hco-accordian-toggle{
+                 width: 2.25rem;
+                 height: 2.25rem;
+                 background-size: 1.25rem;
+                 background-position: 9px center;
+                   flex: 0 0 2.25rem;
+               }
+             }
+             /* Accordian Nested End */
