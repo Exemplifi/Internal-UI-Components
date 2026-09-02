@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cards Component Variants</title>
+  <link rel="stylesheet" href="../assets/dist/style.min.css">
+</head>
+<body>
+  <!-- Card Variant 1 -->
+  <section class="cards cards--v1 py-5" aria-labelledby="cards-v1-title" data-aos="fade-up">
+    <div class="container">
+      <header class="mb-4 text-center" data-aos="fade-up" data-aos-delay="100">
+        <h1 id="cards-v1-title">Cards Component Variants</h1>
+        <p class="text-muted mb-0">Reusable card layouts for data, features, testimonials, and step-by-step flows.</p>
+      </header>
+      <div class="row g-4 justify-content-center">
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="card-v1" data-aos="fade-up" data-aos-delay="200">
+            <div class="card-v1__img-bg">
+              <img src="../assets/images/development-card-img-1.png" class="card-v1__img" alt="Flow data visualization over a river landscape">
+            </div>
+            <div class="card-v1__body">
+              <h3 class="card-v1__title">Flow Data</h3>
+              <p class="card-v1__desc">Data from our rivers, streams, canals and snow</p>
+              <button type="button" class="card-v1__btn" aria-label="Load more about Flow Data">
+                Load More
+                <span class="card-v1__btn-icon">
+                  <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+                    <circle cx="7" cy="7" r="7" fill="#459DFF"/>
+                    <path d="M6 4L9 7L6 10" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </span>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="card-v1" data-aos="fade-up" data-aos-delay="300">
+            <div class="card-v1__img-bg">
+              <img src="../assets/images/maintance-card-img-1.png" class="card-v1__img" alt="GIS and map view of Northern Water service area">
+            </div>
+            <div class="card-v1__body">
+              <h3 class="card-v1__title">GIS and Maps</h3>
+              <p class="card-v1__desc">Maps of our projects and service area</p>
+              <button type="button" class="card-v1__btn" aria-label="Load more about GIS and Maps">
+                Load More
+                <span class="card-v1__btn-icon">
+                  <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+                    <circle cx="7" cy="7" r="7" fill="#459DFF"/>
+                    <path d="M6 4L9 7L6 10" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+
+  <script src="../assets/dist/main.min.js"></script>
+</body>
+</html>
