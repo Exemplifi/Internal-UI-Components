@@ -40,6 +40,8 @@ import "./timeline-v1.js";
 import "./timeline-v2.js";
 import "./stacked-cards.js";
 import "./dart-header.js";
+import "./stats-v1.js"
+import "./search"
 import { initPgCarousel } from "./pg-carousel.js";
 import { initNcmSlider } from "./carousel.js";
 
