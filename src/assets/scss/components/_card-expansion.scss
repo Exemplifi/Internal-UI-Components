@@ -322,3 +322,31 @@
     transition: none !important;
   }
 }
+
+
+
+.for-index-page{
+     .card-expansion__body {
+          background: var(--white);
+          border-radius: var(--ce-radius);
+          color: var(--ce-text);
+          padding: 1.5rem;
+          border: 2px solid var(--ce-card-bg);
+      }
+      .card-expansion__body-title{
+          color: var(--ce-card-bg);
+      }
+      .card-expansion__col-heading{
+          color: var(--ce-card-bg);
+      }
+      .card-expansion__info {
+          background: var(--ce-card-bg);
+          a{ color: var(--white);}
+      }
+      .card-expansion__body-close{
+          color: #000;
+      }
+      .card-expansion__body-header{
+          border-bottom: 1px solid #314459;
+      }
+}
