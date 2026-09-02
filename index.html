@@ -17,182 +17,1125 @@
     href="#components-list">
     Skip to component list
   </a>
-  <header class="py-4" role="banner">
-    <div class="container text-center">
-      <h1 class="mb-3 display-5 fw-bold " id="component-heading">Standard UI Components</h1>
-      <p>
-        Browse each component in a dedicated demo tab. Links announce that they open in a new window for screen readers.
-      </p>
-    </div>
-  </header>
+
   <main id="components-list" class="container py-5" tabindex="-1">
-    <section aria-labelledby="component-heading">
-      <ul class="row g-4 list-unstyled" role="list">
 
-          <li class="col-12 col-md-6 col-lg-4">
-               <a href="src/htmls/header.html" target="_blank" rel="noopener noreferrer">
-                 <div class="card p-4 h-100 shadow-sm border-0 rounded-3">
-                   <h2 class="h5 fw-semibold mb-2">
-                     Header
-                     <span class="visually-hidden">(opens in a new tab)</span>
-                   </h2>
-                   <p class="text-muted mb-0" aria-hidden="true">src/htmls/header.html</p>
+
+
+
+    <section class="card-expansion py-5" aria-labelledby="card-expansion-heading">
+     <div class="container">
+
+       <header class="mb-4 text-center">
+         <h1 id="card-expansion-heading" class="display-5 fw-bold mb-3">Standard UI Components</h1>
+         <p class="text-muted mb-0">
+           Browse each component in a dedicated demo tab. Links announce that they open in a new window for screen readers.
+         </p>
+       </header>
+
+       <div class="card-expansion__group">
+
+         <div class="row g-4 card-expansion__grid">
+
+           <div class="col-12 col-md-6 col-lg-4">
+             <article class="card-expansion__card" data-card-id="ce-1">
+               <h2 class="card-expansion__card-title" id="ce-1-title">Header</h2>
+               <button type="button"
+                 class="card-expansion__btn"
+                 aria-expanded="false"
+                 aria-controls="ce-1-body"
+                 aria-labelledby="ce-1-title">
+                 <span class="card-expansion__btn-icon" aria-hidden="true">
+                   <i data-lucide="plus" class="card-expansion__icon-open"></i>
+                   <i data-lucide="minus" class="card-expansion__icon-close"></i>
+                 </span>
+                 <span class="card-expansion__btn-label"
+                   data-label-open="Details"
+                   data-label-close="Close">Details</span>
+               </button>
+             </article>
+           </div>
+
+           <div class="col-12 col-md-6 col-lg-4">
+             <article class="card-expansion__card" data-card-id="ce-2">
+               <h2 class="card-expansion__card-title" id="ce-2-title">Footer</h2>
+               <button type="button"
+                 class="card-expansion__btn"
+                 aria-expanded="false"
+                 aria-controls="ce-2-body"
+                 aria-labelledby="ce-2-title">
+                 <span class="card-expansion__btn-icon" aria-hidden="true">
+                   <i data-lucide="plus" class="card-expansion__icon-open"></i>
+                   <i data-lucide="minus" class="card-expansion__icon-close"></i>
+                 </span>
+                 <span class="card-expansion__btn-label"
+                   data-label-open="Details"
+                   data-label-close="Close">Details</span>
+               </button>
+             </article>
+           </div>
+
+           <div class="col-12 col-md-6 col-lg-4">
+             <article class="card-expansion__card" data-card-id="ce-3">
+               <h2 class="card-expansion__card-title" id="ce-3-title">Calendar</h2>
+               <button type="button"
+                 class="card-expansion__btn"
+                 aria-expanded="false"
+                 aria-controls="ce-3-body"
+                 aria-labelledby="ce-3-title">
+                 <span class="card-expansion__btn-icon" aria-hidden="true">
+                   <i data-lucide="plus" class="card-expansion__icon-open"></i>
+                   <i data-lucide="minus" class="card-expansion__icon-close"></i>
+                 </span>
+                 <span class="card-expansion__btn-label"
+                   data-label-open="Details"
+                   data-label-close="Close">Details</span>
+               </button>
+             </article>
+           </div>
+
+           <div class="col-12 col-md-6 col-lg-4">
+             <article class="card-expansion__card" data-card-id="ce-4">
+               <h2 class="card-expansion__card-title" id="ce-4-title">Accordion</h2>
+               <button type="button"
+                 class="card-expansion__btn"
+                 aria-expanded="false"
+                 aria-controls="ce-4-body"
+                 aria-labelledby="ce-4-title">
+                 <span class="card-expansion__btn-icon" aria-hidden="true">
+                   <i data-lucide="plus" class="card-expansion__icon-open"></i>
+                   <i data-lucide="minus" class="card-expansion__icon-close"></i>
+                 </span>
+                 <span class="card-expansion__btn-label"
+                   data-label-open="Details"
+                   data-label-close="Close">Details</span>
+               </button>
+             </article>
+           </div>
+
+           <div class="col-12 col-md-6 col-lg-4">
+             <article class="card-expansion__card" data-card-id="ce-5">
+               <h2 class="card-expansion__card-title" id="ce-5-title">Carousel</h2>
+               <button type="button"
+                 class="card-expansion__btn"
+                 aria-expanded="false"
+                 aria-controls="ce-5-body"
+                 aria-labelledby="ce-5-title">
+                 <span class="card-expansion__btn-icon" aria-hidden="true">
+                   <i data-lucide="plus" class="card-expansion__icon-open"></i>
+                   <i data-lucide="minus" class="card-expansion__icon-close"></i>
+                 </span>
+                 <span class="card-expansion__btn-label"
+                   data-label-open="Details"
+                   data-label-close="Close">Details</span>
+               </button>
+             </article>
+           </div>
+
+           <div class="col-12 col-md-6 col-lg-4">
+             <article class="card-expansion__card" data-card-id="ce-6">
+               <h2 class="card-expansion__card-title" id="ce-6-title">Timeline</h2>
+               <button type="button"
+                 class="card-expansion__btn"
+                 aria-expanded="false"
+                 aria-controls="ce-6-body"
+                 aria-labelledby="ce-6-title">
+                 <span class="card-expansion__btn-icon" aria-hidden="true">
+                   <i data-lucide="plus" class="card-expansion__icon-open"></i>
+                   <i data-lucide="minus" class="card-expansion__icon-close"></i>
+                 </span>
+                 <span class="card-expansion__btn-label"
+                   data-label-open="Details"
+                   data-label-close="Close">Details</span>
+               </button>
+             </article>
+           </div>
+
+           <div class="col-12 col-md-6 col-lg-4">
+             <article class="card-expansion__card" data-card-id="ce-7">
+               <h2 class="card-expansion__card-title" id="ce-7-title">Table</h2>
+               <button type="button"
+                 class="card-expansion__btn"
+                 aria-expanded="false"
+                 aria-controls="ce-7-body"
+                 aria-labelledby="ce-7-title">
+                 <span class="card-expansion__btn-icon" aria-hidden="true">
+                   <i data-lucide="plus" class="card-expansion__icon-open"></i>
+                   <i data-lucide="minus" class="card-expansion__icon-close"></i>
+                 </span>
+                 <span class="card-expansion__btn-label"
+                   data-label-open="Details"
+                   data-label-close="Close">Details</span>
+               </button>
+             </article>
+           </div>
+
+           <div class="col-12 col-md-6 col-lg-4">
+             <article class="card-expansion__card" data-card-id="ce-8">
+               <h2 class="card-expansion__card-title" id="ce-8-title">Form</h2>
+               <button type="button"
+                 class="card-expansion__btn"
+                 aria-expanded="false"
+                 aria-controls="ce-8-body"
+                 aria-labelledby="ce-8-title">
+                 <span class="card-expansion__btn-icon" aria-hidden="true">
+                   <i data-lucide="plus" class="card-expansion__icon-open"></i>
+                   <i data-lucide="minus" class="card-expansion__icon-close"></i>
+                 </span>
+                 <span class="card-expansion__btn-label"
+                   data-label-open="Details"
+                   data-label-close="Close">Details</span>
+               </button>
+             </article>
+           </div>
+
+           <div class="col-12 col-md-6 col-lg-4">
+             <article class="card-expansion__card" data-card-id="ce-9">
+               <h2 class="card-expansion__card-title" id="ce-9-title">Hero</h2>
+               <button type="button"
+                 class="card-expansion__btn"
+                 aria-expanded="false"
+                 aria-controls="ce-9-body"
+                 aria-labelledby="ce-9-title">
+                 <span class="card-expansion__btn-icon" aria-hidden="true">
+                   <i data-lucide="plus" class="card-expansion__icon-open"></i>
+                   <i data-lucide="minus" class="card-expansion__icon-close"></i>
+                 </span>
+                 <span class="card-expansion__btn-label"
+                   data-label-open="Details"
+                   data-label-close="Close">Details</span>
+               </button>
+             </article>
+           </div>
+
+           <div class="col-12 col-md-6 col-lg-4">
+             <article class="card-expansion__card" data-card-id="ce-10">
+               <h2 class="card-expansion__card-title" id="ce-10-title">Cards</h2>
+               <button type="button"
+                 class="card-expansion__btn"
+                 aria-expanded="false"
+                 aria-controls="ce-10-body"
+                 aria-labelledby="ce-10-title">
+                 <span class="card-expansion__btn-icon" aria-hidden="true">
+                   <i data-lucide="plus" class="card-expansion__icon-open"></i>
+                   <i data-lucide="minus" class="card-expansion__icon-close"></i>
+                 </span>
+                 <span class="card-expansion__btn-label"
+                   data-label-open="Details"
+                   data-label-close="Close">Details</span>
+               </button>
+             </article>
+           </div>
+
+           <div class="col-12 col-md-6 col-lg-4">
+             <article class="card-expansion__card" data-card-id="ce-11">
+               <h2 class="card-expansion__card-title" id="ce-11-title">Icon &amp; Text</h2>
+               <button type="button"
+                 class="card-expansion__btn"
+                 aria-expanded="false"
+                 aria-controls="ce-11-body"
+                 aria-labelledby="ce-11-title">
+                 <span class="card-expansion__btn-icon" aria-hidden="true">
+                   <i data-lucide="plus" class="card-expansion__icon-open"></i>
+                   <i data-lucide="minus" class="card-expansion__icon-close"></i>
+                 </span>
+                 <span class="card-expansion__btn-label"
+                   data-label-open="Details"
+                   data-label-close="Close">Details</span>
+               </button>
+             </article>
+           </div>
+
+           <div class="col-12 col-md-6 col-lg-4">
+             <article class="card-expansion__card" data-card-id="ce-12">
+               <h2 class="card-expansion__card-title" id="ce-12-title">Image &amp; Text</h2>
+               <button type="button"
+                 class="card-expansion__btn"
+                 aria-expanded="false"
+                 aria-controls="ce-12-body"
+                 aria-labelledby="ce-12-title">
+                 <span class="card-expansion__btn-icon" aria-hidden="true">
+                   <i data-lucide="plus" class="card-expansion__icon-open"></i>
+                   <i data-lucide="minus" class="card-expansion__icon-close"></i>
+                 </span>
+                 <span class="card-expansion__btn-label"
+                   data-label-open="Details"
+                   data-label-close="Close">Details</span>
+               </button>
+             </article>
+           </div>
+
+           <div class="col-12 col-md-6 col-lg-4">
+             <article class="card-expansion__card" data-card-id="ce-13">
+               <h2 class="card-expansion__card-title" id="ce-13-title">Stats</h2>
+               <button type="button"
+                 class="card-expansion__btn"
+                 aria-expanded="false"
+                 aria-controls="ce-13-body"
+                 aria-labelledby="ce-13-title">
+                 <span class="card-expansion__btn-icon" aria-hidden="true">
+                   <i data-lucide="plus" class="card-expansion__icon-open"></i>
+                   <i data-lucide="minus" class="card-expansion__icon-close"></i>
+                 </span>
+                 <span class="card-expansion__btn-label"
+                   data-label-open="Details"
+                   data-label-close="Close">Details</span>
+               </button>
+             </article>
+           </div>
+
+         </div>
+
+         <div class="card-expansion__bodies">
+
+           <!-- Header -->
+           <div id="ce-1-body"
+             class="card-expansion__body"
+             role="region"
+             aria-labelledby="ce-1-body-title"
+             hidden>
+
+             <div class="card-expansion__body-header">
+               <h3 class="card-expansion__body-title" id="ce-1-body-title">Header</h3>
+               <button type="button"
+                 class="card-expansion__body-close"
+                 aria-label="Close Header details">
+                 <i data-lucide="x" aria-hidden="true"></i>
+               </button>
+             </div>
+
+             <div class="card-expansion__body-content">
+               <div class="row g-4">
+
+                 <div class="col-12 col-lg-4">
+                   <h4 class="card-expansion__col-heading">Header V1</h4>
+                   <div class="card-expansion__info">
+                     <p>
+                       <a href="src/htmls/header.html" target="_blank">
+                         src/htmls/header-1.html
+                         <span class="visually-hidden">(opens in a new tab)</span>
+                       </a>
+                     </p>
+                   </div>
                  </div>
-               </a>
-             </li>
 
-             <li class="col-12 col-md-6 col-lg-4">
-               <a href="src/htmls/footer.html" target="_blank" rel="noopener noreferrer">
-                 <div class="card p-4 h-100 shadow-sm border-0 rounded-3">
-                   <h2 class="h5 fw-semibold mb-2">
-                     Footer
-                     <span class="visually-hidden">(opens in a new tab)</span>
-                   </h2>
-                   <p class="text-muted mb-0" aria-hidden="true">src/htmls/footer.html</p>
+                 <div class="col-12 col-lg-4">
+                   <h4 class="card-expansion__col-heading">Header V2</h4>
+                   <div class="card-expansion__info">
+                     <p>
+                       <a href="src/htmls/header-v2.html" target="_blank">
+                         src/htmls/header-v2.html
+                         <span class="visually-hidden">(opens in a new tab)</span>
+                       </a>
+                     </p>
+                   </div>
                  </div>
-               </a>
-             </li>
 
-             <li class="col-12 col-md-6 col-lg-4">
-               <a href="src/htmls/calendar.html" target="_blank" rel="noopener noreferrer">
-                 <div class="card p-4 h-100 shadow-sm border-0 rounded-3">
-                   <h2 class="h5 fw-semibold mb-2">
-                     Calendar
-                     <span class="visually-hidden">(opens in a new tab)</span>
-                   </h2>
-                   <p class="text-muted mb-0" aria-hidden="true">src/htmls/calendar.html</p>
+                 <div class="col-12 col-lg-4">
+                   <h4 class="card-expansion__col-heading">Header V3</h4>
+                   <div class="card-expansion__info">
+                     <p>
+                       <a href="src/htmls/header-v3.html" target="_blank">
+                         src/htmls/header-v3.html
+                         <span class="visually-hidden">(opens in a new tab)</span>
+                       </a>
+                     </p>
+                   </div>
                  </div>
-               </a>
-             </li>
 
-        <li class="col-12 col-md-6 col-lg-4">
-          <a href="src/htmls/accordion.html" target="_blank" rel="noopener noreferrer">
-            <div class="card p-4 h-100 shadow-sm border-0 rounded-3">
-              <h2 class="h5 fw-semibold mb-2">
-                Accordion
-                <span class="visually-hidden">(opens in a new tab)</span>
-              </h2>
-              <p class="text-muted mb-0" aria-hidden="true">src/htmls/accordion.html</p>
-            </div>
-          </a>
-        </li>
-        <li class="col-12 col-md-6 col-lg-4">
-          <a href="src/htmls/carousel.html" target="_blank" rel="noopener noreferrer">
-            <div class="card p-4 h-100 shadow-sm border-0 rounded-3">
-              <h2 class="h5 fw-semibold mb-2">
-                Carousel
-                <span class="visually-hidden">(opens in a new tab)</span>
-              </h2>
-              <p class="text-muted mb-0" aria-hidden="true">src/htmls/carousel.html</p>
-            </div>
-          </a>
-        </li>
+               </div>
+             </div>
+           </div>
 
-        <li class="col-12 col-md-6 col-lg-4">
-          <a href="src/htmls/timeline.html" target="_blank" rel="noopener noreferrer">
-            <div class="card p-4 h-100 shadow-sm border-0 rounded-3">
-              <h2 class="h5 fw-semibold mb-2">
-                Timeline
-                <span class="visually-hidden">(opens in a new tab)</span>
-              </h2>
-              <p class="text-muted mb-0" aria-hidden="true">src/htmls/timeline.html</p>
-            </div>
-          </a>
-        </li>
+           <!-- Footer -->
+           <div id="ce-2-body"
+             class="card-expansion__body"
+             role="region"
+             aria-labelledby="ce-2-body-title"
+             hidden>
+
+             <div class="card-expansion__body-header">
+               <h3 class="card-expansion__body-title" id="ce-2-body-title">Footer</h3>
+               <button type="button"
+                 class="card-expansion__body-close"
+                 aria-label="Close Footer details">
+                 <i data-lucide="x" aria-hidden="true"></i>
+               </button>
+             </div>
+
+             <div class="card-expansion__body-content">
+               <div class="row g-4">
+
+                 <div class="col-12 col-lg-4">
+                   <h4 class="card-expansion__col-heading">Footer V1</h4>
+                   <div class="card-expansion__info">
+                     <p>
+                       <a href="src/htmls/footer.html" target="_blank">
+                         src/htmls/footer.html
+                         <span class="visually-hidden">(opens in a new tab)</span>
+                       </a>
+                     </p>
+                   </div>
+                 </div>
+
+                 <div class="col-12 col-lg-4">
+                   <h4 class="card-expansion__col-heading">Footer V2</h4>
+                   <div class="card-expansion__info">
+                     <p>
+                       <a href="src/htmls/footer-v2.html" target="_blank">
+                         src/htmls/footer-2.html
+                         <span class="visually-hidden">(opens in a new tab)</span>
+                       </a>
+                     </p>
+                   </div>
+                 </div>
+
+               </div>
+             </div>
+           </div>
+
+           <!-- Calendar -->
+           <div id="ce-3-body"
+             class="card-expansion__body"
+             role="region"
+             aria-labelledby="ce-3-body-title"
+             hidden>
+
+             <div class="card-expansion__body-header">
+               <h3 class="card-expansion__body-title" id="ce-3-body-title">Calendar</h3>
+               <button type="button"
+                 class="card-expansion__body-close"
+                 aria-label="Close Calendar details">
+                 <i data-lucide="x" aria-hidden="true"></i>
+               </button>
+             </div>
+
+             <div class="card-expansion__body-content">
+               <div class="row g-4">
+
+                 <div class="col-12 col-lg-4">
+                   <h4 class="card-expansion__col-heading">Calendar</h4>
+                   <div class="card-expansion__info">
+                     <p>
+                       <a href="src/htmls/calendar.html" target="_blank">
+                         src/htmls/calendar.html
+                         <span class="visually-hidden">(opens in a new tab)</span>
+                       </a>
+                     </p>
+                   </div>
+                 </div>
+
+               </div>
+             </div>
+           </div>
+
+           <!-- Accordion -->
+           <div id="ce-4-body"
+             class="card-expansion__body"
+             role="region"
+             aria-labelledby="ce-4-body-title"
+             hidden>
+
+             <div class="card-expansion__body-header">
+               <h3 class="card-expansion__body-title" id="ce-4-body-title">Accordion</h3>
+               <button type="button"
+                 class="card-expansion__body-close"
+                 aria-label="Close Accordion details">
+                 <i data-lucide="x" aria-hidden="true"></i>
+               </button>
+             </div>
+
+             <div class="card-expansion__body-content">
+               <div class="row g-4">
+
+                 <div class="col-12 col-lg-4">
+                   <h4 class="card-expansion__col-heading">Accordion v1</h4>
+                   <div class="card-expansion__info">
+                     <p>
+                       <a href="src/htmls/accordion.html" target="_blank">
+                         src/htmls/accordion.html
+                         <span class="visually-hidden">(opens in a new tab)</span>
+                       </a>
+                     </p>
+                   </div>
+                 </div>
+
+                 <div class="col-12 col-lg-4">
+                   <h4 class="card-expansion__col-heading">Accordion v2</h4>
+                   <div class="card-expansion__info">
+                     <p>
+                       <a href="src/htmls/accordion-v2.html" target="_blank">
+                         src/htmls/accordion-v2.html
+                         <span class="visually-hidden">(opens in a new tab)</span>
+                       </a>
+                     </p>
+                   </div>
+                 </div>
+
+               </div>
+             </div>
+           </div>
+
+           <!-- Carousel -->
+           <div id="ce-5-body"
+             class="card-expansion__body"
+             role="region"
+             aria-labelledby="ce-5-body-title"
+             hidden>
+
+             <div class="card-expansion__body-header">
+               <h3 class="card-expansion__body-title" id="ce-5-body-title">Carousel</h3>
+               <button type="button"
+                 class="card-expansion__body-close"
+                 aria-label="Close Carousel details">
+                 <i data-lucide="x" aria-hidden="true"></i>
+               </button>
+             </div>
+
+             <div class="card-expansion__body-content">
+               <div class="row g-4">
+
+                 <div class="col-12 col-lg-4">
+                   <h4 class="card-expansion__col-heading">Carousel v1</h4>
+                   <div class="card-expansion__info">
+                     <p>
+                       <a href="src/htmls/carousel-v1.html" target="_blank">
+                         src/htmls/carousel-v1.html
+                         <span class="visually-hidden">(opens in a new tab)</span>
+                       </a>
+                     </p>
+                   </div>
+                 </div>
+
+                 <div class="col-12 col-lg-4">
+                   <h4 class="card-expansion__col-heading">Carousel v2</h4>
+                   <div class="card-expansion__info">
+                     <p>
+                       <a href="src/htmls/carousel-v2.html" target="_blank">
+                         src/htmls/carousel-v2.html
+                         <span class="visually-hidden">(opens in a new tab)</span>
+                       </a>
+                     </p>
+                   </div>
+                 </div>
+
+                 <div class="col-12 col-lg-4">
+                   <h4 class="card-expansion__col-heading">Carousel v3</h4>
+                   <div class="card-expansion__info">
+                     <p>
+                       <a href="src/htmls/carousel-v3.html" target="_blank">
+                         src/htmls/carousel-v3.html
+                         <span class="visually-hidden">(opens in a new tab)</span>
+                       </a>
+                     </p>
+                   </div>
+                 </div>
+
+                 <div class="col-12 col-lg-4">
+                   <h4 class="card-expansion__col-heading">Carousel v4</h4>
+                   <div class="card-expansion__info">
+                     <p>
+                       <a href="src/htmls/carousel-v4.html" target="_blank">
+                         src/htmls/carousel-v4.html
+                         <span class="visually-hidden">(opens in a new tab)</span>
+                       </a>
+                     </p>
+                   </div>
+                 </div>
+
+                 <div class="col-12 col-lg-4">
+                   <h4 class="card-expansion__col-heading">Carousel v5</h4>
+                   <div class="card-expansion__info">
+                     <p>
+                       <a href="src/htmls/carousel-v5.html" target="_blank">
+                         src/htmls/carousel-v5.html
+                         <span class="visually-hidden">(opens in a new tab)</span>
+                       </a>
+                     </p>
+                   </div>
+                 </div>
+
+               </div>
+             </div>
+           </div>
+
+           <!-- Timeline -->
+           <div id="ce-6-body"
+             class="card-expansion__body"
+             role="region"
+             aria-labelledby="ce-6-body-title"
+             hidden>
+
+             <div class="card-expansion__body-header">
+               <h3 class="card-expansion__body-title" id="ce-6-body-title">Timeline</h3>
+               <button type="button"
+                 class="card-expansion__body-close"
+                 aria-label="Close Timeline details">
+                 <i data-lucide="x" aria-hidden="true"></i>
+               </button>
+             </div>
+
+             <div class="card-expansion__body-content">
+               <div class="row g-4">
+
+                 <div class="col-12 col-lg-4">
+                   <h4 class="card-expansion__col-heading">Timeline v1</h4>
+                   <div class="card-expansion__info">
+                     <p>
+                       <a href="src/htmls/timeline-v1.html" target="_blank">
+                         src/htmls/timeline-v1.html
+                         <span class="visually-hidden">(opens in a new tab)</span>
+                       </a>
+                     </p>
+                   </div>
+                 </div>
+
+                 <div class="col-12 col-lg-4">
+                   <h4 class="card-expansion__col-heading">Timeline v2</h4>
+                   <div class="card-expansion__info">
+                     <p>
+                       <a href="src/htmls/timeline-v2.html" target="_blank">
+                         src/htmls/timeline-v2.html
+                         <span class="visually-hidden">(opens in a new tab)</span>
+                       </a>
+                     </p>
+                   </div>
+                 </div>
+
+               </div>
+             </div>
+           </div>
+
+           <!-- Table -->
+           <div id="ce-7-body"
+             class="card-expansion__body"
+             role="region"
+             aria-labelledby="ce-7-body-title"
+             hidden>
+
+             <div class="card-expansion__body-header">
+               <h3 class="card-expansion__body-title" id="ce-7-body-title">Table</h3>
+               <button type="button"
+                 class="card-expansion__body-close"
+                 aria-label="Close Table details">
+                 <i data-lucide="x" aria-hidden="true"></i>
+               </button>
+             </div>
+
+             <div class="card-expansion__body-content">
+               <div class="row g-4">
+
+                 <div class="col-12 col-lg-4">
+                   <h4 class="card-expansion__col-heading">Table v1</h4>
+                   <div class="card-expansion__info">
+                     <p>
+                       <a href="src/htmls/table.html" target="_blank">
+                         src/htmls/table.html
+                         <span class="visually-hidden">(opens in a new tab)</span>
+                       </a>
+                     </p>
+                   </div>
+                 </div>
 
 
-        <li class="col-12 col-md-6 col-lg-4">
-          <a href="src/htmls/table.html" target="_blank" rel="noopener noreferrer">
-            <div class="card p-4 h-100 shadow-sm border-0 rounded-3">
-              <h2 class="h5 fw-semibold mb-2">
-                Table
-                <span class="visually-hidden">(opens in a new tab)</span>
-              </h2>
-              <p class="text-muted mb-0" aria-hidden="true">src/htmls/table.html</p>
-            </div>
-          </a>
-        </li>
+               </div>
+             </div>
+           </div>
+
+           <!-- Form -->
+           <div id="ce-8-body"
+             class="card-expansion__body"
+             role="region"
+             aria-labelledby="ce-8-body-title"
+             hidden>
+
+             <div class="card-expansion__body-header">
+               <h3 class="card-expansion__body-title" id="ce-8-body-title">Form</h3>
+               <button type="button"
+                 class="card-expansion__body-close"
+                 aria-label="Close Form details">
+                 <i data-lucide="x" aria-hidden="true"></i>
+               </button>
+             </div>
+
+             <div class="card-expansion__body-content">
+               <div class="row g-4">
+
+                 <div class="col-12 col-lg-4">
+                   <h4 class="card-expansion__col-heading">Form v1</h4>
+                   <div class="card-expansion__info">
+                     <p>
+                       <a href="src/htmls/form-v1.html" target="_blank">
+                         src/htmls/form-v1.html
+                         <span class="visually-hidden">(opens in a new tab)</span>
+                       </a>
+                     </p>
+                   </div>
+                 </div>
+
+                 <div class="col-12 col-lg-4">
+                   <h4 class="card-expansion__col-heading">Form v2</h4>
+                   <div class="card-expansion__info">
+                     <p>
+                       <a href="src/htmls/form-v2.html" target="_blank">
+                         src/htmls/form-v2.html
+                         <span class="visually-hidden">(opens in a new tab)</span>
+                       </a>
+                     </p>
+                   </div>
+                 </div>
+
+               </div>
+             </div>
+           </div>
+
+           <!-- Hero -->
+           <div id="ce-9-body"
+             class="card-expansion__body"
+             role="region"
+             aria-labelledby="ce-9-body-title"
+             hidden>
+
+             <div class="card-expansion__body-header">
+               <h3 class="card-expansion__body-title" id="ce-9-body-title">Hero</h3>
+               <button type="button"
+                 class="card-expansion__body-close"
+                 aria-label="Close Hero details">
+                 <i data-lucide="x" aria-hidden="true"></i>
+               </button>
+             </div>
+
+             <div class="card-expansion__body-content">
+               <div class="row g-4">
+
+                 <div class="col-12 col-lg-4">
+                   <h4 class="card-expansion__col-heading">Hero v1</h4>
+                   <div class="card-expansion__info">
+                     <p>
+                       <a href="src/htmls/hero-v1.html" target="_blank">
+                         src/htmls/hero-v1.html
+                         <span class="visually-hidden">(opens in a new tab)</span>
+                       </a>
+                     </p>
+                   </div>
+                 </div>
+
+
+
+               </div>
+             </div>
+           </div>
+
+           <!-- Cards -->
+           <div id="ce-10-body"
+             class="card-expansion__body"
+             role="region"
+             aria-labelledby="ce-10-body-title"
+             hidden>
+
+             <div class="card-expansion__body-header">
+               <h3 class="card-expansion__body-title" id="ce-10-body-title">Cards</h3>
+               <button type="button"
+                 class="card-expansion__body-close"
+                 aria-label="Close Cards details">
+                 <i data-lucide="x" aria-hidden="true"></i>
+               </button>
+             </div>
+
+             <div class="card-expansion__body-content">
+               <div class="row g-4">
+
+                 <div class="col-12 col-lg-4">
+                   <h4 class="card-expansion__col-heading">Cards v1</h4>
+                   <div class="card-expansion__info">
+                     <p>
+                       <a href="src/htmls/cards-v1.html" target="_blank">
+                         src/htmls/cards-v1.html
+                         <span class="visually-hidden">(opens in a new tab)</span>
+                       </a>
+                     </p>
+                   </div>
+                 </div>
+                 <div class="col-12 col-lg-4">
+                    <h4 class="card-expansion__col-heading">Cards v2</h4>
+                    <div class="card-expansion__info">
+                      <p>
+                        <a href="src/htmls/cards-v2.html" target="_blank">
+                          src/htmls/cards-v2.html
+                          <span class="visually-hidden">(opens in a new tab)</span>
+                        </a>
+                      </p>
+                    </div>
+                  </div>
+                  <div class="col-12 col-lg-4">
+                    <h4 class="card-expansion__col-heading">Cards v3</h4>
+                    <div class="card-expansion__info">
+                      <p>
+                        <a href="src/htmls/cards-v3.html" target="_blank">
+                          src/htmls/cards-v3.html
+                          <span class="visually-hidden">(opens in a new tab)</span>
+                        </a>
+                      </p>
+                    </div>
+                  </div>
+                  <div class="col-12 col-lg-4">
+                    <h4 class="card-expansion__col-heading">Cards v4</h4>
+                    <div class="card-expansion__info">
+                      <p>
+                        <a href="src/htmls/cards-v4.html" target="_blank">
+                          src/htmls/cards-v4.html
+                          <span class="visually-hidden">(opens in a new tab)</span>
+                        </a>
+                      </p>
+                    </div>
+                  </div>
+                  <div class="col-12 col-lg-4">
+                    <h4 class="card-expansion__col-heading">Cards v5</h4>
+                    <div class="card-expansion__info">
+                      <p>
+                        <a href="src/htmls/cards-v5.html" target="_blank">
+                          src/htmls/cards-v5.html
+                          <span class="visually-hidden">(opens in a new tab)</span>
+                        </a>
+                      </p>
+                    </div>
+                  </div>
+                  <div class="col-12 col-lg-4">
+                    <h4 class="card-expansion__col-heading">Cards v6</h4>
+                    <div class="card-expansion__info">
+                      <p>
+                        <a href="src/htmls/cards-v6.html" target="_blank">
+                          src/htmls/cards-v5.html
+                          <span class="visually-hidden">(opens in a new tab)</span>
+                        </a>
+                      </p>
+                    </div>
+                  </div>
+                  <div class="col-12 col-lg-4">
+                    <h4 class="card-expansion__col-heading">Cards v7</h4>
+                    <div class="card-expansion__info">
+                      <p>
+                        <a href="src/htmls/cards-v7.html" target="_blank">
+                          src/htmls/cards-v7.html
+                          <span class="visually-hidden">(opens in a new tab)</span>
+                        </a>
+                      </p>
+                    </div>
+                  </div>
+
+
+               </div>
+             </div>
+           </div>
+
+           <!-- Icon & Text -->
+           <div id="ce-11-body"
+             class="card-expansion__body"
+             role="region"
+             aria-labelledby="ce-11-body-title"
+             hidden>
+
+             <div class="card-expansion__body-header">
+               <h3 class="card-expansion__body-title" id="ce-11-body-title">Icon &amp; Text</h3>
+               <button type="button"
+                 class="card-expansion__body-close"
+                 aria-label="Close Icon and Text details">
+                 <i data-lucide="x" aria-hidden="true"></i>
+               </button>
+             </div>
+
+             <div class="card-expansion__body-content">
+               <div class="row g-4">
+
+                 <div class="col-12 col-lg-4">
+                   <h4 class="card-expansion__col-heading">Icon &amp; Text v1</h4>
+                   <div class="card-expansion__info">
+                     <p>
+                       <a href="src/htmls/icon-and-text-v1.html" target="_blank">
+                         src/htmls/icon-and-text-v1.html
+                         <span class="visually-hidden">(opens in a new tab)</span>
+                       </a>
+                     </p>
+                   </div>
+                 </div>
+
+
+
+               </div>
+             </div>
+           </div>
+
+           <!-- Image & Text -->
+           <div id="ce-12-body"
+             class="card-expansion__body"
+             role="region"
+             aria-labelledby="ce-12-body-title"
+             hidden>
+
+             <div class="card-expansion__body-header">
+               <h3 class="card-expansion__body-title" id="ce-12-body-title">Image &amp; Text</h3>
+               <button type="button"
+                 class="card-expansion__body-close"
+                 aria-label="Close Image and Text details">
+                 <i data-lucide="x" aria-hidden="true"></i>
+               </button>
+             </div>
+
+             <div class="card-expansion__body-content">
+               <div class="row g-4">
+
+                 <div class="col-12 col-lg-4">
+                   <h4 class="card-expansion__col-heading">Image  Text v1</h4>
+                   <div class="card-expansion__info">
+                     <p>
+                       <a href="src/htmls/image-text-v1.html" target="_blank">
+                         src/htmls/image-text-v1.html
+                         <span class="visually-hidden">(opens in a new tab)</span>
+                       </a>
+                     </p>
+                   </div>
+                 </div>
+
+
+
+               </div>
+             </div>
+           </div>
+
+           <!-- Stats -->
+           <div id="ce-13-body"
+             class="card-expansion__body"
+             role="region"
+             aria-labelledby="ce-13-body-title"
+             hidden>
+
+             <div class="card-expansion__body-header">
+               <h3 class="card-expansion__body-title" id="ce-13-body-title">Stats</h3>
+               <button type="button"
+                 class="card-expansion__body-close"
+                 aria-label="Close Stats details">
+                 <i data-lucide="x" aria-hidden="true"></i>
+               </button>
+             </div>
+
+             <div class="card-expansion__body-content">
+               <div class="row g-4">
+
+                 <div class="col-12 col-lg-4">
+                   <h4 class="card-expansion__col-heading">Stats v1</h4>
+                   <div class="card-expansion__info">
+                     <p>
+                       <a href="src/htmls/stats-v1.html" target="_blank">
+                         src/htmls/stats-v1.html
+                         <span class="visually-hidden">(opens in a new tab)</span>
+                       </a>
+                     </p>
+                   </div>
+                 </div>
+
+
+
+               </div>
+             </div>
+           </div>
+
+         </div>
+       </div>
+     </div>
+   </section>
 
 
 
 
-        <li class="col-12 col-md-6 col-lg-4">
-          <a href="src/htmls/form.html" target="_blank" rel="noopener noreferrer">
-            <div class="card p-4 h-100 shadow-sm border-0 rounded-3">
-              <h2 class="h5 fw-semibold mb-2">
-                Form
-                <span class="visually-hidden">(opens in a new tab)</span>
-              </h2>
-              <p class="text-muted mb-0" aria-hidden="true">src/htmls/form.html</p>
-            </div>
-          </a>
-        </li>
+   <section aria-labelledby="component-heading" >
+     <ul class="row g-4 list-unstyled" role="list">
 
-        <li class="col-12 col-md-6 col-lg-4">
-          <a href="src/htmls/hero.html" target="_blank" rel="noopener noreferrer">
-            <div class="card p-4 h-100 shadow-sm border-0 rounded-3">
-              <h2 class="h5 fw-semibold mb-2">
-                Hero
-                <span class="visually-hidden">(opens in a new tab)</span>
-              </h2>
-              <p class="text-muted mb-0" aria-hidden="true">src/htmls/hero.html</p>
-            </div>
-          </a>
-        </li>
-        <li class="col-12 col-md-6 col-lg-4">
-          <a href="src/htmls/cards.html" target="_blank" rel="noopener noreferrer">
-            <div class="card p-4 h-100 shadow-sm border-0 rounded-3">
-              <h2 class="h5 fw-semibold mb-2">
-                Cards
-                <span class="visually-hidden">(opens in a new tab)</span>
-              </h2>
-              <p class="text-muted mb-0" aria-hidden="true">src/htmls/cards.html</p>
-            </div>
-          </a>
-        </li>
+         <li class="col-12 col-md-6 col-lg-4">
 
-        <li class="col-12 col-md-6 col-lg-4">
-          <a href="src/htmls/icon-and-text.html" target="_blank" rel="noopener noreferrer">
-            <div class="card p-4 h-100 shadow-sm border-0 rounded-3">
-              <h2 class="h5 fw-semibold mb-2">
-                Icon &amp; Text
-                <span class="visually-hidden">(opens in a new tab)</span>
-              </h2>
-              <p class="text-muted mb-0" aria-hidden="true">src/htmls/icon-and-text.html</p>
-            </div>
-          </a>
-        </li>
-        <li class="col-12 col-md-6 col-lg-4">
-          <a href="src/htmls/image-text.html" target="_blank" rel="noopener noreferrer">
-            <div class="card p-4 h-100 shadow-sm border-0 rounded-3">
-              <h2 class="h5 fw-semibold mb-2">
-                Image &amp; Text
-                <span class="visually-hidden">(opens in a new tab)</span>
-              </h2>
-              <p class="text-muted mb-0" aria-hidden="true">src/htmls/image-text.html</p>
-            </div>
-          </a>
-        </li>
+                <div class="card p-4 h-100 shadow-sm border-0 rounded-3">
+                  <h2 class="h5 fw-semibold mb-2">
+                    Header
+                    <span class="visually-hidden">(opens in a new tab)</span>
+                  </h2>
+                  <p class="text-muted mb-1" aria-hidden="true"><a href="src/htmls/header.html" target="_blank">src/htmls/header.html   <span class="visually-hidden">(opens in a new tab)</span></a></p>
+                  <p class="text-muted mb-1" aria-hidden="true"><a href="src/htmls/header-v2.html" target="_blank">src/htmls/header-v2.html   <span class="visually-hidden">(opens in a new tab)</span></a></p>
+                  <p class="text-muted mb-1" aria-hidden="true"><a href="src/htmls/header-v3.html" target="_blank">src/htmls/header-v2.html   <span class="visually-hidden">(opens in a new tab)</span></a></p>
+                </div>
+
+            </li>
+
+            <li class="col-12 col-md-6 col-lg-4">
+
+                <div class="card p-4 h-100 shadow-sm border-0 rounded-3">
+                  <h2 class="h5 fw-semibold mb-2">
+                    Footer
+                    <span class="visually-hidden">(opens in a new tab)</span>
+                  </h2>
+                  <p class="text-muted mb-1" aria-hidden="true"><a href="src/htmls/footer.html" target="_blank">src/htmls/footer.html   <span class="visually-hidden">(opens in a new tab)</span></a></p>
+                  <p class="text-muted mb-1" aria-hidden="true"><a href="src/htmls/footer-v2.html" target="_blank">src/htmls/footer-v2.html   <span class="visually-hidden">(opens in a new tab)</span></a></p>
+
+                </div>
+
+            </li>
+
+            <li class="col-12 col-md-6 col-lg-4">
+
+                <div class="card p-4 h-100 shadow-sm border-0 rounded-3">
+                  <h2 class="h5 fw-semibold mb-2">
+                    Calendar
+
+                  </h2>
+                  <p class="text-muted mb-1" aria-hidden="true"><a href="src/htmls/calendar.html" target="_blank">src/htmls/calendar.html   <span class="visually-hidden">(opens in a new tab)</span></a></p>
+                </div>
+
+            </li>
+
+       <li class="col-12 col-md-6 col-lg-4">
+
+           <div class="card p-4 h-100 shadow-sm border-0 rounded-3">
+             <h2 class="h5 fw-semibold mb-2">
+               Accordion
+
+             </h2>
+             <p class="text-muted mb-1" aria-hidden="true"><a href="src/htmls/accordion.html" target="_blank">src/htmls/accordion.html   <span class="visually-hidden">(opens in a new tab)</span></a></p>
+             <p class="text-muted mb-1" aria-hidden="true"><a href="src/htmls/accordion-v2.html" target="_blank">src/htmls/accordion-v2.html   <span class="visually-hidden">(opens in a new tab)</span></a></p>
+           </div>
+
+       </li>
+       <li class="col-12 col-md-6 col-lg-4">
+
+           <div class="card p-4 h-100 shadow-sm border-0 rounded-3">
+             <h2 class="h5 fw-semibold mb-2">
+               Carousel
+
+             </h2>
+             <p class="text-muted mb-1" aria-hidden="true"><a href="src/htmls/carousel-v1.html" target="_blank">src/htmls/carousel-v1.html   <span class="visually-hidden">(opens in a new tab)</span></a></p>
+             <p class="text-muted mb-1" aria-hidden="true"><a href="src/htmls/carousel-v2.html" target="_blank">src/htmls/carousel-v2.html   <span class="visually-hidden">(opens in a new tab)</span></a></p>
+             <p class="text-muted mb-1" aria-hidden="true"><a href="src/htmls/carousel-v3.html" target="_blank">src/htmls/carousel-v3.html   <span class="visually-hidden">(opens in a new tab)</span></a></p>
+             <p class="text-muted mb-1" aria-hidden="true"><a href="src/htmls/carousel-v4.html" target="_blank">src/htmls/carousel-v4.html   <span class="visually-hidden">(opens in a new tab)</span></a></p>
+             <p class="text-muted mb-1" aria-hidden="true"><a href="src/htmls/carousel-v5.html" target="_blank">src/htmls/carousel-v5.html   <span class="visually-hidden">(opens in a new tab)</span></a></p>
+         </div>
+
+       </li>
+
+       <li class="col-12 col-md-6 col-lg-4">
+
+           <div class="card p-4 h-100 shadow-sm border-0 rounded-3">
+             <h2 class="h5 fw-semibold mb-2">
+               Timeline
+               <span class="visually-hidden">(opens in a new tab)</span>
+             </h2>
+             <p class="text-muted mb-0" aria-hidden="true"><a href="src/htmls/timeline-v1.html" target="_blank">src/htmls/timeline-v1.html   <span class="visually-hidden">(opens in a new tab)</span></a></p>
+             <p class="text-muted mb-0" aria-hidden="true"><a href="src/htmls/timeline-v2.html" target="_blank">src/htmls/timeline-v2.html   <span class="visually-hidden">(opens in a new tab)</span></a></p>
+           </div>
+
+       </li>
 
 
-        <li class="col-12 col-md-6 col-lg-4">
-          <a href="src/htmls/stats.html" target="_blank" rel="noopener noreferrer">
-            <div class="card p-4 h-100 shadow-sm border-0 rounded-3">
-              <h2 class="h5 fw-semibold mb-2">
-                Stats
-                <span class="visually-hidden">(opens in a new tab)</span>
-              </h2>
-              <p class="text-muted mb-0" aria-hidden="true">src/htmls/stats.html</p>
-            </div>
-          </a>
-        </li>
+       <li class="col-12 col-md-6 col-lg-4">
+
+           <div class="card p-4 h-100 shadow-sm border-0 rounded-3">
+             <h2 class="h5 fw-semibold mb-2">
+               Table
+
+             </h2>
+             <p class="text-muted mb-0" aria-hidden="true"><a href="src/htmls/table.html" target="_blank">src/htmls/table.html <span class="visually-hidden">(opens in a new tab)</span></a></p>
+           </div>
+
+       </li>
 
 
 
 
-      </ul>
-    </section>
+       <li class="col-12 col-md-6 col-lg-4">
+         <a href="src/htmls/form.html" target="_blank" rel="noopener noreferrer">
+           <div class="card p-4 h-100 shadow-sm border-0 rounded-3">
+             <h2 class="h5 fw-semibold mb-2">
+               Form
+
+             </h2>
+
+             <p class="text-muted mb-0" aria-hidden="true"><a href="src/htmls/form-v1.html" target="_blank">src/htmls/form-v1.html <span class="visually-hidden">(opens in a new tab)</span></a></p>
+             <p class="text-muted mb-0" aria-hidden="true"><a href="src/htmls/form-v2.html" target="_blank">src/htmls/form-v2.html <span class="visually-hidden">(opens in a new tab)</span></a></p>
+           </div>
+         </a>
+       </li>
+
+       <li class="col-12 col-md-6 col-lg-4">
+
+           <div class="card p-4 h-100 shadow-sm border-0 rounded-3">
+             <h2 class="h5 fw-semibold mb-2">
+               Hero
+             </h2>
+             <p class="text-muted mb-0" aria-hidden="true"><a href="src/htmls/form-v1.html" target="_blank">src/htmls/hero-v1.html <span class="visually-hidden">(opens in a new tab)</span></a></p>
+           </div>
+
+       </li>
+       <li class="col-12 col-md-6 col-lg-4">
+
+           <div class="card p-4 h-100 shadow-sm border-0 rounded-3">
+             <h2 class="h5 fw-semibold mb-2">
+               Cards
+
+             </h2>
+
+             <p class="text-muted mb-1" aria-hidden="true"><a href="src/htmls/cards-v1.html" target="_blank">src/htmls/cards-v1.html <span class="visually-hidden">(opens in a new tab)</span></a></p>
+             <p class="text-muted mb-1" aria-hidden="true"><a href="src/htmls/cards-v2.html" target="_blank">src/htmls/cards-v2.html <span class="visually-hidden">(opens in a new tab)</span></a></p>
+             <p class="text-muted mb-1" aria-hidden="true"><a href="src/htmls/cards-v3.html" target="_blank">src/htmls/cards-v3.html <span class="visually-hidden">(opens in a new tab)</span></a></p>
+             <p class="text-muted mb-1" aria-hidden="true"><a href="src/htmls/cards-v4.html" target="_blank">src/htmls/cards-v4.html <span class="visually-hidden">(opens in a new tab)</span></a></p>
+             <p class="text-muted mb-1" aria-hidden="true"><a href="src/htmls/cards-v4.html" target="_blank">src/htmls/cards-v4.html <span class="visually-hidden">(opens in a new tab)</span></a></p>
+             <p class="text-muted mb-1" aria-hidden="true"><a href="src/htmls/cards-v4.html" target="_blank">src/htmls/cards-v4.html <span class="visually-hidden">(opens in a new tab)</span></a></p>
+             <p class="text-muted mb-1" aria-hidden="true"><a href="src/htmls/cards-v5.html" target="_blank" > src/htmls/cards-v5.html <span class="visually-hidden">(opens in a new tab)</span></a></p>
+             <p class="text-muted mb-1" aria-hidden="true"><a href="src/htmls/cards-v6.html" target="_blank">src/htmls/cards-v6.html <span class="visually-hidden">(opens in a new tab)</span></a></p>
+             <p class="text-muted mb-1" aria-hidden="true"><a href="src/htmls/cards-v7.html" target="_blank">src/htmls/cards-v7.html <span class="visually-hidden">(opens in a new tab)</span></a></p>
+           </div>
+
+       </li>
+
+       <li class="col-12 col-md-6 col-lg-4">
+         <a href="src/htmls/icon-and-text.html" target="_blank" rel="noopener noreferrer">
+           <div class="card p-4 h-100 shadow-sm border-0 rounded-3">
+             <h2 class="h5 fw-semibold mb-2">
+               Icon &amp; Text
+
+             </h2>
+             <p class="text-muted mb-0" aria-hidden="true"></p>
+             <p class="text-muted mb-1" aria-hidden="true"><a href="src/htmls/icon-and-text.html" target="_blank">src/htmls/icon-and-text.html <span class="visually-hidden">(opens in a new tab)</span></a></p>
+           </div>
+         </a>
+       </li>
+       <li class="col-12 col-md-6 col-lg-4">
+         <a href="src/htmls/image-text.html" target="_blank" rel="noopener noreferrer">
+           <div class="card p-4 h-100 shadow-sm border-0 rounded-3">
+             <h2 class="h5 fw-semibold mb-2">
+               Image &amp; Text
+
+             </h2>
+
+             <p class="text-muted mb-1" aria-hidden="true"><a href="src/htmls/image-text.html" target="_blank">src/htmls/image-text.html <span class="visually-hidden">(opens in a new tab)</span></a></p>
+           </div>
+         </a>
+       </li>
+
+
+       <li class="col-12 col-md-6 col-lg-4">
+
+           <div class="card p-4 h-100 shadow-sm border-0 rounded-3">
+             <h2 class="h5 fw-semibold mb-2">
+               Stats
+               <span class="visually-hidden">(opens in a new tab)</span>
+             </h2>
+             <p class="text-muted mb-1" aria-hidden="true"><a href="src/htmls/stats-v1.html" target="_blank">stats-v1.html <span class="visually-hidden">(opens in a new tab)</span></a></p>
+           </div>
+
+       </li>
+
+
+
+
+     </ul>
+   </section>
   </main>
 </body>
-
+<script src="./src/assets/dist/main.min.js"></script>
 </html>
