@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Form</title>
+  <link rel="stylesheet" href="../assets/dist/style.min.css">
+</head>
+
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+  <main id="main-content" role="main" tabindex="-1">
+
+  <!-- Text Only V1 Section -->
+  <section  aria-labelledby="search-title">
+     <div class="container">
+<div class="row search-hero-row">
+<div class="col-12 col-lg-8 search-hero">
+<h2 id="search-title" class="search-title h4">Looking for something specific?</h2>
+<form class="search-wrap" role="search" aria-label="Service search">
+<label for="search-input" class="visually-hidden">Search for a county service</label>
+<input type="search" id="search-input" name="s" class="search-input"
+    placeholder="Which service would you like to explore?" autocomplete="off"
+    role="combobox" aria-autocomplete="list" aria-controls="search-dropdown"
+    aria-expanded="false" aria-haspopup="listbox" />
+<button type="submit" aria-label="Submit search">
+    <i data-lucide="search" aria-hidden="true"></i>
+</button>
+<div id="search-dropdown" class="search-dropdown" role="listbox" aria-label="Search results"></div>
+</form>
+</div>
+</div>
+
+
+     </div>
+</section>
+<!-- Text Only V1 Section End -->
+  </main>
+  <script src="../assets/dist/main.min.js"></script>
+</body>
+
+</html>

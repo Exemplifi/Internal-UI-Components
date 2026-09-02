@@ -8,61 +8,69 @@
 </head>
 <body>
 
-  <!-- Card Variant 3 -->
-  <section class="cards cards--v3 py-5" aria-labelledby="cards-v3-title" data-aos="fade-up">
-    <div class="container">
-      <header class="mb-4 text-center" data-aos="fade-up" data-aos-delay="100">
-        <h2 id="cards-v3-title">Testimonial Cards</h2>
-        <p class="text-muted mb-0">Use for people stories, reviews, or team spotlights.</p>
-      </header>
-      <div class="row g-4 justify-content-center">
-        <div class="col-12 col-md-6 col-lg-4">
-          <div class="card-v3" data-aos="fade-right" data-aos-delay="200">
-            <div class="card-v3__header d-flex align-items-center mb-3">
-              <img src="../assets/images/northern-water-logo.svg" class="card-v3__avatar me-3" alt="Portrait placeholder for Jane Doe">
-              <div>
-                <div class="card-v3__name">Jane Doe</div>
-                <div class="card-v3__role">Project Manager</div>
-              </div>
-            </div>
-            <div class="card-v3__body">
-              <p class="card-v3__desc">“Testimonial or quote goes here. This card is great for team or testimonial sections.”</p>
-              <button type="button" class="card-v3__btn ms-auto" aria-label="Read more from Jane Doe">
-                <span class="card-v3__btn-icon">
-                  <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
-                    <circle cx="7" cy="7" r="7" fill="#459DFF"/>
-                    <path d="M6 4L9 7L6 10" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                  </svg>
-                </span>
-              </button>
-            </div>
-          </div>
-        </div>
-        <div class="col-12 col-md-6 col-lg-4">
-          <div class="card-v3" data-aos="fade-left" data-aos-delay="300">
-            <div class="card-v3__header d-flex align-items-center mb-3">
-              <img src="../assets/images/northern-water-colorful-logo.svg" class="card-v3__avatar me-3" alt="Portrait placeholder for John Smith">
-              <div>
-                <div class="card-v3__name">John Smith</div>
-                <div class="card-v3__role">Engineer</div>
-              </div>
-            </div>
-            <div class="card-v3__body">
-              <p class="card-v3__desc">“Another testimonial or quote. Use for team, reviews, or customer stories.”</p>
-              <button type="button" class="card-v3__btn ms-auto" aria-label="Read more from John Smith">
-                <span class="card-v3__btn-icon">
-                  <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
-                    <circle cx="7" cy="7" r="7" fill="#459DFF"/>
-                    <path d="M6 4L9 7L6 10" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                  </svg>
-                </span>
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+
+
+
+  <section class="card-grid" aria-label="Project Benefits">
+     <div class="card-grid__container">
+         <!-- Storage Card -->
+         <article class="card-icon card-icon--blue">
+             <div class="card-icon__content">
+                 <div class="card-icon__image-wrapper">
+                     <img src="../assets/images/card-icons/storage-icon.png"
+                          alt="Water Storage Icon"
+                          class="card-icon__image"
+                          width="64"
+                          height="64">
+                 </div>
+                 <p class="card-icon__text">Provides storage for 30,000 acre-feet of existing water rights associated with the Windy Gap Project</p>
+             </div>
+         </article>
+
+         <!-- Environment Card -->
+         <article class="card-icon card-icon--navy">
+             <div class="card-icon__content">
+                 <div class="card-icon__image-wrapper">
+                     <img src="../assets/images/card-icons/environment-icon.png"
+                          alt="Environmental Benefits Icon"
+                          class="card-icon__image"
+                          width="64"
+                          height="64">
+                 </div>
+                 <p class="card-icon__text">Provides environmental benefits to Colorado's rivers and streams through various commitments</p>
+             </div>
+         </article>
+
+         <!-- Recreation Card -->
+         <article class="card-icon card-icon--light-blue">
+             <div class="card-icon__content">
+                 <div class="card-icon__image-wrapper">
+                     <img src="../assets/images/card-icons/recreation-icon.png"
+                          alt="Recreation Icon"
+                          class="card-icon__image"
+                          width="64"
+                          height="64">
+                 </div>
+                 <p class="card-icon__text">Enhances recreation opportunities to encourage healthy, outdoor lifestyles for residents</p>
+             </div>
+         </article>
+
+         <!-- Demand Card -->
+         <article class="card-icon card-icon--dark-blue">
+             <div class="card-icon__content">
+                 <div class="card-icon__image-wrapper">
+                     <img src="../assets/images/card-icons/demand-icon.png"
+                          alt="Water Demand Icon"
+                          class="card-icon__image"
+                          width="64"
+                          height="64">
+                 </div>
+                 <p class="card-icon__text">Helps meet an increased demand for water in Northern Colorado communities</p>
+             </div>
+         </article>
+     </div>
+ </section>
+
 
 
 
