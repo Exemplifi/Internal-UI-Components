@@ -326,27 +326,45 @@
 
 
 .for-index-page{
-     .card-expansion__body {
-          background: var(--white);
-          border-radius: var(--ce-radius);
-          color: var(--ce-text);
-          padding: 1.5rem;
-          border: 2px solid var(--ce-card-bg);
-      }
-      .card-expansion__body-title{
-          color: var(--ce-card-bg);
+     .card-expansion__card {
+          background: #02302C;
+     }
+     .card-expansion__btn{
+          background: transparent;
+          border: 2px solid #C6DDA9;
+          color: #C6DDA9;
+          &:hover{
+               background: #FFB3D2;
+               border-color: #FFB3D2;
+               color: #4E080C;
+          }
+     }
+     .card-expansion__info{
+          background: #02302c;
+          a{
+               color: #C6DDA9;
+          }
+     }
+     .card-expansion__body{
+          border: 2px solid #c6dda9;
+          background: #fff;
+     }
+     .card-expansion__card.is-active {
+          border-color: #c6dda9;
       }
       .card-expansion__col-heading{
-          color: var(--ce-card-bg);
+          color: #02302c;
       }
-      .card-expansion__info {
-          background: var(--ce-card-bg);
-          a{ color: var(--white);}
+      h1#card-expansion-heading {
+          color: #02302c;
+      }
+     .card-expansion__body-header {
+          border-bottom: 1px solid #c6dda9;
+      }
+      .card-expansion__body-title{
+          color: #02302c;
       }
       .card-expansion__body-close{
-          color: #000;
-      }
-      .card-expansion__body-header{
-          border-bottom: 1px solid #314459;
+          color: #02302c;
       }
 }
