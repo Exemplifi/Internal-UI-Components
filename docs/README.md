@@ -97,5 +97,6 @@ There is no automated test suite in this repo yet; use keyboard checks, IDE lint
 | File | Purpose |
 |------|---------|
 | [components.md](./components.md) | Full component and stylesheet reference |
+| [accordions/](./accordions/README.md) | Accordion variants (v1–v4); deep dives for v3 / v4 |
 | [CHANGELOG.md](../CHANGELOG.md) | Release notes |
 | [VERSIONING.md](../VERSIONING.md) | Version and release policy |
