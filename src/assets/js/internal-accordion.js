@@ -51,7 +51,6 @@ function setExpanded(trigger, collapse, open) {
   trigger.classList.toggle("collapsed", !open);
   trigger.setAttribute("aria-expanded", open ? "true" : "false");
   collapse.setAttribute("aria-hidden", open ? "false" : "true");
-  // Keep closed panels out of tab order / AT tree (aria-hidden alone is not enough)
   collapse.inert = !open;
 }
 
@@ -105,9 +104,7 @@ function snapOpen(collapse) {
   clearInlineTransition(collapse);
 }
 
-/**
- * @returns {Promise<void>}
- */
+/** @returns {Promise<void>} */
 function setCollapseOpen(trigger, collapse, open, { animate = true } = {}) {
   if (!trigger || !collapse) return Promise.resolve();
 
@@ -173,7 +170,6 @@ function wirePanelA11y(panel) {
   if (!collapse.id) collapse.id = uid("panel");
 
   trigger.setAttribute("aria-controls", collapse.id);
-  // Disclosure name comes from visible title text inside the button
   trigger.removeAttribute("aria-label");
   collapse.setAttribute("role", "region");
   collapse.setAttribute("aria-labelledby", trigger.id);
@@ -242,7 +238,6 @@ function wireGroupA11y(group) {
   if (!title.id) title.id = uid("group-title");
   if (!collapse.id) collapse.id = uid("group-panel");
 
-  // Icon-only control: name from the visible group title + expanded state
   trigger.setAttribute("aria-labelledby", title.id);
   trigger.setAttribute("aria-controls", collapse.id);
   trigger.removeAttribute("aria-label");

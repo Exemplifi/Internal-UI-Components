@@ -5,13 +5,7 @@ Dark **team member** (or similar) panels: title + chevron in the header; expande
 **Live demo:** [src/htmls/accordions-v4.html](../../src/htmls/accordions-v4.html)  
 **Overview:** [README.md](./README.md)
 
-The demo uses **intentionally long panel bodies** (multi-paragraph bios + lists + portrait) so you can verify:
-
-1. Snap open without hitch on tall / image panels  
-2. Smooth height close (~350ms)  
-3. Switch: previous panel snaps shut → next opens → heading scrolls under the sticky header offset  
-
-Short production copy is fine; keep tall content in the demo for QA.
+Demo panels use long lorem copy + images to QA tall open/close and scroll-to-heading. Production copy can be shorter.
 
 ---
 

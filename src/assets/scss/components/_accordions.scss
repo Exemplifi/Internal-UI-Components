@@ -200,11 +200,7 @@
              }
              /* Accordian Nested End */
 
-// =============================================================================
-// Accordion v3 / v4 — FAQ group shell + team / media panels
-// Demo: htmls/accordions-v3.html · htmls/accordions-v4.html
-// Colors: Internal-UI tokens ($primary-dark, $blue, $gray, $white, $black)
-// =============================================================================
+// Accordion v3 / v4 — `.internal-accordion` (demos: accordions-v3.html, accordions-v4.html)
 
 $internal-accordion-ease: cubic-bezier(0.22, 1, 0.36, 1);
 $internal-accordion-duration: 0.35s;
@@ -283,9 +279,11 @@ $internal-accordion-white-30: rgb(255 255 255 / 0.3);
   $size-lg: null,
   $color: null,
   $weight: $semibold,
-  $line-height: 1.3
+  $line-height: 1.3,
+  $margin-bottom: 0
 ) {
   @include internal-accordion-heading-reset;
+  margin-bottom: $margin-bottom;
   font-weight: $weight;
   line-height: $line-height;
   font-size: $size;
@@ -299,6 +297,16 @@ $internal-accordion-white-30: rgb(255 255 255 / 0.3);
       font-size: $size-lg;
     }
   }
+}
+
+@mixin internal-accordion-body-text($color: inherit) {
+  margin: 0;
+  font-family: var(--body-font-family);
+  font-size: 1rem;
+  font-weight: $regular;
+  line-height: 1.55;
+  text-transform: none;
+  color: $color;
 }
 
 .internal-accordion {
@@ -484,29 +492,21 @@ $internal-accordion-white-30: rgb(255 255 255 / 0.3);
       @include internal-accordion-chevron-toggle($primary-dark);
     }
 
-    .accordion-body .content-wrapper {
-      p {
-        margin: 0;
-        font-family: var(--body-font-family);
-        color: $primary-dark;
-        font-size: 1rem;
-        line-height: 1.55;
-        font-weight: $regular;
-        text-transform: none;
+    .accordion-body .content-wrapper p {
+      @include internal-accordion-body-text($primary-dark);
 
-        a {
-          color: $blue;
-          font-weight: $medium;
-          text-decoration: underline;
+      a {
+        color: $blue;
+        font-weight: $medium;
+        text-decoration: underline;
 
-          &:hover {
-            color: $primary-dark;
-          }
+        &:hover {
+          color: $primary-dark;
         }
+      }
 
-        & + p {
-          margin-top: 1rem;
-        }
+      & + p {
+        margin-top: 1rem;
       }
     }
   }
@@ -529,23 +529,16 @@ $internal-accordion-white-30: rgb(255 255 255 / 0.3);
           2rem,
           $primary-dark,
           $bold,
-          1.25
+          1.25,
+          0.75rem
         );
-
-        & {
-          margin-bottom: 0.75rem;
-        }
       }
 
       p {
-        margin: 0 auto;
+        @include internal-accordion-body-text($gray);
+        margin-inline: auto;
         max-width: 37rem;
-        font-family: var(--body-font-family);
-        color: $gray;
         font-size: 1.0625rem;
-        font-weight: $regular;
-        line-height: 1.55;
-        text-transform: none;
       }
     }
 
@@ -631,12 +624,7 @@ $internal-accordion-white-30: rgb(255 255 255 / 0.3);
       p,
       ul,
       ol {
-        margin: 0;
-        color: inherit;
-        font-size: 1rem;
-        font-weight: $regular;
-        line-height: 1.55;
-        text-transform: none;
+        @include internal-accordion-body-text(inherit);
       }
 
       ul,
