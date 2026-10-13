@@ -29,7 +29,7 @@ These match the cards in [index.html](../index.html), listed alphabetically. **P
 | 3 | Card Expansion | [card-expansion.html](../src/htmls/card-expansion.html) | Expandable cards with a details panel | `card-expansion` | `card-expansion.js` |
 | 4 | Card with Icon | [card-with-icon.html](../src/htmls/card-with-icon.html) | Icon-led cards | `card-with-icon` | `card-with-icon.js` |
 | 5 | Cards | [cards.html](../src/htmls/cards.html) | Card layouts and variants | `cards` | — (globals only) |
-| 6 | Carousel | [carousel.html](../src/htmls/carousel.html) | Swiper carousels (v1–v3) and NCM spotlight slider (v4, Slick) | `carousels` | `swiper-init.js`, `carousel.js` (`initNcmSlider` in `main.js`) |
+| 6 | Carousel | [carousel-v1.html](../src/htmls/carousel-v1.html), [carousel-v2.html](../src/htmls/carousel-v2.html), [carousel-v3.html](../src/htmls/carousel-v3.html), [carousel-v4.html](../src/htmls/carousel-v4.html) | Swiper cards (v1–v2); hero + thumbnail gallery (v3, ARRC port); NCM spotlight (v4, Slick). Docs: [carousels/](./carousels/README.md) | `carousels` | `swiper-init.js` (v1–v2); `internal-carousel.js` (v3); `carousel.js` (`initNcmSlider`, v4) |
 | 7 | Exemplifi Header | [exemplifi-header.html](../src/htmls/exemplifi-header.html) | Branded Exemplifi header | `exemplifi-header` | `exemplifi-header.js` |
 | 8 | Footer | [footer.html](../src/htmls/footer.html) | Footer pattern | `footer` | `footer.js` |
 | 9 | Footer V2 | [footer-v2.html](../src/htmls/footer-v2.html) | Alternate footer layout | `footer` | `footer.js` |
@@ -95,7 +95,8 @@ Imported from [main.js](../src/assets/js/main.js) in this order (after libraries
 | `footer.js` | Footer demos |
 | `exemplifi-header.js` | Exemplifi header |
 | `calendar.js` | Calendar |
-| `swiper-init.js` | Swiper instances for carousel markup |
+| `swiper-init.js` | Swiper instances for carousel v1 / v2 markup |
+| `internal-carousel.js` | Carousel v3 hero + thumbnail gallery |
 | `pg-carousel.js` | PG carousel (`initPgCarousel` called from `main.js` on `$(function(){...})`) |
 | `carousel.js` | NCM spotlight slider (`initNcmSlider` called from `main.js` on `$(function(){...})`) |
 | `timeline-v1.js` | Timeline V1 scroll spy and progress |
@@ -156,4 +157,5 @@ Slick card slider with glass “Featured” pill, Lucide prev/next, and live reg
 | [README.md](../README.md) | Repo overview and commands |
 | [docs/README.md](./README.md) | Handbook and change checklist |
 | [accordions/](./accordions/README.md) | Accordion v3 / v4 developer + UI guides |
+| [carousels/](./carousels/README.md) | Carousel variants; v3 hero + thumbs guide |
 | [CHANGELOG.md](../CHANGELOG.md) | Log changes under `[Unreleased]` when you touch patterns |
