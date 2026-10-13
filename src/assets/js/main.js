@@ -45,6 +45,7 @@ import "./search"
 import { initPgCarousel } from "./pg-carousel.js";
 import { initNcmSlider } from "./carousel.js";
 import "./internal-accordion.js";
+import "./internal-carousel.js";
 
 $(function () {
   initPgCarousel($);

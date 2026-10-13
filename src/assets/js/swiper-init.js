@@ -62,31 +62,6 @@ const initSwipers = () => {
     });
   }
 
-  const el3 = document.querySelector(".carousel-v3");
-  if (el3) {
-    new Swiper(el3, {
-      modules: [Navigation, Pagination],
-      slidesPerView: 1,
-      spaceBetween: 30,
-      loop: false,
-      pagination: {
-        el: ".carousel--v3 .swiper-pagination",
-        clickable: true,
-      },
-      navigation: {
-        nextEl: ".carousel--v3 .swiper-button-next",
-        prevEl: ".carousel--v3 .swiper-button-prev",
-      },
-      breakpoints: {
-        768: {
-          slidesPerView: 2,
-        },
-        992: {
-          slidesPerView: 3,
-        },
-      },
-    });
-  }
 };
 
 // Initialize when DOM is loaded

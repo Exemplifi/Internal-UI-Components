@@ -158,80 +158,388 @@
   .carousel-v2__link:hover { color: #184479; }
 }
 
-// Carousel - v3 (Image Overlay)
-.carousel--v3 {
-  .carousel-v3__header {
-    text-align: left;
-    margin-bottom: 32px;
-  }
-  .carousel-v3__title {
-    font-family: 'Inter', sans-serif;
-    font-weight: 700;
-    font-size: 28px;
-    color: #184479;
-    margin-bottom: 8px;
-  }
-  .carousel-v3__desc {
-    font-family: 'Inter', sans-serif;
-    font-weight: 400;
-    font-size: 16px;
-    color: #4C6785;
-    margin-bottom: 0;
-  }
-  .carousel-v3__card {
-    background: none;
-    border-radius: 20px;
-    overflow: hidden;
-    box-shadow: 0 2px 12px rgba(49,68,89,0.06);
-    position: relative;
-  }
-  .carousel-v3__img-wrapper {
-    position: relative;
-    border-radius: 20px;
-    overflow: hidden;
-  }
-  .carousel-v3__img {
-    width: 100%;
-    height: 250px;
-    object-fit: cover;
-    border-radius: 20px;
-    display: block;
-  }
-  .carousel-v3__overlay {
-    position: absolute;
-    left: 0; right: 0; bottom: 0;
-    background: linear-gradient(180deg, rgba(49,68,89,0.0) 0%, rgba(49,68,89,0.7) 100%);
-    color: #fff;
-    padding: 24px 16px 16px 16px;
-    border-bottom-left-radius: 20px;
-    border-bottom-right-radius: 20px;
-  }
-  .carousel-v3__overlay-title {
-    font-family: 'Inter', sans-serif;
-    font-weight: 700;
-    font-size: 20px;
-    margin-bottom: 4px;
-    color: #fff;
-  }
-  .carousel-v3__overlay-desc {
-    font-size: 15px;
-    color: #fff;
-    font-weight: 400;
-    margin-bottom: 0;
-  }
-}
-
-// Responsive tweaks
+// Responsive tweaks (v1 / v2)
 @media (max-width: 991px) {
-  .carousel-v1__img, .carousel-v2__img, .carousel-v3__img { height: 120px; }
+  .carousel-v1__img, .carousel-v2__img { height: 120px; }
   .carousel-v1__body, .carousel-v2__body { padding: 12px; }
-  .carousel-v3__overlay { padding: 16px 8px 8px 8px; }
 }
 @media (max-width: 600px) {
-  .carousel-v1__title, .carousel-v2__title, .carousel-v3__title { font-size: 18px; }
-  .carousel-v1__card-title, .carousel-v2__card-title, .carousel-v3__overlay-title { font-size: 14px; }
-  .carousel-v1__desc, .carousel-v2__desc, .carousel-v3__desc, .carousel-v1__card-desc, .carousel-v2__card-desc, .carousel-v3__overlay-desc { font-size: 12px; }
-  .carousel-v1__img, .carousel-v2__img, .carousel-v3__img { height: 80px; }
+  .carousel-v1__title, .carousel-v2__title { font-size: 18px; }
+  .carousel-v1__card-title, .carousel-v2__card-title { font-size: 14px; }
+  .carousel-v1__desc, .carousel-v2__desc, .carousel-v1__card-desc, .carousel-v2__card-desc { font-size: 12px; }
+  .carousel-v1__img, .carousel-v2__img { height: 80px; }
+}
+
+// ── Internal Carousel v3 — hero + thumbnail gallery (from ARRC carousel-v2) ──
+.internal-carousel {
+  &.v3 {
+    $hero-w: 81.75rem; // 1308px — pan on small screens, full-bleed ≥992px
+    $hero-h: 22.6875rem; // 363px
+    $hero-w-sm: 48rem; // tighter pan target on phones
+    $hero-h-sm: 13.3125rem;
+    $thumb-w: 21rem;
+    $thumb-h: 12.8125rem;
+    $thumb-w-sm: 15rem;
+    $thumb-h-sm: 9.125rem;
+    $thumb-ring-space: 0.5rem;
+
+    @mixin focus-ring {
+      outline: 2px solid $blue;
+      outline-offset: 3px;
+    }
+
+    @mixin thumb-ring {
+      outline: none;
+      box-shadow: 0 0 0 3px $primary-dark, 0 0 0 5px $blue;
+    }
+
+    @mixin control-reset {
+      margin: 0;
+      padding: 0;
+      border: 0;
+      background: none;
+      cursor: pointer;
+      appearance: none;
+      -webkit-appearance: none;
+      -webkit-tap-highlight-color: transparent;
+      touch-action: manipulation;
+    }
+
+    overflow-x: clip;
+    background-color: $primary-dark;
+    padding-block: 3rem;
+
+    @media (min-width: 768px) {
+      padding-block: 4rem;
+    }
+
+    @media (min-width: 992px) {
+      padding-block: 6rem;
+    }
+
+    > .container {
+      display: flex;
+      flex-direction: column;
+      gap: 1.75rem;
+      min-width: 0;
+
+      @media (min-width: 768px) {
+        gap: 2.5rem;
+      }
+    }
+
+    .section-header-wrapper {
+      margin: 0;
+      min-width: 0;
+
+      h2 {
+        margin: 0;
+        color: $white;
+        font-family: $font-family-sans-serif;
+        font-size: clamp(1.375rem, 4vw, 2rem);
+        font-weight: $bold;
+        line-height: 1.25;
+        overflow-wrap: anywhere;
+        text-wrap: balance;
+      }
+    }
+
+    .internal-carousel-hero {
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+      margin: 0;
+      min-width: 0;
+
+      @media (min-width: 768px) {
+        gap: 1rem;
+      }
+    }
+
+    .internal-carousel-hero-scroll {
+      width: 100%;
+      min-width: 0;
+      overflow-x: auto;
+      overflow-y: hidden;
+      -webkit-overflow-scrolling: touch;
+      overscroll-behavior-x: contain;
+      touch-action: pan-x;
+      padding-bottom: 0.25rem;
+      scrollbar-width: thin;
+      scrollbar-color: $blue rgb(255 255 255 / 0.16);
+      border-radius: 0.75rem;
+
+      &::-webkit-scrollbar {
+        height: 4px;
+      }
+
+      &::-webkit-scrollbar-track {
+        border-radius: 999px;
+        background: rgb(255 255 255 / 0.16);
+      }
+
+      &::-webkit-scrollbar-thumb {
+        border-radius: 999px;
+        background: $blue;
+      }
+
+      &::-webkit-scrollbar-button {
+        display: none;
+        width: 0;
+        height: 0;
+      }
+
+      &:focus-visible {
+        @include focus-ring;
+      }
+
+      &:focus:not(:focus-visible) {
+        outline: none;
+      }
+
+      @media (min-width: 992px) {
+        overflow: hidden;
+        touch-action: auto;
+        padding-bottom: 0;
+        scrollbar-width: none;
+        border-radius: 0;
+
+        &::-webkit-scrollbar {
+          display: none;
+        }
+      }
+    }
+
+    .internal-carousel-hero-figure {
+      position: relative;
+      width: $hero-w-sm;
+      min-width: $hero-w-sm;
+      height: $hero-h-sm;
+      aspect-ratio: 253 / 70;
+      margin: 0;
+      border-radius: 0.75rem;
+      overflow: hidden;
+
+      @media (min-width: 576px) {
+        width: $hero-w;
+        min-width: $hero-w;
+        height: $hero-h;
+        border-radius: 1.0625rem;
+      }
+
+      @media (min-width: 992px) {
+        align-self: stretch;
+        width: 100%;
+        min-width: 0;
+        height: auto;
+        min-height: $hero-h;
+      }
+
+      img {
+        position: absolute;
+        inset: 0;
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        -webkit-user-drag: none;
+        user-select: none;
+        -webkit-touch-callout: none;
+      }
+    }
+
+    .internal-carousel-hero-caption,
+    .internal-carousel-thumb-caption {
+      margin: 0;
+      color: $white;
+      font-family: $font-family-sans-serif;
+    }
+
+    .internal-carousel-hero-caption {
+      max-width: 40rem;
+      font-size: 0.9375rem;
+      font-weight: $regular;
+      line-height: 1.5;
+
+      @media (min-width: 768px) {
+        font-size: 1rem;
+      }
+    }
+
+    .internal-carousel-thumb-caption {
+      font-size: 1rem;
+      font-weight: $semibold;
+      line-height: 1.35;
+
+      @media (min-width: 768px) {
+        font-size: 1.125rem;
+      }
+    }
+
+    .internal-carousel-gallery {
+      display: flex;
+      flex-direction: column;
+      gap: 1.25rem;
+      min-width: 0;
+
+      @media (min-width: 768px) {
+        gap: 2rem;
+      }
+    }
+
+    .internal-carousel-swiper.swiper {
+      width: calc(100% + #{$thumb-ring-space * 2});
+      min-width: 0;
+      margin-inline: -#{$thumb-ring-space};
+      overflow: hidden;
+      padding: $thumb-ring-space;
+
+      .swiper-slide {
+        width: $thumb-w-sm;
+        box-sizing: border-box;
+        overflow: visible;
+
+        @media (min-width: 576px) {
+          width: $thumb-w;
+        }
+      }
+    }
+
+    .internal-carousel-media {
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+      margin: 0;
+      width: $thumb-w-sm;
+
+      @media (min-width: 576px) {
+        width: $thumb-w;
+        gap: 1rem;
+      }
+    }
+
+    .internal-carousel-thumb {
+      @include control-reset;
+      position: relative;
+      display: block;
+      width: $thumb-w-sm;
+      height: $thumb-h-sm;
+      aspect-ratio: #{$thumb-w-sm} / #{$thumb-h-sm};
+      border-radius: 0.4375rem;
+      overflow: visible;
+      color: inherit;
+
+      @media (min-width: 576px) {
+        width: $thumb-w;
+        height: $thumb-h;
+        aspect-ratio: #{$thumb-w} / #{$thumb-h};
+      }
+
+      img {
+        position: absolute;
+        inset: 0;
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: inherit;
+        pointer-events: none;
+        -webkit-user-drag: none;
+        user-select: none;
+      }
+
+      &[aria-checked="true"],
+      &:focus-visible {
+        @include thumb-ring;
+      }
+
+      &:focus:not(:focus-visible):not([aria-checked="true"]) {
+        outline: none;
+        box-shadow: none;
+      }
+    }
+
+    .internal-carousel-nav {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: flex-end;
+      gap: 1rem;
+      padding-bottom: env(safe-area-inset-bottom, 0);
+
+      @media (min-width: 768px) {
+        gap: 1.5rem;
+      }
+
+      @media (min-width: 992px) {
+        justify-content: center;
+      }
+    }
+
+    .internal-carousel-arrow {
+      @include control-reset;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      width: 2.75rem;
+      height: 2.75rem;
+      min-width: 2.75rem;
+      min-height: 2.75rem;
+      padding: 0.75rem;
+      border: 1px solid $blue;
+      border-radius: 999px;
+      color: $blue;
+      transition: background-color 0.15s ease, color 0.15s ease, opacity 0.15s ease;
+
+      @media (min-width: 768px) {
+        width: 3rem;
+        height: 3rem;
+        padding: 0.875rem;
+      }
+
+      svg {
+        display: block;
+        width: 1.25rem;
+        height: 1.25rem;
+        stroke-width: 1.5;
+        pointer-events: none;
+      }
+
+      @media (hover: hover) and (pointer: fine) {
+        &:hover:not(:disabled):not(.swiper-button-disabled) {
+          background-color: $blue;
+          color: $primary-dark;
+        }
+      }
+
+      &:focus-visible {
+        @include focus-ring;
+      }
+
+      &:focus:not(:focus-visible) {
+        outline: none;
+      }
+
+      &.swiper-button-disabled,
+      &:disabled,
+      &[aria-disabled="true"] {
+        opacity: 0.6;
+        cursor: not-allowed;
+        pointer-events: none;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .internal-carousel-arrow {
+        transition: none;
+      }
+
+      .internal-carousel-swiper.swiper .swiper-wrapper {
+        transition-duration: 0ms !important;
+      }
+    }
+  }
 }
 
 // Carousel - v4 (NCM Spotlight Slider, Slick)
