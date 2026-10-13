@@ -4,7 +4,7 @@
  */
 
 import Swiper from "swiper";
-import { Navigation, A11y } from "swiper/modules";
+import { Navigation } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 
@@ -67,8 +67,7 @@ function createInternalSwiper(el, { prevEl, nextEl, unlockFocus, ...options }) {
   };
 
   const swiper = new Swiper(el, {
-    modules: [Navigation, A11y],
-    a11y: { enabled: false },
+    modules: [Navigation],
     loop: false,
     speed: prefersReducedMotion() ? 0 : 300,
     watchOverflow: true,
@@ -187,6 +186,7 @@ function bindCarouselV3Hero(root, heroImg, swiper, statusEl) {
       } else if (event.key === "End") {
         next = thumbs[thumbs.length - 1];
       } else if (event.key === " " || event.key === "Enter") {
+        // Keep selection + strip in sync when AT activates the radio
         event.preventDefault();
         setHeroFromThumb(current, { moveStrip: true, announce: true });
         return;
@@ -245,8 +245,8 @@ export function initInternalCarousel(context = document) {
     const nextEl = root?.querySelector("[data-internal-carousel-v3-next]");
     const statusEl = root?.querySelector("[data-internal-carousel-v3-status]");
     const heroImg =
-      root.querySelector(".internal-carousel-hero-img") ||
-      root.querySelector(".internal-carousel-hero-figure img");
+      root?.querySelector(".internal-carousel-hero-img") ||
+      root?.querySelector(".internal-carousel-hero-figure img");
     if (!root || !prevEl || !nextEl) return;
 
     const swiper = createInternalSwiper(el, {
