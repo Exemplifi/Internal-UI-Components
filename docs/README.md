@@ -99,5 +99,6 @@ There is no automated test suite in this repo yet; use keyboard checks, IDE lint
 | [components.md](./components.md) | Full component and stylesheet reference |
 | [accordions/](./accordions/README.md) | Accordion variants (v1–v4); deep dives for v3 / v4 |
 | [carousels/](./carousels/README.md) | Carousel variants; deep dive for v3 hero + thumbs |
+| [tabs/](./tabs/README.md) | Tabs variants; deep dive for v1 pill bar + panels |
 | [CHANGELOG.md](../CHANGELOG.md) | Release notes |
 | [VERSIONING.md](../VERSIONING.md) | Version and release policy |

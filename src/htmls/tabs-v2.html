@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tabs v2 — Chevron route tabs + content</title>
+  <link rel="stylesheet" href="../assets/dist/style.min.css">
+</head>
+
+<body>
+  <a class="skip-link btn btn-primary visually-hidden-focusable position-absolute top-0 start-0 ms-2 mt-2"
+    href="#tabs-v2-main">
+    Skip to tabs content
+  </a>
+
+  <main id="tabs-v2-main" tabindex="-1">
+    <section class="internal-tabs v2" data-internal-route-tabs aria-label="Explore by route">
+
+      <div class="route-tabs" role="tablist" aria-label="Sample routes">
+        <button type="button" class="route-tab is-active" role="tab" aria-selected="true" data-route-tab>
+          Coastal Classic
+        </button>
+        <button type="button" class="route-tab" role="tab" aria-selected="false" data-route-tab tabindex="-1">
+          Denali Star
+        </button>
+        <button type="button" class="route-tab" role="tab" aria-selected="false" data-route-tab tabindex="-1">
+          Glacier Discovery
+        </button>
+        <button type="button" class="route-tab" role="tab" aria-selected="false" data-route-tab tabindex="-1">
+          Hurricane Turn
+        </button>
+        <button type="button" class="route-tab" role="tab" aria-selected="false" data-route-tab tabindex="-1">
+          Aurora Winter
+        </button>
+      </div>
+
+      <div class="container internal-tabs-v2__content">
+        <div class="route-panels">
+
+          <article class="route-panel is-active" role="tabpanel" aria-label="Coastal Classic" data-route-panel>
+            <div class="internal-tabs-v2__intro">
+              <h2>Coastal Classic</h2>
+              <p>Step into a breathtaking coastal journey</p>
+            </div>
+            <div class="internal-tabs-v2__panel">
+              <div class="internal-tabs-v2__body">
+                <p class="internal-tabs-v2__lead">
+                  With a seamless round-trip schedule and access to hidden backcountry, this scenic route is a
+                  beloved local favorite.
+                </p>
+                <ul class="internal-tabs-v2__cards" role="list">
+                  <li class="internal-tabs-v2__card">
+                    <span class="internal-tabs-v2__card-icon" aria-hidden="true">
+                      <i data-lucide="calendar"></i>
+                    </span>
+                    <div class="internal-tabs-v2__card-copy">
+                      <p class="internal-tabs-v2__card-title">Operating season</p>
+                      <p class="internal-tabs-v2__card-text">Mid-May to mid-September</p>
+                    </div>
+                  </li>
+                  <li class="internal-tabs-v2__card">
+                    <span class="internal-tabs-v2__card-icon" aria-hidden="true">
+                      <i data-lucide="route"></i>
+                    </span>
+                    <div class="internal-tabs-v2__card-copy">
+                      <p class="internal-tabs-v2__card-title">Route</p>
+                      <p class="internal-tabs-v2__card-text internal-tabs-v2__card-text--route">
+                        <span>Anchorage</span>
+                        <i data-lucide="arrow-right" aria-hidden="true"></i>
+                        <span>Seward</span>
+                      </p>
+                    </div>
+                  </li>
+                  <li class="internal-tabs-v2__card">
+                    <span class="internal-tabs-v2__card-icon" aria-hidden="true">
+                      <i data-lucide="clock"></i>
+                    </span>
+                    <div class="internal-tabs-v2__card-copy">
+                      <p class="internal-tabs-v2__card-title">Duration</p>
+                      <p class="internal-tabs-v2__card-text">4.5 hours</p>
+                    </div>
+                  </li>
+                  <li class="internal-tabs-v2__card">
+                    <span class="internal-tabs-v2__card-icon" aria-hidden="true">
+                      <i data-lucide="circle-dollar-sign"></i>
+                    </span>
+                    <div class="internal-tabs-v2__card-copy">
+                      <p class="internal-tabs-v2__card-title">Fare starts from</p>
+                      <p class="internal-tabs-v2__card-text">$103</p>
+                    </div>
+                  </li>
+                </ul>
+                <div class="internal-tabs-v2__actions">
+                  <a href="#" class="btn btn-primary">Buy tickets</a>
+                  <a href="#" class="btn btn-outline-light">View fare details</a>
+                </div>
+              </div>
+              <figure class="internal-tabs-v2__media">
+                <img src="../assets/images/carousel-img/carousel-image-1.jpg" alt="" decoding="async">
+              </figure>
+            </div>
+          </article>
+
+          <article class="route-panel" role="tabpanel" aria-label="Denali Star" data-route-panel hidden>
+            <div class="internal-tabs-v2__intro">
+              <h2>Denali Star</h2>
+              <p>Ride toward Alaska&rsquo;s highest peak</p>
+            </div>
+            <div class="internal-tabs-v2__panel">
+              <div class="internal-tabs-v2__body">
+                <p class="internal-tabs-v2__lead">
+                  Travel between Anchorage and Fairbanks with optional Denali National Park stopovers and
+                  mountain views along the way.
+                </p>
+                <ul class="internal-tabs-v2__cards" role="list">
+                  <li class="internal-tabs-v2__card">
+                    <span class="internal-tabs-v2__card-icon" aria-hidden="true">
+                      <i data-lucide="calendar"></i>
+                    </span>
+                    <div class="internal-tabs-v2__card-copy">
+                      <p class="internal-tabs-v2__card-title">Operating season</p>
+                      <p class="internal-tabs-v2__card-text">Mid-May to mid-September</p>
+                    </div>
+                  </li>
+                  <li class="internal-tabs-v2__card">
+                    <span class="internal-tabs-v2__card-icon" aria-hidden="true">
+                      <i data-lucide="route"></i>
+                    </span>
+                    <div class="internal-tabs-v2__card-copy">
+                      <p class="internal-tabs-v2__card-title">Route</p>
+                      <p class="internal-tabs-v2__card-text internal-tabs-v2__card-text--route">
+                        <span>Anchorage</span>
+                        <i data-lucide="arrow-right" aria-hidden="true"></i>
+                        <span>Fairbanks</span>
+                      </p>
+                    </div>
+                  </li>
+                  <li class="internal-tabs-v2__card">
+                    <span class="internal-tabs-v2__card-icon" aria-hidden="true">
+                      <i data-lucide="clock"></i>
+                    </span>
+                    <div class="internal-tabs-v2__card-copy">
+                      <p class="internal-tabs-v2__card-title">Duration</p>
+                      <p class="internal-tabs-v2__card-text">About 12 hours</p>
+                    </div>
+                  </li>
+                  <li class="internal-tabs-v2__card">
+                    <span class="internal-tabs-v2__card-icon" aria-hidden="true">
+                      <i data-lucide="circle-dollar-sign"></i>
+                    </span>
+                    <div class="internal-tabs-v2__card-copy">
+                      <p class="internal-tabs-v2__card-title">Fare starts from</p>
+                      <p class="internal-tabs-v2__card-text">$189</p>
+                    </div>
+                  </li>
+                </ul>
+                <div class="internal-tabs-v2__actions">
+                  <a href="#" class="btn btn-primary">Buy tickets</a>
+                  <a href="#" class="btn btn-outline-light">View fare details</a>
+                </div>
+              </div>
+              <figure class="internal-tabs-v2__media">
+                <img src="../assets/images/carousel-img/carousel-image-2.jpg" alt="" decoding="async">
+              </figure>
+            </div>
+          </article>
+
+          <article class="route-panel" role="tabpanel" aria-label="Glacier Discovery" data-route-panel hidden>
+            <div class="internal-tabs-v2__intro">
+              <h2>Glacier Discovery</h2>
+              <p>Day trips into glacier country</p>
+            </div>
+            <div class="internal-tabs-v2__panel">
+              <div class="internal-tabs-v2__body">
+                <p class="internal-tabs-v2__lead">
+                  A flexible day trip that reaches glacier viewpoints and trailheads with same-day return options.
+                </p>
+                <ul class="internal-tabs-v2__cards" role="list">
+                  <li class="internal-tabs-v2__card">
+                    <span class="internal-tabs-v2__card-icon" aria-hidden="true">
+                      <i data-lucide="calendar"></i>
+                    </span>
+                    <div class="internal-tabs-v2__card-copy">
+                      <p class="internal-tabs-v2__card-title">Operating season</p>
+                      <p class="internal-tabs-v2__card-text">Late May to mid-September</p>
+                    </div>
+                  </li>
+                  <li class="internal-tabs-v2__card">
+                    <span class="internal-tabs-v2__card-icon" aria-hidden="true">
+                      <i data-lucide="route"></i>
+                    </span>
+                    <div class="internal-tabs-v2__card-copy">
+                      <p class="internal-tabs-v2__card-title">Route</p>
+                      <p class="internal-tabs-v2__card-text internal-tabs-v2__card-text--route">
+                        <span>Anchorage</span>
+                        <i data-lucide="arrow-right" aria-hidden="true"></i>
+                        <span>Grandview</span>
+                      </p>
+                    </div>
+                  </li>
+                  <li class="internal-tabs-v2__card">
+                    <span class="internal-tabs-v2__card-icon" aria-hidden="true">
+                      <i data-lucide="clock"></i>
+                    </span>
+                    <div class="internal-tabs-v2__card-copy">
+                      <p class="internal-tabs-v2__card-title">Duration</p>
+                      <p class="internal-tabs-v2__card-text">Full-day outing</p>
+                    </div>
+                  </li>
+                  <li class="internal-tabs-v2__card">
+                    <span class="internal-tabs-v2__card-icon" aria-hidden="true">
+                      <i data-lucide="circle-dollar-sign"></i>
+                    </span>
+                    <div class="internal-tabs-v2__card-copy">
+                      <p class="internal-tabs-v2__card-title">Fare starts from</p>
+                      <p class="internal-tabs-v2__card-text">$98</p>
+                    </div>
+                  </li>
+                </ul>
+                <div class="internal-tabs-v2__actions">
+                  <a href="#" class="btn btn-primary">Buy tickets</a>
+                  <a href="#" class="btn btn-outline-light">View fare details</a>
+                </div>
+              </div>
+              <figure class="internal-tabs-v2__media">
+                <img src="../assets/images/carousel-img/carousel-image-3.jpg" alt="" decoding="async">
+              </figure>
+            </div>
+          </article>
+
+          <article class="route-panel" role="tabpanel" aria-label="Hurricane Turn" data-route-panel hidden>
+            <div class="internal-tabs-v2__intro">
+              <h2>Hurricane Turn</h2>
+              <p>Flag-stop adventure into the backcountry</p>
+            </div>
+            <div class="internal-tabs-v2__panel">
+              <div class="internal-tabs-v2__body">
+                <p class="internal-tabs-v2__lead">
+                  A unique flag-stop train serving remote cabins and trailheads between Talkeetna and Hurricane Gulch.
+                </p>
+                <ul class="internal-tabs-v2__cards" role="list">
+                  <li class="internal-tabs-v2__card">
+                    <span class="internal-tabs-v2__card-icon" aria-hidden="true">
+                      <i data-lucide="calendar"></i>
+                    </span>
+                    <div class="internal-tabs-v2__card-copy">
+                      <p class="internal-tabs-v2__card-title">Operating season</p>
+                      <p class="internal-tabs-v2__card-text">Year-round (select days)</p>
+                    </div>
+                  </li>
+                  <li class="internal-tabs-v2__card">
+                    <span class="internal-tabs-v2__card-icon" aria-hidden="true">
+                      <i data-lucide="route"></i>
+                    </span>
+                    <div class="internal-tabs-v2__card-copy">
+                      <p class="internal-tabs-v2__card-title">Route</p>
+                      <p class="internal-tabs-v2__card-text internal-tabs-v2__card-text--route">
+                        <span>Talkeetna</span>
+                        <i data-lucide="arrow-right" aria-hidden="true"></i>
+                        <span>Hurricane</span>
+                      </p>
+                    </div>
+                  </li>
+                  <li class="internal-tabs-v2__card">
+                    <span class="internal-tabs-v2__card-icon" aria-hidden="true">
+                      <i data-lucide="clock"></i>
+                    </span>
+                    <div class="internal-tabs-v2__card-copy">
+                      <p class="internal-tabs-v2__card-title">Duration</p>
+                      <p class="internal-tabs-v2__card-text">About 5.5 hours</p>
+                    </div>
+                  </li>
+                  <li class="internal-tabs-v2__card">
+                    <span class="internal-tabs-v2__card-icon" aria-hidden="true">
+                      <i data-lucide="circle-dollar-sign"></i>
+                    </span>
+                    <div class="internal-tabs-v2__card-copy">
+                      <p class="internal-tabs-v2__card-title">Fare starts from</p>
+                      <p class="internal-tabs-v2__card-text">$108</p>
+                    </div>
+                  </li>
+                </ul>
+                <div class="internal-tabs-v2__actions">
+                  <a href="#" class="btn btn-primary">Buy tickets</a>
+                  <a href="#" class="btn btn-outline-light">View fare details</a>
+                </div>
+              </div>
+              <figure class="internal-tabs-v2__media">
+                <img src="../assets/images/carousel-img/carousel-image-4.jpg" alt="" decoding="async">
+              </figure>
+            </div>
+          </article>
+
+          <article class="route-panel" role="tabpanel" aria-label="Aurora Winter" data-route-panel hidden>
+            <div class="internal-tabs-v2__intro">
+              <h2>Aurora Winter</h2>
+              <p>Winter rails under northern lights</p>
+            </div>
+            <div class="internal-tabs-v2__panel">
+              <div class="internal-tabs-v2__body">
+                <p class="internal-tabs-v2__lead">
+                  A winter service focused on aurora viewing and cozy onboard amenities between Anchorage and Fairbanks.
+                </p>
+                <ul class="internal-tabs-v2__cards" role="list">
+                  <li class="internal-tabs-v2__card">
+                    <span class="internal-tabs-v2__card-icon" aria-hidden="true">
+                      <i data-lucide="calendar"></i>
+                    </span>
+                    <div class="internal-tabs-v2__card-copy">
+                      <p class="internal-tabs-v2__card-title">Operating season</p>
+                      <p class="internal-tabs-v2__card-text">September to May</p>
+                    </div>
+                  </li>
+                  <li class="internal-tabs-v2__card">
+                    <span class="internal-tabs-v2__card-icon" aria-hidden="true">
+                      <i data-lucide="route"></i>
+                    </span>
+                    <div class="internal-tabs-v2__card-copy">
+                      <p class="internal-tabs-v2__card-title">Route</p>
+                      <p class="internal-tabs-v2__card-text internal-tabs-v2__card-text--route">
+                        <span>Anchorage</span>
+                        <i data-lucide="arrow-right" aria-hidden="true"></i>
+                        <span>Fairbanks</span>
+                      </p>
+                    </div>
+                  </li>
+                  <li class="internal-tabs-v2__card">
+                    <span class="internal-tabs-v2__card-icon" aria-hidden="true">
+                      <i data-lucide="clock"></i>
+                    </span>
+                    <div class="internal-tabs-v2__card-copy">
+                      <p class="internal-tabs-v2__card-title">Duration</p>
+                      <p class="internal-tabs-v2__card-text">Overnight options</p>
+                    </div>
+                  </li>
+                  <li class="internal-tabs-v2__card">
+                    <span class="internal-tabs-v2__card-icon" aria-hidden="true">
+                      <i data-lucide="circle-dollar-sign"></i>
+                    </span>
+                    <div class="internal-tabs-v2__card-copy">
+                      <p class="internal-tabs-v2__card-title">Fare starts from</p>
+                      <p class="internal-tabs-v2__card-text">$229</p>
+                    </div>
+                  </li>
+                </ul>
+                <div class="internal-tabs-v2__actions">
+                  <a href="#" class="btn btn-primary">Buy tickets</a>
+                  <a href="#" class="btn btn-outline-light">View fare details</a>
+                </div>
+              </div>
+              <figure class="internal-tabs-v2__media">
+                <img src="../assets/images/carousel-img/carousel-image.jpg" alt="" decoding="async">
+              </figure>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="../assets/dist/main.min.js"></script>
+</body>
+
+</html>

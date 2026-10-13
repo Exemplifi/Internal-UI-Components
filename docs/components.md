@@ -42,8 +42,9 @@ These match the cards in [index.html](../index.html), listed alphabetically. **P
 | 16 | Stacked Cards | [stacked-cards.html](../src/htmls/stacked-cards.html) | Sticky stacked service cards (VVTA Specialized Services) | `stacked-cards` | `stacked-cards.js` |
 | 17 | Stats | [stats.html](../src/htmls/stats.html) | Stat blocks and figures | `stats` | — |
 | 18 | Table | [table.html](../src/htmls/table.html) | Data / content tables | `tables` | — |
-| 19 | Timeline V1 | [timeline-v1.html](../src/htmls/timeline-v1.html) | Scroll-driven historical timeline | `timeline-v1` | `timeline-v1.js` |
-| 20 | Timeline V2 | [timeline-v2.html](../src/htmls/timeline-v2.html) | Four-step reimbursement timeline (VVTA Figma 4803:7223) | `timeline-v2` | `timeline-v2.js` |
+| 19 | Tabs | [tabs-v1.html](../src/htmls/tabs-v1.html), [tabs-v2.html](../src/htmls/tabs-v2.html) | v1 pill bar + panels; v2 chevron route tabs + sample content (ARRC explore-by-route, no nested pills). Docs: [tabs/](./tabs/README.md) | `tabs` | `internal-tabs.js` |
+| 20 | Timeline V1 | [timeline-v1.html](../src/htmls/timeline-v1.html) | Scroll-driven historical timeline | `timeline-v1` | `timeline-v1.js` |
+| 21 | Timeline V2 | [timeline-v2.html](../src/htmls/timeline-v2.html) | Four-step reimbursement timeline (VVTA Figma 4803:7223) | `timeline-v2` | `timeline-v2.js` |
 
 ---
 
@@ -69,6 +70,7 @@ Declared in [\_components.scss](../src/assets/scss/components/_components.scss) 
 | `image-and-text` | `_image-and-text.scss` | Image & text demo |
 | `stats` | `_stats.scss` | Stats demo |
 | `tables` | `_tables.scss` | Table demo |
+| `tabs` | `_tabs.scss` | Tabs v1 pill bar + panels |
 | `text-only` | `_text-only.scss` | Text-only patterns |
 | `typography` | `_typography.scss` | Typography defaults |
 | `exemplifi-header` | `_exemplifi-header.scss` | Exemplifi header demo |
@@ -97,6 +99,7 @@ Imported from [main.js](../src/assets/js/main.js) in this order (after libraries
 | `calendar.js` | Calendar |
 | `swiper-init.js` | Swiper instances for carousel v1 / v2 markup |
 | `internal-carousel.js` | Carousel v3 hero + thumbnail gallery |
+| `internal-tabs.js` | Tabs v1 pill bar; Tabs v2 chevron route tabs (`initInternalRouteTabs`) |
 | `pg-carousel.js` | PG carousel (`initPgCarousel` called from `main.js` on `$(function(){...})`) |
 | `carousel.js` | NCM spotlight slider (`initNcmSlider` called from `main.js` on `$(function(){...})`) |
 | `timeline-v1.js` | Timeline V1 scroll spy and progress |
@@ -158,4 +161,5 @@ Slick card slider with glass “Featured” pill, Lucide prev/next, and live reg
 | [docs/README.md](./README.md) | Handbook and change checklist |
 | [accordions/](./accordions/README.md) | Accordion v3 / v4 developer + UI guides |
 | [carousels/](./carousels/README.md) | Carousel variants; v3 hero + thumbs guide |
+| [tabs/](./tabs/README.md) | Tabs variants; v1 pill bar + panels guide |
 | [CHANGELOG.md](../CHANGELOG.md) | Log changes under `[Unreleased]` when you touch patterns |
