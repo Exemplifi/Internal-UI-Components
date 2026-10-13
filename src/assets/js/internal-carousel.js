@@ -244,7 +244,9 @@ export function initInternalCarousel(context = document) {
     const prevEl = root?.querySelector("[data-internal-carousel-v3-prev]");
     const nextEl = root?.querySelector("[data-internal-carousel-v3-next]");
     const statusEl = root?.querySelector("[data-internal-carousel-v3-status]");
-    const heroImg = root?.querySelector(".internal-carousel-hero-figure img");
+    const heroImg =
+      root.querySelector(".internal-carousel-hero-img") ||
+      root.querySelector(".internal-carousel-hero-figure img");
     if (!root || !prevEl || !nextEl) return;
 
     const swiper = createInternalSwiper(el, {

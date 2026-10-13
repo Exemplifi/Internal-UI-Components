@@ -173,9 +173,10 @@
 // ── Internal Carousel v3 — hero + thumbnail gallery (from ARRC carousel-v2) ──
 .internal-carousel {
   &.v3 {
-    $hero-w: 81.75rem; // 1308px — pan on small screens, full-bleed ≥992px
+    // Hero frame matches ARRC facility showcase (wide cover crop)
+    $hero-w: 81.75rem; // 1308px — pan on small screens
     $hero-h: 22.6875rem; // 363px
-    $hero-w-sm: 48rem; // tighter pan target on phones
+    $hero-w-sm: 48rem;
     $hero-h-sm: 13.3125rem;
     $thumb-w: 21rem;
     $thumb-h: 12.8125rem;
@@ -319,6 +320,7 @@
       margin: 0;
       border-radius: 0.75rem;
       overflow: hidden;
+      background: rgb(0 0 0 / 0.2);
 
       @media (min-width: 576px) {
         width: $hero-w;
@@ -335,6 +337,7 @@
         min-height: $hero-h;
       }
 
+      .internal-carousel-hero-img,
       img {
         position: absolute;
         inset: 0;
@@ -342,6 +345,7 @@
         width: 100%;
         height: 100%;
         object-fit: cover;
+        object-position: center;
         -webkit-user-drag: none;
         user-select: none;
         -webkit-touch-callout: none;

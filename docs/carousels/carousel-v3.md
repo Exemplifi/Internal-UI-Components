@@ -30,7 +30,7 @@ Do **not** use v3 for simple multi-card product carousels — use v1 / v2.
 
 ## Behavior (developers)
 
-1. **Hero** — Clicking / arrow-keying a thumb swaps `.internal-carousel-hero-figure img` `src` and the hero caption text from `data-internal-carousel-caption`.
+1. **Hero** — Clicking / arrow-keying a thumb swaps `.internal-carousel-hero-img` `src` and the hero caption from `data-internal-carousel-caption`. Use **landscape** assets (demo set: `carousel-img/carousel-v3/`). Avoid tiny ~300px square JPGs in the hero — they look soft when cropped to the wide frame.
 2. **Thumb strip** — Swiper `slidesPerView: "auto"`, prev/next arrows scroll the strip only (do not change selection by themselves).
 3. **Radiogroup** — Thumbs are `role="radio"` inside `role="radiogroup"`. ←/→/↑/↓, Home/End move selection. All thumbs stay tabbable (`tabindex="0"`); Swiper `aria-hidden` / `inert` on slides is cleared after updates.
 4. **Live region** — `[data-internal-carousel-v3-status]` announces selection and strip position.
