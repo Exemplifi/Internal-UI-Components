@@ -199,3 +199,549 @@
                }
              }
              /* Accordian Nested End */
+
+// =============================================================================
+// Accordion v3 / v4 — FAQ group shell + team / media panels
+// Demo: htmls/accordions-v3.html · htmls/accordions-v4.html
+// Colors: Internal-UI tokens ($primary-dark, $blue, $gray, $white, $black)
+// =============================================================================
+
+$internal-accordion-ease: cubic-bezier(0.22, 1, 0.36, 1);
+$internal-accordion-duration: 0.35s;
+$internal-accordion-stroke: #d7e0ea;
+$internal-accordion-white-30: rgb(255 255 255 / 0.3);
+
+@mixin internal-accordion-trigger-states {
+  &:focus-visible {
+    outline: 2px solid $blue;
+    outline-offset: -2px;
+  }
+
+  &.collapsed .accordion-icon--open {
+    display: none;
+  }
+
+  &:not(.collapsed) .accordion-icon--closed {
+    display: none;
+  }
+}
+
+@mixin internal-accordion-trigger-layout {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  width: 100%;
+  margin: 0;
+  border: 0;
+  background: transparent;
+  font: inherit;
+  color: inherit;
+  text-align: left;
+  cursor: pointer;
+
+  @include internal-accordion-trigger-states;
+}
+
+@mixin internal-accordion-chevron-toggle($color) {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 2rem;
+  height: 2rem;
+  color: $color;
+
+  svg {
+    display: block;
+    width: 1.5rem;
+    height: 1.5rem;
+    stroke-width: 2;
+    transition: transform $internal-accordion-duration $internal-accordion-ease;
+
+    @media (prefers-reduced-motion: reduce) {
+      transition: none;
+    }
+  }
+}
+
+.internal-accordion {
+  h3.accordion-heading,
+  h2.accordion-group-title {
+    margin: 0;
+    padding: 0;
+    font: inherit;
+    color: inherit;
+    letter-spacing: inherit;
+  }
+
+  .accordion-list {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .accordion-panel,
+  .accordion-heading {
+    scroll-margin-top: 1.5rem;
+  }
+
+  .accordion-collapse,
+  .accordion-group-collapse {
+    display: block !important;
+    height: 0;
+    overflow: hidden;
+    contain: paint;
+
+    &.show {
+      height: auto;
+    }
+
+    &.accordion-collapse--settled:not(.show) {
+      content-visibility: hidden;
+    }
+  }
+
+  .accordion-collapse-inner,
+  .accordion-group-collapse-inner {
+    overflow: hidden;
+  }
+
+  // ── v3 — FAQ (primary-dark shell, white Q/A cards, chevron) ───────────────
+  &.v3 {
+    padding: 4rem 0;
+
+    .accordion-wrapper {
+      border-radius: 1rem;
+      background: $primary-dark;
+      overflow: hidden;
+    }
+
+    .accordion-group-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      padding: 1.25rem;
+      border-bottom: 1px solid transparent;
+      transition: border-color $internal-accordion-duration $internal-accordion-ease;
+
+      @media (min-width: 992px) {
+        padding: 2rem;
+        gap: 1.5rem;
+      }
+    }
+
+    .accordion-wrapper.is-group-open .accordion-group-header {
+      border-bottom-color: $internal-accordion-white-30;
+    }
+
+    .accordion-group-title {
+      color: $white;
+      font-size: 1.5rem;
+      font-weight: $semibold;
+      line-height: 1.3;
+
+      @media (min-width: 992px) {
+        font-size: 1.75rem;
+      }
+    }
+
+    .accordion-group-trigger {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      margin: 0;
+      padding: 0;
+      border: 0;
+      background: transparent;
+      font: inherit;
+      line-height: 0;
+      color: inherit;
+      cursor: pointer;
+      -webkit-appearance: none;
+      appearance: none;
+
+      @include internal-accordion-trigger-states;
+
+      &:focus-visible {
+        outline-offset: 2px;
+        border-radius: 0.25rem;
+      }
+
+      .accordion-toggle {
+        @include internal-accordion-chevron-toggle($white);
+      }
+    }
+
+    .accordion-group-collapse-inner {
+      padding-inline: 1.25rem;
+
+      @media (min-width: 992px) {
+        padding-inline: 2rem;
+      }
+    }
+
+    .accordion-wrapper.is-group-open .accordion-group-collapse-inner {
+      padding-block: 1.5rem 2rem;
+
+      @media (min-width: 992px) {
+        padding-block: 2rem 2.5rem;
+      }
+    }
+
+    .accordion-list {
+      gap: 1rem;
+
+      @media (min-width: 992px) {
+        gap: 1.5rem;
+      }
+    }
+
+    .accordion-panel {
+      border-radius: 1rem;
+      background: $white;
+      overflow: hidden;
+    }
+
+    .accordion-trigger {
+      @include internal-accordion-trigger-layout;
+      padding: 1.25rem;
+
+      @media (min-width: 992px) {
+        padding: 1.5rem 2rem;
+      }
+    }
+
+    .accordion-panel:has(.accordion-collapse.show) .accordion-trigger {
+      padding-bottom: 1.25rem;
+    }
+
+    .accordion-collapse-inner {
+      margin-inline: 1.25rem;
+      padding-inline: 0;
+
+      @media (min-width: 992px) {
+        margin-inline: 2rem;
+      }
+    }
+
+    .accordion-panel:has(.accordion-collapse.show) .accordion-collapse-inner {
+      border-top: 1px solid $internal-accordion-stroke;
+      margin-bottom: 1.75rem;
+      padding-top: 1.25rem;
+
+      @media (min-width: 992px) {
+        margin-bottom: 2rem;
+        padding-top: 1.5rem;
+      }
+    }
+
+    .accordion-header-copy {
+      display: flex;
+      align-items: center;
+      flex: 1;
+      min-width: 0;
+
+      .title {
+        margin: 0;
+        color: $primary-dark;
+        font-size: 1.125rem;
+        font-weight: $semibold;
+        line-height: 1.35;
+
+        @media (min-width: 992px) {
+          font-size: 1.25rem;
+        }
+      }
+    }
+
+    .accordion-toggle {
+      @include internal-accordion-chevron-toggle($primary-dark);
+    }
+
+    .accordion-body .content-wrapper {
+      p {
+        margin: 0;
+        color: $primary-dark;
+        font-size: 1rem;
+        line-height: 1.55;
+        font-weight: $regular;
+
+        a {
+          color: $blue;
+          font-weight: $medium;
+          text-decoration: underline;
+
+          &:hover {
+            color: $primary-dark;
+          }
+        }
+
+        & + p {
+          margin-top: 1rem;
+        }
+      }
+    }
+  }
+
+  // ── v4 — team / media panels (primary-dark panels, photo + bio) ───────────
+  &.v4 {
+    padding: 4rem 0;
+
+    @media (min-width: 992px) {
+      padding: 5rem 0;
+    }
+
+    .section-header-wrapper {
+      margin-bottom: 2.5rem;
+      text-align: center;
+
+      h2 {
+        margin: 0 0 0.75rem;
+        color: $primary-dark;
+        font-size: 2rem;
+        font-weight: $bold;
+        line-height: 1.25;
+      }
+
+      p {
+        margin: 0 auto;
+        max-width: 37rem;
+        color: $gray;
+        font-size: 1.0625rem;
+        line-height: 1.55;
+      }
+    }
+
+    .accordion-list {
+      gap: 1.5rem;
+    }
+
+    .accordion-panel {
+      border-radius: 1rem;
+      overflow: hidden;
+      background: $primary-dark;
+    }
+
+    .accordion-trigger {
+      @include internal-accordion-trigger-layout;
+      background: $primary-dark;
+      padding: 1.5rem;
+
+      @media (min-width: 992px) {
+        padding: 2rem;
+      }
+    }
+
+    .accordion-body {
+      border-top: 1px solid transparent;
+      transition: border-color $internal-accordion-duration $internal-accordion-ease;
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+      background: $primary-dark;
+      padding: 1.5rem 1.25rem 1.75rem;
+
+      @media (min-width: 992px) {
+        flex-direction: row;
+        gap: 2rem;
+        padding: 2rem 2rem 2.5rem;
+      }
+    }
+
+    .accordion-panel:has(.accordion-collapse.show) .accordion-body {
+      border-top-color: $internal-accordion-white-30;
+    }
+
+    .accordion-header-copy {
+      display: flex;
+      align-items: center;
+      flex: 1;
+      min-width: 0;
+
+      .title {
+        margin: 0;
+        color: $white;
+        font-size: 1.25rem;
+        font-weight: $semibold;
+        line-height: 1.3;
+
+        @media (min-width: 992px) {
+          font-size: 1.5rem;
+        }
+      }
+    }
+
+    .accordion-toggle {
+      @include internal-accordion-chevron-toggle($white);
+    }
+
+    .media-wrapper {
+      flex-shrink: 0;
+      margin: 0;
+
+      img {
+        display: block;
+        width: 100%;
+        max-width: 19.1875rem;
+        aspect-ratio: 307 / 306;
+        height: auto;
+        border-radius: 0.5rem;
+        object-fit: cover;
+      }
+    }
+
+    .content-wrapper {
+      flex: 1;
+      min-width: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+      color: $white;
+
+      :is(h1, h2, h3, h4, h5, h6) {
+        margin: 0;
+        color: inherit;
+      }
+
+      h1 { font-size: 1.75rem; font-weight: $bold; }
+      h2 { font-size: 1.5rem; font-weight: $semibold; }
+      h3 { font-size: 1.25rem; font-weight: $semibold; }
+      h4 { font-size: 1.125rem; font-weight: $semibold; }
+      h5 { font-size: 1rem; font-weight: $semibold; }
+      h6 { font-size: 0.9375rem; font-weight: $medium; }
+
+      p,
+      ul,
+      ol,
+      blockquote {
+        margin: 0;
+        color: inherit;
+        font-size: 1rem;
+        line-height: 1.55;
+      }
+
+      ul,
+      ol {
+        padding-inline-start: 1.25rem;
+
+        ul,
+        ol {
+          margin-block-start: 0.5rem;
+        }
+      }
+
+      blockquote {
+        padding-inline-start: 1rem;
+        border-inline-start: 2px solid $internal-accordion-white-30;
+      }
+
+      a:not([class]) {
+        color: inherit;
+        text-decoration: underline;
+
+        &:hover {
+          color: $light-blue;
+        }
+      }
+
+      hr {
+        margin: 0;
+        border: 0;
+        border-top: 1px solid $internal-accordion-white-30;
+      }
+
+      table {
+        display: table;
+        width: 100%;
+        margin: 0;
+        color: inherit;
+        table-layout: fixed;
+        border-collapse: collapse;
+        font-size: 1rem;
+
+        caption {
+          caption-side: top;
+          text-align: left;
+          margin: 0;
+          padding: 0.75rem 1rem;
+          color: inherit;
+          font-weight: $medium;
+        }
+
+        th,
+        td {
+          padding: 0.75rem 1rem;
+          border: 0;
+          border-bottom: 1px solid $internal-accordion-white-30;
+          text-align: left;
+          vertical-align: middle;
+        }
+
+        thead th {
+          background: rgb(255 255 255 / 0.12);
+          color: $white;
+          font-weight: $medium;
+        }
+
+        tbody tr:nth-child(even) td {
+          background: rgb(255 255 255 / 0.05);
+        }
+
+        tbody tr:last-child td {
+          border-bottom: 0;
+        }
+      }
+
+      .btn-wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem;
+        width: 100%;
+        margin: 0;
+      }
+
+      .doc-list {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        gap: 0.75rem;
+      }
+
+      .doc-item {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 1rem;
+        padding: 0.875rem 1rem;
+        border: 1px solid $internal-accordion-white-30;
+        border-radius: 0.5rem;
+        color: $white;
+        text-decoration: none;
+        background: rgb(255 255 255 / 0.06);
+
+        &:hover {
+          background: rgb(255 255 255 / 0.12);
+          color: $white;
+        }
+
+        &:focus-visible {
+          outline: 2px solid $blue;
+          outline-offset: 2px;
+        }
+      }
+
+      .doc-item-title {
+        font-weight: $medium;
+      }
+
+      .doc-item-action {
+        flex-shrink: 0;
+        display: inline-flex;
+      }
+    }
+  }
+}

@@ -24,7 +24,7 @@ These match the cards in [index.html](../index.html), listed alphabetically. **P
 
 | # | Name | Demo file | Purpose | Primary SCSS partial | Primary JS |
 |---|------|-----------|---------|------------------------|------------|
-| 1 | Accordion | [accordion.html](../src/htmls/accordion.html) | FAQ-style expand/collapse | `accordions` | Bootstrap accordion (no dedicated `accordion.js`) |
+| 1 | Accordion | [accordion.html](../src/htmls/accordion.html), [accordion-v2.html](../src/htmls/accordion-v2.html), [accordions-v3.html](../src/htmls/accordions-v3.html), [accordions-v4.html](../src/htmls/accordions-v4.html) | FAQ expand/collapse (v1 Bootstrap; v2 nested; v3 FAQ group shell; v4 team/media panels) | `accordions` | Bootstrap (v1/v2); `internal-accordion.js` (v3 / v4) |
 | 2 | Calendar | [calendar.html](../src/htmls/calendar.html) | Calendar UI | `calendar` | `calendar.js` |
 | 3 | Card Expansion | [card-expansion.html](../src/htmls/card-expansion.html) | Expandable cards with a details panel | `card-expansion` | `card-expansion.js` |
 | 4 | Card with Icon | [card-with-icon.html](../src/htmls/card-with-icon.html) | Icon-led cards | `card-with-icon` | `card-with-icon.js` |
@@ -101,6 +101,7 @@ Imported from [main.js](../src/assets/js/main.js) in this order (after libraries
 | `timeline-v1.js` | Timeline V1 scroll spy and progress |
 | `timeline-v2.js` | Timeline V2 step autoplay and chevron |
 | `stacked-cards.js` | Stacked Cards sticky stack and chevron |
+| `internal-accordion.js` | Accordions v3 / v4 id-free collapse (`data-internal-accordion`) |
 
 Libraries loaded before these: **jQuery**, **slick-carousel**, **Bootstrap**, **bs5-lightbox**, **Lucide**, **AOS** (+ AOS CSS).
 
