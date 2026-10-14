@@ -46,6 +46,7 @@ import { initPgCarousel } from "./pg-carousel.js";
 import { initNcmSlider } from "./carousel.js";
 import "./internal-accordion.js";
 import "./internal-carousel.js";
+import "./internal-tabs.js";
 
 $(function () {
   initPgCarousel($);

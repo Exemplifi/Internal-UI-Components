@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tabs v1 — Pill tab bar + panels</title>
+  <link rel="stylesheet" href="../assets/dist/style.min.css">
+</head>
+
+<body>
+  <a class="skip-link btn btn-primary visually-hidden-focusable position-absolute top-0 start-0 ms-2 mt-2"
+    href="#tabs-v1-main">
+    Skip to tabs content
+  </a>
+
+  <main id="tabs-v1-main" tabindex="-1">
+
+    <section class="internal-tabs v1 bg-white" aria-labelledby="tabs-v1-light-heading">
+      <div class="container">
+        <div class="section-header-wrapper layout-center">
+          <div class="section-header-body">
+            <h2 id="tabs-v1-light-heading">Explore Our Services</h2>
+            <p>Use the pill bar to switch topics. Extra tabs show overflow (desktop arrows, mobile fades).</p>
+          </div>
+        </div>
+
+        <div class="tab-bar" data-tab-bar aria-label="Explore our services">
+          <div class="tab-list">
+            <div class="tab-list-items" role="tablist">
+              <button type="button" class="tab-btn is-active" role="tab" aria-selected="true"
+                data-tab-bar-tab>Overview</button>
+              <button type="button" class="tab-btn" role="tab" aria-selected="false" data-tab-bar-tab
+                tabindex="-1">Programs &amp; initiatives</button>
+              <button type="button" class="tab-btn" role="tab" aria-selected="false" data-tab-bar-tab
+                tabindex="-1">Resources</button>
+              <button type="button" class="tab-btn" role="tab" aria-selected="false" data-tab-bar-tab
+                tabindex="-1">Events calendar</button>
+              <button type="button" class="tab-btn" role="tab" aria-selected="false" data-tab-bar-tab
+                tabindex="-1">Community partnerships</button>
+              <button type="button" class="tab-btn" role="tab" aria-selected="false" data-tab-bar-tab
+                tabindex="-1">Research &amp; reports</button>
+              <button type="button" class="tab-btn" role="tab" aria-selected="false" data-tab-bar-tab
+                tabindex="-1">Training workshops</button>
+              <button type="button" class="tab-btn" role="tab" aria-selected="false" data-tab-bar-tab
+                tabindex="-1">Contact</button>
+            </div>
+          </div>
+
+          <div class="tab-panels">
+            <div class="tab-panel is-active" role="tabpanel" aria-label="Overview" data-tab-bar-panel>
+              <p>Clear, accessible digital experiences for communities. Swap this copy for CMS content, cards, or
+                media.</p>
+            </div>
+            <div class="tab-panel" role="tabpanel" aria-label="Programs & initiatives" data-tab-bar-panel hidden>
+              <p>Initiatives, timelines, and outcomes. Replace with program cards or nested components.</p>
+            </div>
+            <div class="tab-panel" role="tabpanel" aria-label="Resources" data-tab-bar-panel hidden>
+              <p>Downloads, guides, and related links with descriptive labels.</p>
+            </div>
+            <div class="tab-panel" role="tabpanel" aria-label="Events calendar" data-tab-bar-panel hidden>
+              <p>Upcoming events, registration, and seasonal schedules.</p>
+            </div>
+            <div class="tab-panel" role="tabpanel" aria-label="Community partnerships" data-tab-bar-panel hidden>
+              <p>Partner organizations, joint projects, and collaboration stories.</p>
+            </div>
+            <div class="tab-panel" role="tabpanel" aria-label="Research & reports" data-tab-bar-panel hidden>
+              <p>Published research, annual reports, and data summaries.</p>
+            </div>
+            <div class="tab-panel" role="tabpanel" aria-label="Training workshops" data-tab-bar-panel hidden>
+              <p>Workshop catalogs, curricula, and enrollment details.</p>
+            </div>
+            <div class="tab-panel" role="tabpanel" aria-label="Contact" data-tab-bar-panel hidden>
+              <p>Contact details, office hours, or a short form.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="internal-tabs v1 bg-primary-dark" aria-labelledby="tabs-v1-dark-heading">
+      <div class="container">
+        <div class="section-header-wrapper layout-center">
+          <div class="section-header-body">
+            <h2 id="tabs-v1-dark-heading">Same pattern on dark</h2>
+            <p>Identical markup on a dark surface with placeholder panels.</p>
+          </div>
+        </div>
+
+        <div class="tab-bar" data-tab-bar aria-label="Same pattern on dark">
+          <div class="tab-list">
+            <div class="tab-list-items" role="tablist">
+              <button type="button" class="tab-btn is-active" role="tab" aria-selected="true"
+                data-tab-bar-tab>Mission</button>
+              <button type="button" class="tab-btn" role="tab" aria-selected="false" data-tab-bar-tab
+                tabindex="-1">Impact stories</button>
+              <button type="button" class="tab-btn" role="tab" aria-selected="false" data-tab-bar-tab
+                tabindex="-1">Regional partners</button>
+              <button type="button" class="tab-btn" role="tab" aria-selected="false" data-tab-bar-tab
+                tabindex="-1">Volunteer opportunities</button>
+              <button type="button" class="tab-btn" role="tab" aria-selected="false" data-tab-bar-tab
+                tabindex="-1">Funding priorities</button>
+              <button type="button" class="tab-btn" role="tab" aria-selected="false" data-tab-bar-tab tabindex="-1">News
+                &amp; updates</button>
+              <button type="button" class="tab-btn" role="tab" aria-selected="false" data-tab-bar-tab tabindex="-1">Next
+                steps</button>
+            </div>
+          </div>
+
+          <div class="tab-panels">
+            <div class="tab-panel is-active" role="tabpanel" aria-label="Mission" data-tab-bar-panel>
+              <p class="no-content-placeholder">Mission content will be provided by the CMS.</p>
+            </div>
+            <div class="tab-panel" role="tabpanel" aria-label="Impact stories" data-tab-bar-panel hidden>
+              <p class="no-content-placeholder">Impact stories content will be provided by the CMS.</p>
+            </div>
+            <div class="tab-panel" role="tabpanel" aria-label="Regional partners" data-tab-bar-panel hidden>
+              <p class="no-content-placeholder">Regional partners content will be provided by the CMS.</p>
+            </div>
+            <div class="tab-panel" role="tabpanel" aria-label="Volunteer opportunities" data-tab-bar-panel hidden>
+              <p class="no-content-placeholder">Volunteer opportunities content will be provided by the CMS.</p>
+            </div>
+            <div class="tab-panel" role="tabpanel" aria-label="Funding priorities" data-tab-bar-panel hidden>
+              <p class="no-content-placeholder">Funding priorities content will be provided by the CMS.</p>
+            </div>
+            <div class="tab-panel" role="tabpanel" aria-label="News & updates" data-tab-bar-panel hidden>
+              <p class="no-content-placeholder">News &amp; updates content will be provided by the CMS.</p>
+            </div>
+            <div class="tab-panel" role="tabpanel" aria-label="Next steps" data-tab-bar-panel hidden>
+              <p class="no-content-placeholder">Next steps content will be provided by the CMS.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <script src="../assets/dist/main.min.js"></script>
+</body>
+
+</html>

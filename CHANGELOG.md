@@ -9,6 +9,7 @@ Versioning: [Semantic Versioning](https://semver.org/spec/v2.0.0.html) — polic
 
 ### Added
 
+- Tabs v1 / v2: pill tab bar (ARRC `tabs-v2`) and chevron route tabs + sample content (ARRC `explore-by-route`, no nested pills), Exemplifi tokens. Demos: [tabs-v1.html](./src/htmls/tabs-v1.html), [tabs-v2.html](./src/htmls/tabs-v2.html). Behavior: `internal-tabs.js`. Docs: [docs/tabs/](./docs/tabs/README.md).
 - Carousel v3: hero + thumbnail gallery ported from ARRC carousel-v2, restyled with Exemplifi tokens (`$primary-dark`, `$blue`). Demo: [carousel-v3.html](./src/htmls/carousel-v3.html). Behavior: `internal-carousel.js` (radiogroup keyboard, live status, reduced-motion, mobile thumb/hero scaling). Docs: [docs/carousels/](./docs/carousels/README.md).
 - Accordions v3 / v4: FAQ group shell and team/media panels ported from ARRC prototypes, restyled with Exemplifi tokens (`$primary-dark`, `$blue`, `$gray`). Demos: [accordions-v3.html](./src/htmls/accordions-v3.html), [accordions-v4.html](./src/htmls/accordions-v4.html). Behavior: `internal-accordion.js`. Docs: [docs/accordions/](./docs/accordions/README.md).
 - Stacked Cards: sticky stacked cards copied from VVTA Specialized Services. Demo: [stacked-cards.html](./src/htmls/stacked-cards.html). See [docs/stacked-cards/README.md](./docs/stacked-cards/README.md).
