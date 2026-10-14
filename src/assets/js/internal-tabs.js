@@ -1,6 +1,8 @@
 /**
- * Internal Tabs — pill tab bar + panels (from ARRC tabs.js / tabs-v2)
- * Demo: htmls/tabs-v1.html
+ * Internal Tabs
+ * v1 — pill tab bar + panels (ARRC tabs-v2) · Demo: htmls/tabs-v1.html
+ * v2 — chevron route tabs + content (ARRC explore-by-route, no nested pills)
+ *      Demo: htmls/tabs-v2.html
  */
 
 import { createIcons, icons } from "lucide";
