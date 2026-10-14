@@ -196,6 +196,7 @@ class SearchInterface {
                 .map(
                   (item, index) => `
                     <button type="button" class="popular-search-item" 
+                         id="search-popular-${index}"
                          data-index="${index}" 
                          data-url="${item.url}">
                       <span class="popular-search-text">${item.text}</span>
@@ -212,6 +213,7 @@ class SearchInterface {
       `;
 
     this.dropdown.innerHTML = noResultsHTML;
+    this.resetActiveOption();
     this.showDropdown();
     this.attachPopularSearchListeners();
 
@@ -502,6 +504,7 @@ class SearchInterface {
       </div>
     `;
 
+    this.resetActiveOption();
     this.showDropdown();
     this.attachResultListeners();
   }
@@ -570,9 +573,13 @@ class SearchInterface {
       case "Enter":
         e.preventDefault();
         if (this.selectedIndex >= 0 && results[this.selectedIndex]) {
+          const selected = results[this.selectedIndex];
           // Let the anchor tag handle navigation naturally
-          results[this.selectedIndex].click();
-          this.hideDropdown();
+          selected.click();
+          // A popular item re-renders the dropdown with its results; keep it open
+          if (selected.classList.contains("search-result")) {
+            this.hideDropdown();
+          }
         }
         break;
 
@@ -592,10 +599,16 @@ class SearchInterface {
       if (selected.id) {
         this.searchInput.setAttribute("aria-activedescendant", selected.id);
       }
-      selected.focus();
+      // Focus stays in the combobox input so it keeps receiving arrow keys
+      selected.scrollIntoView({ block: "nearest" });
     } else {
       this.searchInput.removeAttribute("aria-activedescendant");
     }
+  }
+
+  resetActiveOption() {
+    this.selectedIndex = -1;
+    this.searchInput.removeAttribute("aria-activedescendant");
   }
 
   clearSelection() {
